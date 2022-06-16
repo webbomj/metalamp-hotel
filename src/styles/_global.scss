@@ -1,0 +1,20 @@
+$primary: red;
+$secondary: blue;
+
+html {
+  font-family: Manrope;
+}
+
+h1 {
+  color: $primary;
+}
+
+.container {
+  &__subtitle {
+    color: $secondary;
+    display: block;
+    height: auto;
+    display: flex;
+    justify-content: center;
+  }
+}

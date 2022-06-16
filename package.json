@@ -1,0 +1,49 @@
+{
+  "name": "hotel",
+  "version": "1.0.0",
+  "description": "��#\u0000 \u0000m\u0000e\u0000t\u0000a\u0000l\u0000a\u0000m\u0000p\u0000-\u0000h\u0000o\u0000t\u0000e\u0000l\u0000\r\u0000 \u0000",
+  "main": "index.js",
+  "scripts": {
+    "start": "set NODE_ENV=development&&webpack serve --open",
+    "dev": "set NODE_ENV=development&&webpack",
+    "build": "set NODE_ENV=production&&webpack"
+  },
+  "browserslist": [
+    "chrome >= 99",
+    "firefox >= 98"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/webbomj/metalamp-hotel.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/webbomj/metalamp-hotel/issues"
+  },
+  "homepage": "https://github.com/webbomj/metalamp-hotel#readme",
+  "devDependencies": {
+    "@babel/core": "^7.18.5",
+    "@babel/preset-env": "^7.18.2",
+    "babel-loader": "^8.2.5",
+    "css-loader": "^6.7.1",
+    "html-loader": "^3.1.2",
+    "html-webpack-plugin": "^5.5.0",
+    "mini-css-extract-plugin": "^2.6.1",
+    "postcss": "^8.4.14",
+    "postcss-loader": "^7.0.0",
+    "postcss-preset-env": "^7.7.1",
+    "pug": "^2.0.4",
+    "pug-loader": "^2.4.0",
+    "sass": "^1.52.3",
+    "sass-loader": "^13.0.0",
+    "style-loader": "^3.3.1",
+    "webpack": "^5.73.0",
+    "webpack-cli": "^4.10.0",
+    "webpack-dev-server": "^4.9.2"
+  },
+  "dependencies": {
+    "jquery": "^3.6.0"
+  }
+}
