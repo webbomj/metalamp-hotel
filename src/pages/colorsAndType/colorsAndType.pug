@@ -1,0 +1,38 @@
+mixin colorBlock(color, title, hash)
+  li.pageColors__item
+    div(class=`pageColors__colors pageColors__${color}`)
+    div
+      h2.pageColors__title= title 
+      span.pageColors__hash= hash
+
+include ../../components/Button/button.pug
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Document
+  body 
+    block content
+      .pageColors__content
+        .pageColors__leftBlock
+          ul.pageColors__list
+          - const colors = [{color: 'dark100', title: 'Dark Shade 100%', hash: '#1F2041'},{color: 'dark75', title: 'Dark Shade 75%', hash: '#1F2041'},{color: 'dark50', title: 'Dark Shade 50%', hash: '#1F2041'},{color: 'dark25', title: 'Dark Shade 25%', hash: '#1F2041'},{color: 'dark5', title: 'Dark Shade 5%', hash: '#1F2041'},{color: 'purple', title: 'Purple', hash: '#BC9CFF'},{color: 'green', title: 'Green', hash: '#6FCF97'}]
+          each color in colors
+            +colorBlock(color.color, color.title, color.hash)
+        .pageColors__rightBlock
+          ul.pageColors__rightBlock 
+            li 
+              span H1 
+              h1 This one is the sub-section or widget title
+            li 
+              span H2
+              h2 Next one is the item title inside widgets
+            li 
+              span H3 
+              h3 This is a label or CTA text
+            li 
+              span H1 
+              p This is the body text which is used for most of the design, like paragraphs, lists, etc.
+

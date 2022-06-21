@@ -1,83 +1,98 @@
-const HtmlWebpackPlugin = require("html-webpack-plugin");
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const fs = require('fs');
+const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
-let mode = "development";
-if (process.env.NODE_ENV === "production") {
-  mode = "production";
+let mode = 'development';
+if (process.env.NODE_ENV === 'production') {
+  mode = 'production';
 }
-console.log(mode + " mode");
+
+const PAGES_DIR = path.resolve(__dirname, 'src/pages');
+const PAGES = fs.readdirSync(PAGES_DIR);
 
 module.exports = {
-  entry: "./src/index.js",
-  mode: mode,
+  mode,
+  entry: path.resolve(__dirname, './src/index.js'),
+  context: path.resolve(__dirname, 'src'),
   output: {
-    filename: "[name].[contenthash].js",
-    assetModuleFilename: "assets/[name][ext][query]",
+    filename: '[name].[contenthash].js',
+    path: path.resolve(__dirname, 'dist'),
+    assetModuleFilename: 'assets/[name][ext][query]',
     clean: true,
   },
-  devtool: "source-map",
+  devtool: 'source-map',
   optimization: {
     splitChunks: {
-      chunks: "all",
+      chunks: 'all',
     },
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: "[name].[contenthash].css",
+      filename: '[name].[contenthash].css',
     }),
-    new HtmlWebpackPlugin({
-      template: "./src/index.pug",
+    ...PAGES.map((page) => {
+      if (page === 'startPage') {
+        return new HtmlWebpackPlugin({
+          filename: `index.html`,
+          template: `${PAGES_DIR}/${page}/${page}.pug`,
+        });
+      }
+      return new HtmlWebpackPlugin({
+        filename: `${page}.html`,
+        template: `${PAGES_DIR}/${page}/${page}.pug`,
+      });
     }),
   ],
   module: {
     rules: [
       {
         test: /\.html$/i,
-        loader: "html-loader",
+        loader: 'html-loader',
       },
       {
         test: /\.(sa|sc|c)ss$/,
         use: [
-          mode === "development" ? "style-loader" : MiniCssExtractPlugin.loader,
-          "css-loader",
+          mode === 'development' ? 'style-loader' : MiniCssExtractPlugin.loader,
+          'css-loader',
           {
-            loader: "postcss-loader",
+            loader: 'postcss-loader',
             options: {
               postcssOptions: {
                 plugins: [
                   [
-                    "postcss-preset-env",
+                    'postcss-preset-env',
                     {
-                      //Options
+                      browsers: 'last 2 versions',
                     },
                   ],
                 ],
               },
             },
           },
-          "sass-loader",
+          'sass-loader',
         ],
       },
       {
         test: /\.(png|svg|jpg|jpeg|gif)$/i,
-        type: "asset/resource",
+        type: 'asset/resource',
       },
       {
         test: /\.(woff|woff2|eot|tff|otf)$/i,
-        type: "asset/resourse",
+        type: 'asset/resourse',
       },
       {
         test: /\.pug$/,
-        loader: "pug-loader",
+        loader: 'pug-loader',
         exclude: /(node_modules|bower_components)/,
       },
       {
         test: /\.m?js$/,
         exclude: /node_modules/,
         use: {
-          loader: "babel-loader",
+          loader: 'babel-loader',
           options: {
-            presets: ["@babel/preset-env"],
+            presets: ['@babel/preset-env'],
           },
         },
       },

@@ -1,0 +1,79 @@
+@import "../../styles/global";
+
+.pageColors__content {
+  display: flex;
+  margin-top: 60px;
+  padding-left: 150px;
+}
+
+.pageColors__leftBlock {
+  display: inline-block;
+  margin-right: 415px;
+}
+
+.pageColors__rightBlock {
+  display: inline-block;
+}
+
+//colorBlock mixin
+.pageColors__list {
+  margin: 0;
+  padding: 0;
+}
+
+.pageColors__item {
+  display: flex;
+  list-style-type: none;
+  margin-bottom: 20px;
+}
+
+.pageColors__colors {
+  width: 70px;
+  height: 70px;
+  border-radius: 6px;
+  margin-right: 40px;
+}
+
+.pageColors__dark100 {
+  background-color: $dark100;
+}
+
+.pageColors__dark75 {
+  background-color: $dark75;
+}
+
+.pageColors__dark50 {
+  background-color: $dark50;
+}
+
+.pageColors__dark25 {
+  background-color: $dark25;
+}
+
+.pageColors__dark5 {
+  background-color: $dark5;
+}
+
+.pageColors__purple {
+  background-color: $purple;
+}
+
+.pageColors__green {
+  background-color: $green;
+}
+
+.pageColors__title {
+  margin: 10px 0 0 0;
+  font-weight: 700;
+  font-size: 19px;
+}
+
+.pageColors__hash {
+  display: inline-block;
+  margin-top: 3px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 19px;
+  line-height: 28px;
+  color: $dark100;
+}

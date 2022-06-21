@@ -1,17 +1,5 @@
-import './styles/index.scss'
-import $ from 'jquery'
+import "./styles/index.scss";
 
-const ss = {
-  lolo: 'lol',
-  lolo2: 'lol2'
-}
-
-const ss2 = {
-  lol3: 'lol3',
-  lolo4: 'lol4',
-  ...ss
-}
-
-$('.block').html('jQuery is working')
-console.log(ss2)
-
+const allImports = (context) => context.keys().map(context);
+const allContext = require.context("./", true, /\.js$|\.scss$/);
+allImports(allContext);
