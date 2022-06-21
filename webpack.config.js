@@ -2,6 +2,7 @@ const fs = require('fs');
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+// const CopyPlugin = require('copy-webpack-plugin');
 
 let mode = 'development';
 if (process.env.NODE_ENV === 'production') {
@@ -43,6 +44,11 @@ module.exports = {
         template: `${PAGES_DIR}/${page}/${page}.pug`,
       });
     }),
+    // new CopyPlugin({
+    //   patterns: [
+    //     { from: path.resolve(__dirname, 'src/images'), to: path.resolve(__dirname, 'dist/images') },
+    //   ],
+    // }),
   ],
   module: {
     rules: [
@@ -76,15 +82,29 @@ module.exports = {
       {
         test: /\.(png|svg|jpg|jpeg|gif)$/i,
         type: 'asset/resource',
+        // generator: {
+        //   filename: 'images/[name][ext][query]',
+        // },
+        // use: {
+        //   loader: 'file-loader',
+        //   options: {
+        //     name: '[path][name].[ext]',
+        //   },
+        // },
       },
       {
         test: /\.(woff|woff2|eot|tff|otf)$/i,
-        type: 'asset/resourse',
+        type: 'asset/resource',
       },
       {
         test: /\.pug$/,
-        loader: 'pug-loader',
-        exclude: /(node_modules|bower_components)/,
+        use: [
+          {
+            loader: 'simple-pug-loader',
+          },
+        ],
+        // loader: 'pug-loader',
+        // exclude: /(node_modules|bower_components)/,
       },
       {
         test: /\.m?js$/,
