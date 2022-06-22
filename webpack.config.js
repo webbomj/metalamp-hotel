@@ -2,7 +2,6 @@ const fs = require('fs');
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-// const CopyPlugin = require('copy-webpack-plugin');
 
 let mode = 'development';
 if (process.env.NODE_ENV === 'production') {
@@ -44,11 +43,6 @@ module.exports = {
         template: `${PAGES_DIR}/${page}/${page}.pug`,
       });
     }),
-    // new CopyPlugin({
-    //   patterns: [
-    //     { from: path.resolve(__dirname, 'src/images'), to: path.resolve(__dirname, 'dist/images') },
-    //   ],
-    // }),
   ],
   module: {
     rules: [

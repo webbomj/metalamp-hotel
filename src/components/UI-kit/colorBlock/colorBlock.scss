@@ -1,0 +1,58 @@
+@import '../../../styles/_global.scss';
+
+.colorBlock__item {
+  display: flex;
+  list-style-type: none;
+  margin-bottom: 20px;
+}
+
+.colorBlock__title {
+  margin: 10px 0 0 0;
+  font-weight: 700;
+  font-size: 19px;
+}
+
+.colorBlock__hash {
+  display: inline-block;
+  margin-top: 3px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 19px;
+  line-height: 28px;
+  color: $dark100;
+}
+
+.colorBlock__colors {
+  width: 70px;
+  height: 70px;
+  border-radius: 6px;
+  margin-right: 40px;
+}
+
+.colorBlock__dark100 {
+  background-color: $dark100;
+}
+
+.colorBlock__dark75 {
+  background-color: $dark75;
+}
+
+.colorBlock__dark50 {
+  background-color: $dark50;
+}
+
+.colorBlock__dark25 {
+  background-color: $dark25;
+}
+
+.colorBlock__dark5 {
+  background-color: $dark5;
+}
+
+.colorBlock__purple {
+  background-color: $purple;
+}
+
+.colorBlock__green {
+  background-color: $green;
+}

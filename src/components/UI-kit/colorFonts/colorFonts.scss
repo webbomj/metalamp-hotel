@@ -1,0 +1,81 @@
+@import '../../../styles/global';
+
+.colorFonts__item {
+  display: flex;
+  margin-bottom: 51px;
+  list-style-type: none;
+}
+
+.colorFonts__tagFonts {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  margin-right: 30px;
+  color: rgba(31, 32, 65, 0.25);
+}
+
+.colorFonts__h1 {
+  font-size: 24px;
+  text-transform: uppercase;
+  transform: translate(9px, 3px);
+}
+
+.colorFonts__h2 {
+  font-size: 19px;
+  text-transform: uppercase;
+  transform: translate(11px, 1px);
+}
+
+.colorFonts__h3 {
+  font-size: 12px;
+  text-transform: uppercase;
+  transform: translate(20px, -4px);
+}
+
+.colorFonts__body {
+  font-size: 14px;
+  transform: translate(0px, -13px);
+}
+
+.colorFonts__body::first-letter {
+  text-transform: uppercase;
+}
+
+.colorFonts__textWrapper {
+  width: 370px;
+}
+
+.colorFonts__textFonts {
+  display: block;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+}
+
+.colorFonts__text--h1 {
+  font-size: 24px;
+  line-height: 29px;
+  color: $dark100;
+  transform: translate(9px, 0px);
+}
+
+.colorFonts__text--h2 {
+  font-size: 19px;
+  color: $dark100;
+  transform: translate(11px, 1px);
+}
+
+.colorFonts__text--h3 {
+  font-size: 12px;
+  color: $dark100;
+  transform: translate(21px, -4px);
+  text-transform: uppercase;
+}
+
+.colorFonts__text--body {
+  font-size: 14px;
+  font-weight: 400;
+  color: $dark75;
+  transform: translate(1px, -13px);
+  width: 301px;
+}

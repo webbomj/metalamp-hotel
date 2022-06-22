@@ -1,30 +1,16 @@
 extends ../../layouts/UI.pug
-
-mixin colorBlock(color, title, hash)
-  li.pageColors__item
-    div(class=`pageColors__colors pageColors__${color}`)
-    div
-      h2.pageColors__title= title
-      span.pageColors__hash= hash
+include ../../components/UI-kit/ColorBlock/colorBlock.pug
+include ../../components/UI-kit/ColorFonts/colorFonts.pug
 
 block content
   .pageColors__content
     .pageColors__leftBlock
+      - const colors = [{color: 'dark100', title: 'Dark Shade 100%', hash: '#1F2041'},{color: 'dark75', title: 'Dark Shade 75%', hash: '#1F2041'},{color: 'dark50', title: 'Dark Shade 50%', hash: '#1F2041'},{color: 'dark25', title: 'Dark Shade 25%', hash: '#1F2041'},{color: 'dark5', title: 'Dark Shade 5%', hash: '#1F2041'},{color: 'purple', title: 'Purple', hash: '#BC9CFF'},{color: 'green', title: 'Green', hash: '#6FCF97'}];
       ul.pageColors__list
-      - const colors = [{color: 'dark100', title: 'Dark Shade 100%', hash: '#1F2041'},{color: 'dark75', title: 'Dark Shade 75%', hash: '#1F2041'},{color: 'dark50', title: 'Dark Shade 50%', hash: '#1F2041'},{color: 'dark25', title: 'Dark Shade 25%', hash: '#1F2041'},{color: 'dark5', title: 'Dark Shade 5%', hash: '#1F2041'},{color: 'purple', title: 'Purple', hash: '#BC9CFF'},{color: 'green', title: 'Green', hash: '#6FCF97'}]
-      each color in colors
-        +colorBlock(color.color, color.title, color.hash)
+        each color in colors
+          +colorBlock(color)
     .pageColors__rightBlock
-      ul.pageColors__rightBlock 
-        li 
-          span H1
-          h1 This one is the sub-section or widget title
-        li 
-          span H2
-          h2 Next one is the item title inside widgets
-        li 
-          span H3
-          h3 This is a label or CTA text
-        li 
-          span H1
-          p This is the body text which is used for most of the design, like paragraphs, lists, etc.
+      - const fonts = [{tag:'h1', title: 'This one is the sub-section or widget title'},{tag:'h2', title: 'Next one is the item title inside widgets'},{tag:'h3', title: 'This is a label or CTA text'},{tag:'body', title: 'This is the body text which is used for most of the design, like paragraphs, lists, etc.'}]
+      ul.pageColors__list
+        each font in fonts
+          +colorFonts(font)
