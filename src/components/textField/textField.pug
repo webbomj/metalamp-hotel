@@ -1,0 +1,7 @@
+mixin textField(props)
+  - const { title = "Default", description = "", placeholder = "", value = "", styles = "" } = props;
+  .textField(style=`${styles}`) 
+    .textField__top 
+      span.textField__title= title
+      span.textField__description= description
+    input.textField__input(placeholder=placeholder, value=value)

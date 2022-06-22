@@ -1,0 +1,19 @@
+extends ../../layouts/UI.pug
+include ../../components/textField/textField.pug
+include ../../components/button/button.pug
+
+block content
+  section.formElements
+    .formElements__firstColumn
+      +textField({title: 'Text field', description: 'default', placeholder: 'Email', styles: 'margin-bottom: 17px'})
+      +textField({title: 'Text field', description: 'hover / focus', placeholder: 'Email', value: 'This is pretty awesome'})
+    .formElements__secondColumn
+      +button({title: 'click me'})
+      +button({title: 'click me'})
+      +button({title: 'click me', type: 'white'})
+      +button({title: 'click me', type: 'white'})
+      +button({title: 'click me', type: 'without'})
+      +button({title: 'click me', type: 'without'})
+      +button({title: 'Перейти к оплате', type: 'big'})
+      +button({title: 'Перейти к оплате', type: 'big', arrow: true})
+    .formElements__thirdColumn

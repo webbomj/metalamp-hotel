@@ -1,3 +1,45 @@
+@import '../../styles/global';
+
 .button {
-  background-color: red;
+  width: 99px;
+  height: 44px;
+  border-radius: 22px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  text-transform: uppercase;
+  background: #ffffff;
+  text-align: center;
+  color: #bc9cff;
+  &:hover {
+    opacity: 0.5;
+  }
+  &__default {
+    background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+    border: none;
+    color: #ffffff;
+  }
+  &__white {
+    background: linear-gradient(#fff, #fff) padding-box,
+      linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%) border-box;
+    border: 2px solid transparent;
+  }
+  &__without {
+    width: auto;
+    color: #bc9cff;
+    border: none;
+    text-align: left;
+    padding: 0;
+    &:hover {
+      opacity: 1;
+      color: $dark50;
+    }
+  }
+  &__big {
+    width: 320px;
+    height: 44px;
+    background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+    color: #ffffff;
+    border: none;
+  }
 }

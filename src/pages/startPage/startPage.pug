@@ -6,7 +6,7 @@ html(lang="en")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     title Document
   body 
-    - const links = ['colorsAndType']
-    for link in links
+    - const links = ["colorsAndType", "formElements"];
+    each link in links
       li
         a(href=`./${link}.html`)= link

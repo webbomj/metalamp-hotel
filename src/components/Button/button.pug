@@ -1,2 +1,6 @@
-mixin button(name)
-  .button= name
+mixin button(props)
+  - const { title = "button", type = "default", arrow = false } = props;
+  if (arrow === false)
+    button(class=`button button__${type}`, type="button")= title
+  else
+    button(class=`button button__${type}`, type="button")= `${title}`
