@@ -1,0 +1,27 @@
+include ../button/button.pug
+
+mixin dropdown(props)
+  -
+    const { uniqId, title = "dropdown", text = "" } = props;
+    const list = ['взрослые', 'дети', 'младенцы'];
+  .dropdown
+    span.dropdown__title= title
+    .dropdown__main(data-dropdown=uniqId)
+      input.dropdown__field(value=text, readonly, data-dropdown-input=uniqId)
+      .material-icons.md-24.dropdown__arrow &#xe5cf;
+    .dropdown__bottomField.dropdown__bottomField--none
+      ul.dropdown__list 
+        each item, i in list 
+          li
+            span.dropdown__title= item
+            .dropdown__counter 
+              - const IdPlusIdx = `${uniqId}-${i}`;
+              .dropdown__circle.dropdown__circle--none(
+                data-dropdownbutton=IdPlusIdx,
+                id=IdPlusIdx
+              ) -
+              .dropdown__count(data-dropdowncounter=IdPlusIdx) 0
+              .dropdown__circle(data-dropdownbutton=IdPlusIdx) +
+      .dropdown__buttons 
+        +button({title: 'очистить', type: 'without', visible: false, data: uniqId})
+        +button({title: 'применить', type: 'without', data: uniqId}) 

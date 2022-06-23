@@ -1,12 +1,15 @@
 extends ../../layouts/UI.pug
 include ../../components/textField/textField.pug
 include ../../components/button/button.pug
+include ../../components/dropdown/dropdown.pug
 
 block content
   section.formElements
     .formElements__firstColumn
       +textField({title: 'Text field', description: 'default', placeholder: 'Email', styles: 'margin-bottom: 17px'})
       +textField({title: 'Text field', description: 'hover / focus', placeholder: 'Email', value: 'This is pretty awesome'})
+      +dropdown({uniqId: 'first', title: 'dropdown', text: 'Сколько гостей'})
+      +dropdown({uniqId: 'second', title: 'dropdown', text: 'Сколько гостей'})
     .formElements__secondColumn
       +button({title: 'click me'})
       +button({title: 'click me'})

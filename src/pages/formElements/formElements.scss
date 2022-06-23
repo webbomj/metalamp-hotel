@@ -1,13 +1,10 @@
 .formElements {
   display: flex;
   justify-content: space-between;
-}
-
-.formElements__firstColumn {
-}
-
-.formElements__secondColumn {
-}
-
-.formElements__thirdColumn {
+  &__firstColumn {
+  }
+  &__secondColumn {
+  }
+  &__thirdColumn {
+  }
 }

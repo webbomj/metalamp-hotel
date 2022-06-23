@@ -11,21 +11,29 @@
   background: #ffffff;
   text-align: center;
   color: #bc9cff;
+  cursor: pointer;
   &:hover {
     opacity: 0.5;
   }
   &__default {
-    background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+    background: linear-gradient(
+      180deg,
+      #bc9cff 0%,
+      #8ba4f9 100%
+    );
     border: none;
     color: #ffffff;
   }
   &__white {
     background: linear-gradient(#fff, #fff) padding-box,
-      linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%) border-box;
+      linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%)
+        border-box;
     border: 2px solid transparent;
   }
   &__without {
     width: auto;
+    height: 37px;
+
     color: #bc9cff;
     border: none;
     text-align: left;
@@ -38,8 +46,20 @@
   &__big {
     width: 320px;
     height: 44px;
-    background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+    background: linear-gradient(
+      180deg,
+      #bc9cff 0%,
+      #8ba4f9 100%
+    );
     color: #ffffff;
     border: none;
+  }
+  &__arrow {
+    transform: translate(-34px, 8px);
+    color: #ffffff;
+  }
+
+  &__none {
+    visibility: hidden;
   }
 }
