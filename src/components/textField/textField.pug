@@ -1,7 +1,9 @@
 mixin textField(props)
-  - const { title = "Default", description = "", placeholder = "", value = "", styles = "" } = props;
+  - const { title = "Default", description = "", placeholder = "", value = "", styles = "", arrow = false } = props;
   .textField(style=`${styles}`) 
-    .textField__top 
+    .textField__top(class=!arrow ? "" : "textField__top--arrow") 
       span.textField__title= title
       span.textField__description= description
-    input.textField__input(placeholder=placeholder, value=value)
+    input.textField__input(class=!arrow ? "" : "textField__input--arrow", placeholder=placeholder, value=value)
+    if arrow === true
+      span.material-icons.md-24.textField__arrow &#xe5c8;

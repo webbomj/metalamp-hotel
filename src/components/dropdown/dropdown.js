@@ -1,9 +1,5 @@
-import {
-  counter,
-  decrementCounter,
-  incrementCounter,
-  clearState,
-} from './dropdownCounterState';
+import { counter, decrementCounter, incrementCounter, clearState } from './dropdownCounterState';
+import { dropdownSaveStartTitle, dropdownChangeTitle } from './dropdownChangeTitle';
 
 const dropdownElements = document.querySelectorAll('.dropdown__main');
 const dropdownList = document.querySelectorAll('.dropdown__list');
@@ -12,6 +8,15 @@ const buttons = document.querySelectorAll(`button[data-button]`);
 const allInputs = [...dropdownElements];
 const allList = [...dropdownList];
 const allButtons = [...buttons];
+
+document.addEventListener('DOMContentLoaded', () => {
+  allList.forEach((el) => {
+    const uniqId = el.dataset.dropdownList;
+    console.log('uniqid', uniqId);
+    console.log('el', el);
+    dropdownSaveStartTitle(uniqId);
+  });
+});
 
 const clearCount = (e) => {
   const dataset = e.target.dataset.button;
@@ -33,19 +38,21 @@ const clearCount = (e) => {
   });
 };
 
-allButtons.forEach((el) => {
-  if (el.textContent === 'применить') {
-    const dataset = el.dataset.button;
-    const target = document.querySelector(`[data-dropdown=${dataset}]`);
-    el.addEventListener('click', () => {
-      target.nextElementSibling.classList.add('dropdown__bottomField--none');
-    });
-  } else if (el.textContent === 'очистить') {
-    el.addEventListener('click', (e) => {
-      clearCount(e);
-    });
-  }
-});
+if (allButtons) {
+  allButtons.forEach((el) => {
+    if (el.textContent === 'применить') {
+      const dataset = el.dataset.button;
+      const target = document.querySelector(`[data-dropdown=${dataset}]`);
+      el.addEventListener('click', () => {
+        target.nextElementSibling.classList.add('dropdown__bottomField--none');
+      });
+    } else if (el.textContent === 'очистить') {
+      el.addEventListener('click', (e) => {
+        clearCount(e);
+      });
+    }
+  });
+}
 
 const changeVisibility = (e) => {
   const datasetParent = e.target.parentNode.dataset.dropdown;
@@ -59,30 +66,31 @@ allInputs.forEach((el) => el.addEventListener('click', (e) => changeVisibility(e
 
 const counterHandler = (e) => {
   const dataset = e.target.dataset.dropdownbutton;
-
   if (!dataset) return;
+
   const uniqDropDownId = dataset.split('-')[0];
   const clearButton = document.querySelector(`button[data-button=${uniqDropDownId}]`);
-
   const whatIsButton = e.target.textContent;
-
   const datasetCounter = document.querySelector(`[data-dropdowncounter='${dataset}']`);
 
   if (whatIsButton === '+') {
     incrementCounter(dataset);
     datasetCounter.textContent = counter[dataset];
-    clearButton.classList.remove('button__none');
+    if (clearButton) {
+      clearButton.classList.remove('button__none');
+    }
   } else {
     decrementCounter(dataset);
     datasetCounter.textContent = counter[dataset];
   }
-  console.log(counter);
-  if (counter[uniqDropDownId] === 0) {
+
+  dropdownChangeTitle(uniqDropDownId);
+
+  if (counter[uniqDropDownId] === 0 && clearButton) {
     clearButton.classList.add('button__none');
   }
 
   const incremButton = document.getElementById(dataset);
-
   if (counter[dataset] > 0) {
     incremButton.classList.remove('dropdown__circle--none');
   } else if (counter[dataset] === 0) {

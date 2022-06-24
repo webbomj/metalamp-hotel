@@ -2,26 +2,35 @@ include ../button/button.pug
 
 mixin dropdown(props)
   -
-    const { uniqId, title = "dropdown", text = "" } = props;
-    const list = ['взрослые', 'дети', 'младенцы'];
-  .dropdown
-    span.dropdown__title= title
-    .dropdown__main(data-dropdown=uniqId)
-      input.dropdown__field(value=text, readonly, data-dropdown-input=uniqId)
+    const { uniqId, title = "dropdown", description = "", text = "", type = "guests" } = props;
+    const listGuests = ['взрослые', 'дети', 'младенцы'];
+    const listFurniture = ['спальни', 'кровати', 'ванные комнаты']
+    const list = type === 'guests' ? listGuests : listFurniture
+  .dropdown(data-type=`${uniqId}-${type}`)
+    div(class=type === "guests" ? "dropdown__topInfo" : "dropdown__topInfo--furniture")
+      span.dropdown__title= title
+      span.dropdown__description= description
+    .dropdown__main(class=type === "guests" ? "" : "dropdown__furnituremain", data-dropdown=uniqId)
+      input.dropdown__field(
+        class=type === "guests" ? "" : "dropdown__furniture",
+        value=text.length < 20 ? text : text.slice(0, 20) + "...",
+        readonly,
+        data-dropdown-input=uniqId
+      )
       .material-icons.md-24.dropdown__arrow &#xe5cf;
-    .dropdown__bottomField.dropdown__bottomField--none
-      ul.dropdown__list 
+    div(
+      class=type === "guests" ? `dropdown__bottomField dropdown__bottomField--none` : `dropdown__bottomField dropdown__furnitureField dropdown__bottomField--none`
+    )
+      ul.dropdown__list(data-dropdown-list=uniqId) 
         each item, i in list 
           li
             span.dropdown__title= item
             .dropdown__counter 
               - const IdPlusIdx = `${uniqId}-${i}`;
-              .dropdown__circle.dropdown__circle--none(
-                data-dropdownbutton=IdPlusIdx,
-                id=IdPlusIdx
-              ) -
+              .dropdown__circle.dropdown__circle--none(data-dropdownbutton=IdPlusIdx, id=IdPlusIdx) -
               .dropdown__count(data-dropdowncounter=IdPlusIdx) 0
               .dropdown__circle(data-dropdownbutton=IdPlusIdx) +
-      .dropdown__buttons 
-        +button({title: 'очистить', type: 'without', visible: false, data: uniqId})
-        +button({title: 'применить', type: 'without', data: uniqId}) 
+      .dropdown__buttons
+        if type === 'guests'
+          +button({title: 'очистить', type: 'without', visible: false, data: uniqId})
+          +button({title: 'применить', type: 'without', data: uniqId})
