@@ -3,7 +3,7 @@ import { dropdownSaveStartTitle, dropdownChangeTitle } from './dropdownChangeTit
 
 const dropdownElements = document.querySelectorAll('.dropdown__main');
 const dropdownList = document.querySelectorAll('.dropdown__list');
-const buttons = document.querySelectorAll(`button[data-button]`);
+const buttons = document.querySelectorAll(`.dropdown__buttons button[data-button]`);
 
 const allInputs = [...dropdownElements];
 const allList = [...dropdownList];

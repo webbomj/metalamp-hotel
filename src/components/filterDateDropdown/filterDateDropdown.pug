@@ -1,0 +1,9 @@
+include ../airDatePicker/airDatePicker.pug
+
+mixin filterDateDropdown({uniqId = 'uniqIdsQQ', title ='filter date dropdown', placeholder = 'Выберите даты'})
+  .filterDateDropdown
+    span.filterDateDropdown__title= title
+    .filterDateDropdown__main
+      input.filterDateDropdown__input(placeholder=placeholder, readonly)
+      .material-icons.md-24.filterDateDropdown__arrow &#xe5cf;
+  .filterDateDropdown__close(data-filterDateDropdown=uniqId)

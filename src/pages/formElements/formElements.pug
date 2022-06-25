@@ -2,6 +2,8 @@ extends ../../layouts/UI.pug
 include ../../components/textField/textField.pug
 include ../../components/button/button.pug
 include ../../components/dropdown/dropdown.pug
+include ../../components/airDatePicker/airDatePicker.pug
+include ../../components/filterDateDropdown/filterDateDropdown.pug
 
 block content
   section.formElements
@@ -10,6 +12,8 @@ block content
       +textField({title: 'Text field', description: 'hover / focus', placeholder: 'Email', value: 'This is pretty awesome'})
       +dropdown({uniqId: 'first', title: 'dropdown', description: 'hover', text: 'Сколько гостей'})
       +dropdown({uniqId: 'second', title: 'dropdown', description: 'hover', text: '2 спальни, 2 кровати, 3 ванныые комнаты', type: 'furniture'})
+      //- +airDatePicker({uniqId: 'filterDateDropdown'})
+      +filterDateDropdown({uniqId: 'sadSADsadSAD'})
     .formElements__secondColumn
       +button({title: 'click me'})
       +button({title: 'click me'})
