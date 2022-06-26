@@ -1,0 +1,15 @@
+include ../airDatePicker/airDatePicker.pug
+
+mixin dateDropdown({uniqId = 'uniqIdsQQ2', title ='date dropdown', placeholder = 'ДД.ММ.ГГГГ'})
+  .dateDropdown
+    .dateDropdownLeft
+      span.dateDropdownLeft__title= title
+      .dateDropdownLeft__main
+        input.dateDropdownLeft__input(value=placeholder, readonly)
+        .material-icons.md-24.dateDropdownLeft__arrow &#xe5cf;
+    .dateDropdownRight
+      span.dateDropdownRight__title= title
+      .dateDropdownRight__main
+        input.dateDropdownRight__input(value=placeholder, readonly)
+        .material-icons.md-24.dateDropdownRight__arrow &#xe5cf;
+  .dateDropdown__close(data-dateDropdown=uniqId)
