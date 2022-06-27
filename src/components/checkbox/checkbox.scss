@@ -9,6 +9,7 @@
     &:checked + label::before {
       background-image: url('../../images/Vector.png');
       background-repeat: no-repeat;
+      background-position: center center;
     }
   }
 
