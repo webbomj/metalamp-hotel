@@ -5,6 +5,7 @@ include ../../components/dropdown/dropdown.pug
 include ../../components/airDatePicker/airDatePicker.pug
 include ../../components/filterDateDropdown/filterDateDropdown.pug
 include ../../components/dateDropdown/dateDropdown.pug
+include ../../components/checkbox/checkbox.pug
 
 block content
   section.formElements
@@ -26,4 +27,8 @@ block content
       +button({title: 'click me', type: 'without'})
       +button({title: 'Перейти к оплате', type: 'big'})
       +button({title: 'Перейти к оплате', type: 'big', arrow: true})
+
+      +checkbox({id: 'SuperIDcheckbox', title: 'Можно курить'})
+      +checkbox({id: 'SuperIDcheckbox', title: 'Можно с питомцами'})
+      +checkbox({id: 'SuperIDcheckbox', title: 'Можно пригласить гостей (до 10 человек)'})
     .formElements__thirdColumn

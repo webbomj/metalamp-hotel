@@ -1,0 +1,32 @@
+@import '../../styles/global';
+
+.checkbox {
+  margin-bottom: 3px;
+  &__input {
+    position: absolute;
+    z-index: -100;
+    opacity: 0;
+    &:checked + label::before {
+      background-image: url('../../images/Vector.png');
+      background-repeat: no-repeat;
+    }
+  }
+
+  &__label {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    color: $dark50;
+    &::before {
+      content: '';
+      display: inline-block;
+      width: 18px;
+      height: 18px;
+      background: #ffffff;
+      border: 1px solid #bc9cff;
+      border-radius: 4px;
+      margin-right: 10px;
+      transform: translateY(6px);
+    }
+  }
+}
