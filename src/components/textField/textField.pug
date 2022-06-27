@@ -1,5 +1,5 @@
 mixin textField(props)
-  - const { title = "Default", description = "", placeholder = "", value = "", styles = "", arrow = false, readonly = false, mask = false } = props;
+  - const { id = "uniqIdTextField", title = "Default", description = "", placeholder = "", value = "", styles = "", arrow = false, readonly = false, mask = false } = props;
   .textField(style=`${styles}`) 
     .textField__top(class=!arrow ? "" : "textField__top--arrow") 
       span.textField__title= title
@@ -9,7 +9,8 @@ mixin textField(props)
       placeholder=placeholder,
       value=valuem,
       readonly=readonly,
-      date-masked=mask ? "masked" : "simple"
+      date-masked=mask ? "masked" : "simple",
+      id=uniqId
     )
     if arrow === true
       span.material-icons.md-24.textField__arrow &#xe5c8;
