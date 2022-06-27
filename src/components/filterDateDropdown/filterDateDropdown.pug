@@ -1,9 +1,12 @@
 include ../airDatePicker/airDatePicker.pug
+include ../textField/textField.pug
 
 mixin filterDateDropdown({uniqId = 'uniqIdsQQ', title ='filter date dropdown', placeholder = 'Выберите даты'})
   .filterDateDropdown
-    span.filterDateDropdown__title= title
-    .filterDateDropdown__main
-      input.filterDateDropdown__input(placeholder=placeholder, readonly)
-      .material-icons.md-24.filterDateDropdown__arrow &#xe5cf;
+    +textField({id: uniqId, title: 'Dropdown2', description: 'default', value: '', placeholder: '19 авг - 23 авг', readonly: true, classNames: 'filterDateDropdown__main', styles: 'margin-bottom: 17px', dropdown: true})
+    .material-icons.md-24.filterDateDropdown__arrow &#xe5cf;
+    //- span.filterDateDropdown__title= title
+    //- .filterDateDropdown__main
+    //-   input.filterDateDropdown__input(placeholder=placeholder, readonly)
+    //-   .material-icons.md-24.filterDateDropdown__arrow &#xe5cf;
   .filterDateDropdown__close(data-filterDateDropdown=uniqId)

@@ -9,19 +9,7 @@ mixin dropdown(props)
     const list = type === 'guests' ? listGuests : listFurniture
   .dropdown(data-type=`${uniqId}-${type}`)
     +textField({id: uniqId, title: 'Dropdown2', description: 'default', value: '', placeholder: 'Сколько гостей', readonly: true, classNames: 'dropdown__main', styles: 'margin-bottom: 17px', dropdown: true})
-    //- +textField({id: uniqId, title: 'Dropdown3', description: 'hover / focus', placeholder: 'Email', readonly: true, value: 'This is pretty awesome', classNames: 'dropdown__main', dropdown: true})
     .material-icons.md-24.dropdown__arrow &#xe5cf;
-    //- div(class=type === "guests" ? "dropdown__topInfo" : "dropdown__topInfo--furniture")
-    //-   span.dropdown__title= title
-    //-   span.dropdown__description= description
-    //- .dropdown__main(class=type === "guests" ? "" : "dropdown__furnituremain", data-dropdown=uniqId)
-    //-   input.dropdown__field(
-    //-     class=type === "guests" ? "" : "dropdown__furniture",
-    //-     value=text.length < 20 ? text : text.slice(0, 20) + "...",
-    //-     readonly,
-    //-     data-dropdown-input=uniqId
-    //-   )
-    //-   .material-icons.md-24.dropdown__arrow &#xe5cf;
     div(
       class=type === "guests" ? `dropdown__bottomField dropdown__bottomField--none` : `dropdown__bottomField dropdown__furnitureField dropdown__bottomField--none`
     )

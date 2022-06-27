@@ -4,7 +4,7 @@ import { airDatePickerOptionsCreator, dateConversion } from '../airDatePicker/in
 
 const mainBlock = document.querySelector('.filterDateDropdown__main');
 const airDatePickerBlock = document.querySelector('.filterDateDropdown__close');
-const airDatePickerInput = document.querySelector('.filterDateDropdown__input');
+const airDatePickerInput = document.querySelector('.filterDateDropdown__main .textField__input');
 
 // eslint-disable-next-line no-return-assign
 const changeTitle = (dateString = '') => (airDatePickerInput.value = dateString);

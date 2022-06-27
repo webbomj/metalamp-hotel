@@ -2,8 +2,8 @@ import AirDatepicker from 'air-datepicker';
 import 'air-datepicker/air-datepicker.css';
 import { airDatePickerOptionsCreator, dateConversion } from '../airDatePicker/index';
 
-const dateDropdownLeftInput = document.querySelector('.dateDropdownLeft__input');
-const dateDropdownRightInput = document.querySelector('.dateDropdownRight__input');
+const dateDropdownLeftInput = document.querySelector('.dateDropdownLeft__main .textField__input');
+const dateDropdownRightInput = document.querySelector('.dateDropdownRight__main .textField__input');
 const dateDropdownElement = document.querySelector('.dateDropdown__close');
 
 const openCloseDropdownFunction = () => {
