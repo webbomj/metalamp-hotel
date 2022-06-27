@@ -157,15 +157,15 @@ const getFurnitureValue = (uniqId) => {
 
 const setNewTitle = (uniqId) => {
   const dropdownField = document.querySelector(`.dropdown[data-type*=${uniqId}]`);
-  const dropdownInput = document.querySelector(`[data-dropdown-input=${uniqId}]`);
+  const dropdownInput = document.querySelector(`[data-dropdown=${uniqId}]`);
   const type = dropdownField.dataset.type.split('-')[1];
   if (type === 'guests') {
     const newTitle = getGuestsValue(uniqId);
-    dropdownInput.value = newTitle;
+    dropdownInput.firstChild.value = newTitle;
   }
   if (type === 'furniture') {
     const newTitle = getFurnitureValue(uniqId);
-    dropdownInput.value = newTitle;
+    dropdownInput.firstChild.value = newTitle;
   }
 };
 

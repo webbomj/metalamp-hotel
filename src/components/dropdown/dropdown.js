@@ -44,7 +44,10 @@ if (allButtons) {
       const dataset = el.dataset.button;
       const target = document.querySelector(`[data-dropdown=${dataset}]`);
       el.addEventListener('click', () => {
-        target.nextElementSibling.classList.add('dropdown__bottomField--none');
+        target.parentNode.nextElementSibling.nextElementSibling.classList.add(
+          'dropdown__bottomField--none'
+        );
+        target.firstChild.classList.toggle('dropdown__field--active');
       });
     } else if (el.textContent === 'очистить') {
       el.addEventListener('click', (e) => {
@@ -55,11 +58,14 @@ if (allButtons) {
 }
 
 const changeVisibility = (e) => {
+  console.log(e.target);
   const datasetParent = e.target.parentNode.dataset.dropdown;
   if (!datasetParent) return;
   const target = allInputs.find((el) => el.dataset.dropdown === datasetParent);
   target.firstChild.classList.toggle('dropdown__field--active');
-  target.nextElementSibling.classList.toggle('dropdown__bottomField--none');
+  target.parentNode.nextElementSibling.nextElementSibling.classList.toggle(
+    'dropdown__bottomField--none'
+  );
 };
 
 allInputs.forEach((el) => el.addEventListener('click', (e) => changeVisibility(e)));

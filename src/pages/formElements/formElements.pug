@@ -9,9 +9,9 @@ include ../../components/dateDropdown/dateDropdown.pug
 block content
   section.formElements
     .formElements__firstColumn
-      +textField({uniqId = 'uniqId1', title: 'Text field', description: 'default', placeholder: 'Email', styles: 'margin-bottom: 17px', arrow: true})
-      +textField({uniqId = 'uniqId2', title: 'Text field', description: 'hover / focus', placeholder: 'Email', value: 'This is pretty awesome'})
-      +textField({uniqId = 'uniqId3', title: 'Text field', description: 'hover / focus', placeholder: 'Email', value: 'This is pretty awesome', arrow: false, readonly: false , mask: true})
+      +textField({uniqId: 'uniqId1', title: 'Text field', description: 'default', placeholder: 'Email', styles: 'margin-bottom: 17px', arrow: true})
+      +textField({uniqId: 'uniqId2', title: 'Text field', description: 'hover / focus', placeholder: 'Email', value: 'This is pretty awesome'})
+      +textField({uniqId: 'uniqId3', title: 'Text field', description: 'hover / focus', placeholder: 'Email', value: 'This is pretty awesome', arrow: false, readonly: false , mask: true})
       +dropdown({uniqId: 'first', title: 'dropdown', description: 'hover', text: 'Сколько гостей'})
       +dropdown({uniqId: 'second', title: 'dropdown', description: 'hover', text: '2 спальни, 2 кровати, 3 ванныые комнаты', type: 'furniture'})
       //- +airDatePicker({uniqId: 'filterDateDropdown'})
