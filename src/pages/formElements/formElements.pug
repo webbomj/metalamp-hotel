@@ -13,6 +13,7 @@ include ../../components/iconTextItem/iconTextItem.pug
 include ../../components/iconTextList/iconTextList.pug
 include ../../components/likeButton/likeButton.pug
 include ../../components/rateButton/rateButton.pug
+include ../../components/comment/comment.pug
 
 block content
   section.formElements
@@ -48,4 +49,5 @@ block content
       +likeButton({number: 2, clicked: false})
       +likeButton({number: 12, clicked: true})
       +rateButton({size: 5})
+      +comment({id: 'UniqIdComment1', title: 'Мурад Сарафанов', date: '5', photo: '../../images/photo.png', text: 'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.'})
     .formElements__thirdColumn

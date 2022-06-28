@@ -1,0 +1,14 @@
+include ../likeButton/likeButton.pug
+
+mixin comment({id = 'UniqIdComment', title = 'Мурад Сарафанов', date = '5', text = 'Лучший матрас', photo = '#' })
+  .comment
+    .comment__top 
+      .comment__photo
+        img(src=require("../../images/photo.png"))
+      .comment__header
+        .comment__title= title
+        .comment__date= date
+    .comment__bottom
+      .comment__likeButton
+        +likeButton({number: 12, clicked: true}) 
+      .comment__text= text
