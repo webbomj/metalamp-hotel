@@ -11,6 +11,7 @@ include ../../components/radioButton/radioButton.pug
 include ../../components/expandableCheckboxList/expandableCheckboxList.pug
 include ../../components/iconTextItem/iconTextItem.pug
 include ../../components/iconTextList/iconTextList.pug
+include ../../components/likeButton/likeButton.pug
 
 block content
   section.formElements
@@ -43,4 +44,6 @@ block content
       +checkbox({id: 'SuperIDcheckbox33', title: 'Широкий коридор', rich: true, richText: 'Ширина коридоров в номере не менее 91 см.'})
       +checkbox({id: 'SuperIDcheckbox344', title: 'Помощник для инвалидов', rich: true, richText: 'На 1 этаже вас встретит специалист и проводит до номера.'})
       +bulletList({title: 'bullet list', list: ['Нельзя с питомцами', 'Без вечеринок и мероприятий', 'Время прибытия — после 13:00, а выезд до 12:00']})
+      +likeButton({number: 2, clicked: false})
+      +likeButton({number: 12, clicked: true})
     .formElements__thirdColumn
