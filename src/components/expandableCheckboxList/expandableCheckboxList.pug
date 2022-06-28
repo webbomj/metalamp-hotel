@@ -1,0 +1,11 @@
+include ../checkbox/checkbox.pug
+
+mixin expandableCheckboxList({id = 'uniqIdExpandable', title = ''})
+  - const list = ["Завтрак", "Письменный стол", "Стул для кормления", "Кроватка", "Телевизор", "Шампунь", "Телевизор", "Шампунь"];
+  .expandableCheckboxes
+    .expandableCheckboxes__header
+      .expandableCheckboxes__title= title
+      .material-icons.md-24.expandableCheckboxes__arrow &#xe5cf;
+    ul.expandableCheckboxes__content
+      each item, indx in list 
+        +checkbox({id: `${id}${indx}`, title: item})
