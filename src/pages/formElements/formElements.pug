@@ -6,6 +6,7 @@ include ../../components/airDatePicker/airDatePicker.pug
 include ../../components/filterDateDropdown/filterDateDropdown.pug
 include ../../components/dateDropdown/dateDropdown.pug
 include ../../components/checkbox/checkbox.pug
+include ../../components/bulletList/bulletList.pug
 include ../../components/radioButton/radioButton.pug
 include ../../components/expandableCheckboxList/expandableCheckboxList.pug
 
@@ -36,4 +37,7 @@ block content
       +radioButton({id: 'SuperIDcheckboxSS1', title:'Мужчина', name: 'checkboxed'})
       +radioButton({id: 'SuperIDcheckboxSS2', title: 'Женщина', name: 'checkboxed'})
       +expandableCheckboxList({id: 'expandableCheckbox', title: 'expandable checkbox list'})
+      +checkbox({id: 'SuperIDcheckbox33', title: 'Широкий коридор', rich: true, richText: 'Ширина коридоров в номере не менее 91 см.'})
+      +checkbox({id: 'SuperIDcheckbox344', title: 'Помощник для инвалидов', rich: true, richText: 'На 1 этаже вас встретит специалист и проводит до номера.'})
+      +bulletList({title: 'bullet list', list: ['Нельзя с питомцами', 'Без вечеринок и мероприятий', 'Время прибытия — после 13:00, а выезд до 12:00']})
     .formElements__thirdColumn

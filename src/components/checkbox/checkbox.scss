@@ -29,5 +29,18 @@
       margin-right: 10px;
       transform: translateY(6px);
     }
+    &--rich {
+      font-weight: 700;
+      color: $dark75;
+    }
+  }
+  &__richText {
+    display: block;
+    width: 226px;
+    margin: 2px 0 5px 30px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    color: $dark50;
   }
 }

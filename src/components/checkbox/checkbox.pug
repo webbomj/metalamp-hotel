@@ -1,4 +1,6 @@
-mixin checkbox({id = 'uniqIdQSQLK', title = ''})
+mixin checkbox({id = 'uniqIdQSQLK', title = '', rich = false, richText = 'Lorem'})
   .checkbox
     input.checkbox__input(type="checkbox", id=id)
-    label.checkbox__label(for=id)= title
+    label.checkbox__label(for=id, class=rich ? "checkbox__label--rich" : "")= title
+    if rich
+      span.checkbox__richText= richText

@@ -1,0 +1,36 @@
+@import '../../styles/global';
+
+.bulletList {
+  &__title {
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 15px;
+    text-transform: uppercase;
+    color: $dark100;
+  }
+  &__list {
+    list-style-type: none;
+
+    margin: 9px 0 0 0;
+  }
+  &__item {
+    display: flex;
+
+    margin-bottom: 10px;
+  }
+  &__circle {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-right: 11px;
+    margin-top: 7px;
+    background: $dark25;
+  }
+  &__text {
+    width: 240px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    color: $dark75;
+  }
+}
