@@ -9,6 +9,8 @@ include ../../components/checkbox/checkbox.pug
 include ../../components/bulletList/bulletList.pug
 include ../../components/radioButton/radioButton.pug
 include ../../components/expandableCheckboxList/expandableCheckboxList.pug
+include ../../components/iconTextItem/iconTextItem.pug
+include ../../components/iconTextList/iconTextList.pug
 
 block content
   section.formElements
@@ -21,6 +23,8 @@ block content
       //- +airDatePicker({uniqId: 'filterDateDropdown'})
       +filterDateDropdown({uniqId: 'sadSADsadSAD'})
       +dateDropdown({uniqId: 'asdsadsadsadsada2'})
+      +iconTextItem({title: 'Комфорт', text: 'Шумопоглощающие стены', icon: 'insert_emoticon'})
+      +iconTextList({list: [{title: 'Комфорт', text: 'Шумопоглощающие стены', icon: 'insert_emoticon'}, {title: 'Удобство', text: 'Окно в каждой из спален', icon: 'location_city'}]})
     .formElements__secondColumn
       +button({title: 'click me'})
       +button({title: 'click me'})
@@ -30,7 +34,6 @@ block content
       +button({title: 'click me', type: 'without'})
       +button({title: 'Перейти к оплате', type: 'big'})
       +button({title: 'Перейти к оплате', type: 'big', arrow: true})
-
       +checkbox({id: 'SuperIDcheckbox1', title: 'Можно курить'})
       +checkbox({id: 'SuperIDcheckbox2', title: 'Можно с питомцами'})
       +checkbox({id: 'SuperIDcheckbox3', title: 'Можно пригласить гостей (до 10 человек)'})
