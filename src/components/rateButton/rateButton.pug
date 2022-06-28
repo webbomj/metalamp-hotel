@@ -1,0 +1,4 @@
+mixin rateButton({id = 'uniqIdRateButton'})
+  .rateButton(id=id)
+    each item, indx in [1, 2, 3, 4, 5]
+      .material-icons.rateButton__icon(data-rateButton=`${id}-${indx}`)= "star_border"

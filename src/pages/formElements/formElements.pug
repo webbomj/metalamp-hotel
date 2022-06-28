@@ -12,6 +12,7 @@ include ../../components/expandableCheckboxList/expandableCheckboxList.pug
 include ../../components/iconTextItem/iconTextItem.pug
 include ../../components/iconTextList/iconTextList.pug
 include ../../components/likeButton/likeButton.pug
+include ../../components/rateButton/rateButton.pug
 
 block content
   section.formElements
@@ -46,4 +47,5 @@ block content
       +bulletList({title: 'bullet list', list: ['Нельзя с питомцами', 'Без вечеринок и мероприятий', 'Время прибытия — после 13:00, а выезд до 12:00']})
       +likeButton({number: 2, clicked: false})
       +likeButton({number: 12, clicked: true})
+      +rateButton({size: 5})
     .formElements__thirdColumn
