@@ -4,6 +4,8 @@
   font-family: Marmelad, 'Lucida Grande', Arial, 'Hiragino Sans GB', Georgia, sans-serif;
   font-size: 14px;
   box-sizing: initial;
+  display: flex;
+  flex-direction: column;
 }
 .paginationjs:after {
   display: table;
@@ -122,6 +124,8 @@
 .paginationjs .paginationjs-nav {
   height: 30px;
   line-height: 30px;
+  margin: 4px 0 0 6px;
+  color: $dark75;
 }
 .paginationjs .paginationjs-go-button,
 .paginationjs .paginationjs-go-input {
