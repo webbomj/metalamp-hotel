@@ -8,8 +8,8 @@ mixin dropdown(props)
     const listFurniture = ['спальни', 'кровати', 'ванные комнаты']
     const list = type === 'guests' ? listGuests : listFurniture
   .dropdown(data-type=`${uniqId}-${type}`)
-    +textField({id: uniqId, title: 'Dropdown2', description: 'default', value: '', placeholder: 'Сколько гостей', readonly: true, classNames: 'dropdown__main', styles: 'margin-bottom: 17px', dropdown: true})
-    .material-icons.md-24.dropdown__arrow &#xe5cf;
+    +textField({id: uniqId, title: title, description: description, value: '', placeholder: 'Сколько гостей', readonly: true, classNames: 'dropdown__main', styles: 'margin-bottom: 17px', dropdown: true})
+    //- .material-icons.md-24.dropdown__arrow &#xe5cf;
     div(
       class=type === "guests" ? `dropdown__bottomField dropdown__bottomField--none` : `dropdown__bottomField dropdown__furnitureField dropdown__bottomField--none`
     )

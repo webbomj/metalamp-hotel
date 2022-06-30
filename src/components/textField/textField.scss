@@ -45,6 +45,9 @@
       border: 1px solid $dark50;
       outline: none;
     }
+    &:read-only {
+      cursor: pointer;
+    }
     &--arrow {
       width: 266px;
     }

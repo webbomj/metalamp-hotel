@@ -1,8 +1,4 @@
 mixin likeButton({number = 2, clicked = false})
-  .likeButton
-    if clicked
-      .material-icons.likeButton__icon.likeButton__icon--clicked= "favorite"
-      span.likeButton__number.likeButton__number--clicked= number
-    else
-      .material-icons.likeButton__icon= "favorite_border"
-      span.likeButton__number= number
+  .likeButton(class=clicked ? "likeButton__clicked" : "")
+    .material-icons.likeButton__icon= "favorite"
+    span.likeButton__number= number

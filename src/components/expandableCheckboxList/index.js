@@ -1,11 +1,11 @@
-const coll = document.getElementsByClassName('expandableCheckboxes__title');
+const coll = document.getElementsByClassName('expandableCheckboxes__header');
 
 [...coll].forEach((el) => {
   el.addEventListener('click', () => {
     el.classList.toggle('active');
-    const content = el.parentNode.nextElementSibling;
+    const content = el.nextElementSibling;
 
-    el.nextElementSibling.classList.toggle('expandableCheckboxes__arrow--rotate');
+    el.lastChild.classList.toggle('expandableCheckboxes__arrow--rotate');
 
     if (content.style.display === 'block') {
       content.style.display = 'none';

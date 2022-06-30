@@ -1,10 +1,16 @@
 .formElements {
-  display: flex;
-  justify-content: space-between;
+  padding: 54px 0 0 141px;
+  display: grid;
+  grid-template-columns: 320px 374px 320px;
+  grid-column-gap: 72px;
   &__firstColumn {
+    grid-column: 1 / 2;
   }
   &__secondColumn {
+    padding: 0 0 0 54px;
+    grid-column: 2 / 3;
   }
   &__thirdColumn {
+    grid-column: 3 / 4;
   }
 }

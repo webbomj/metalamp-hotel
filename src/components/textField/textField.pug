@@ -13,5 +13,7 @@ mixin textField(props)
         date-masked=mask ? "masked" : "simple",
         id=uniqId
       )
+      if dropdown === true
+        .material-icons.md-24.dropdown__arrow &#xe5cf;
     if arrow === true
       span.material-icons.md-24.textField__arrow &#xe5c8;

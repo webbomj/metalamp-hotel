@@ -18,11 +18,11 @@
       & .textField__input {
         width: 150px;
       }
-    }
-    & .dateDropdown__arrow {
-      position: absolute;
-      top: 35px;
-      left: 116px;
+      & .dropdown__arrow {
+        position: absolute;
+        top: 11px;
+        left: 116px;
+      }
     }
   }
   & .dateDropdownRight {
@@ -33,11 +33,11 @@
       & .textField__input {
         width: 150px;
       }
-    }
-    & .dateDropdown__arrow {
-      position: absolute;
-      top: 35px;
-      left: 116px;
+      & .dropdown__arrow {
+        position: absolute;
+        top: 11px;
+        left: 116px;
+      }
     }
   }
   &__arrow {

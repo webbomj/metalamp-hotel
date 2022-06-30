@@ -63,9 +63,7 @@ const changeVisibility = (e) => {
   if (!datasetParent) return;
   const target = allInputs.find((el) => el.dataset.dropdown === datasetParent);
   target.firstChild.classList.toggle('dropdown__field--active');
-  target.parentNode.nextElementSibling.nextElementSibling.classList.toggle(
-    'dropdown__bottomField--none'
-  );
+  target.parentNode.nextElementSibling.classList.toggle('dropdown__bottomField--none');
 };
 
 allInputs.forEach((el) => el.addEventListener('click', (e) => changeVisibility(e)));
