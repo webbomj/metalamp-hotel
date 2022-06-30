@@ -43,10 +43,13 @@
         }
       }
       &__expandable-checkbox {
-        margin-bottom: 40px;
+        margin-bottom: 41px;
         &--open {
           margin-bottom: 279px;
         }
+      }
+      &__icon-text-list {
+        margin-top: -5px;
       }
     }
   }
@@ -88,7 +91,7 @@
       margin: 4px 0 11px 0;
     }
     & .checkbox {
-      margin-bottom: 4px;
+      margin-bottom: 3px;
     }
   }
   &__radio-button {
@@ -98,6 +101,7 @@
     }
     &-box {
       display: flex;
+      margin-top: 10px;
     }
     & .radioButton:first-of-type {
       margin-right: 20px;
@@ -144,7 +148,7 @@
   }
   &__comment {
     grid-column: 2 / span 4;
-    margin-top: 226px;
+    margin-top: 224px;
   }
   &__range-slider {
     & h3 {
