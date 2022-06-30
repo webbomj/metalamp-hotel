@@ -146,4 +146,42 @@
     grid-column: 2 / span 4;
     margin-top: 226px;
   }
+  &__range-slider {
+    & h3 {
+      margin: 4px 0 10px 0;
+    }
+  }
+  &__buttons {
+    margin-top: 73px;
+    & h3 {
+      margin: 4px 0 10px 0;
+    }
+    & .formElements__topButtons {
+      margin-top: 16px;
+      & button:first-of-type {
+        margin-right: 20px;
+      }
+    }
+    & .formElements__middleButtons {
+      margin-top: 30px;
+      & button:first-of-type {
+        margin-right: 20px;
+      }
+    }
+    & .formElements__botButtons {
+      margin-top: 20px;
+      & button:first-of-type {
+        margin-right: 21px;
+      }
+    }
+    & .button__wrapper {
+      margin-top: 19px;
+    }
+  }
+  &__pagination {
+    margin-top: 40px;
+    & h3 {
+      margin: 4px 0 16px 0;
+    }
+  }
 }
