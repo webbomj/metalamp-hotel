@@ -1,5 +1,5 @@
-mixin toggle({text = 'ssss'})
-  .toggle
+mixin toggle({id = 'uniqIdToggle', text = 'ssss'})
+  .toggle(data-toggle=id)
     .toggle__Block
       .toggle__Circle 
     .toggle__Text= text
