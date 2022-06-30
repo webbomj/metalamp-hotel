@@ -1,10 +1,10 @@
 @import '../../styles/global';
 
 .filterDateDropdown {
-  position: relative;
   width: 266px;
   &__main {
     width: 266px;
+    position: relative;
     & .textField__input {
       width: 266px;
     }

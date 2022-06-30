@@ -20,10 +20,10 @@ include ../../components/toggle/toggle.pug
 block content
   section.formElements
     .formElements__firstColumn
-      +textField({uniqId: 'textField1', title: 'Text field', description: 'default', placeholder: 'Email', styles: 'margin-bottom: 17px'})
+      +textField({uniqId: 'textField1', title: 'Text field', description: 'default', placeholder: 'Email'})
       +textField({uniqId: 'textField2', title: 'Text field', description: 'hover / focus', placeholder: 'Email', value: 'This is pretty awesome'})
       +dropdown({uniqId: 'dropdown1', title: 'dropdown', description: 'hover', text: 'Сколько гостей'})
-      +textField({uniqId: 'textField3', title: 'Masked text field', description: '', mask: true})
+      +textField({uniqId: 'textField3', title: 'Masked text field', description: '', placeholder: 'ДД.ММ.ГГГГ', mask: true})
       //- +dropdown({uniqId: 'second', title: 'dropdown', description: 'hover', text: '2 спальни, 2 кровати, 3 ванныые комнаты', type: 'furniture'})
       +dateDropdown({uniqId: 'dateDropdown1'})
       +filterDateDropdown({uniqId: 'filterDateDropdown1'})

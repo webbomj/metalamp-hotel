@@ -33,6 +33,13 @@
     font-size: 14px;
     transform: translateY(-3px);
   }
+  &__title {
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 15px;
+    text-transform: uppercase;
+    color: $dark100;
+  }
   &__arrow {
     position: absolute;
     top: 10px;
@@ -51,11 +58,12 @@
       display: none;
     }
     & ul {
+      padding: 5px 0 2px 0;
       li {
         display: flex;
         justify-content: space-between;
         list-style-type: none;
-        margin-bottom: 8px;
+        margin-bottom: 7px;
       }
     }
   }
@@ -63,7 +71,7 @@
     display: flex;
     width: 92px;
     justify-content: space-between;
-    transform: translateY(-2px);
+    transform: translateY(-6px);
   }
   &__circle {
     display: flex;
@@ -97,6 +105,7 @@
   &__buttons {
     display: flex;
     justify-content: space-between;
+    margin-top: -6px;
   }
 
   &__furniture {

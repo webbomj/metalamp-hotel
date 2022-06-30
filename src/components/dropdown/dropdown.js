@@ -44,9 +44,7 @@ if (allButtons) {
       const dataset = el.dataset.button;
       const target = document.querySelector(`[data-dropdown=${dataset}]`);
       el.addEventListener('click', () => {
-        target.parentNode.nextElementSibling.nextElementSibling.classList.add(
-          'dropdown__bottomField--none'
-        );
+        target.parentNode.nextElementSibling.classList.add('dropdown__bottomField--none');
         target.firstChild.classList.toggle('dropdown__field--active');
       });
     } else if (el.textContent === 'очистить') {
