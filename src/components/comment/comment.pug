@@ -7,7 +7,7 @@ mixin comment({id = 'UniqIdComment', title = 'Мурад Сарафанов', da
         img(src=require("../../images/photo.png"))
       .comment__header
         .comment__title= title
-        .comment__date= date
+        .comment__date= `${date} дней назад`
     .comment__bottom
       .comment__likeButton
         +likeButton({number: 12, clicked: true}) 

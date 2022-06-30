@@ -52,27 +52,39 @@ block content
     .formElements__secondColumn
       .formElements__firstBlock
         .formElements__checkbox-button
+          h3 Checkbox Buttons
           +checkbox({id: 'checkbox1', title: 'Можно курить'})
           +checkbox({id: 'checkbox2', title: 'Можно с питомцами'})
           +checkbox({id: 'checkbox3', title: 'Можно пригласить гостей (до 10 человек)'})
         .formElements__radio-button
-          +radioButton({id: 'radioButton1', title:'Мужчина', name: 'checkboxed', checked: true})
-          +radioButton({id: 'radioButton2', title: 'Женщина', name: 'checkboxed'})
+          h3 Radio Buttons
+          .formElements__radio-button-box
+            +radioButton({id: 'radioButton1', title:'Мужчина', name: 'checkboxed', checked: true})
+            +radioButton({id: 'radioButton2', title: 'Женщина', name: 'checkboxed'})
         .formElements__toggle
+          h3 Toggle
           +toggle({id: 'toggle1', text: 'Получать спецпредложения'})
           +toggle({id: 'toggle2', text: 'Получать спецпредложения'})
         .formElements__like-button
-          +likeButton({number: 2, clicked: false})
-          +likeButton({number: 12, clicked: true})
+          h3 like button
+          .formElements__like-button-box
+            +likeButton({number: 2, clicked: false})
+            +likeButton({number: 12, clicked: true})
         .formElements__rate-button
-          +rateButton({id: 'rateButton1', size: 5})
-          +rateButton({id: 'rateButton2', size: 5})
+          h3 rate button
+            .formElements__rate-button-box
+              +rateButton({id: 'rateButton1', size: 5})
+              +rateButton({id: 'rateButton2', size: 5})
       .formElements__secondBlock
-        +dropdown({uniqId: 'dropdown4', title: 'dropdown', description: 'expanded', text: '2 спальни, 2 кровати...'})
+        .formElements__dropdown
+          +dropdown({uniqId: 'dropdown4', title: 'dropdown', description: 'expanded', text: '2 спальни, 2 кровати...'})
       .formElements__thirdBlock
-        +checkbox({id: 'SuperIDcheckbox33', title: 'Широкий коридор', rich: true, richText: 'Ширина коридоров в номере не менее 91 см.'})
-        +checkbox({id: 'SuperIDcheckbox344', title: 'Помощник для инвалидов', rich: true, richText: 'На 1 этаже вас встретит специалист и проводит до номера.'})
-        +comment({id: 'UniqIdComment1', title: 'Мурад Сарафанов', date: '5', photo: '../../images/photo.png', text: 'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.'})
+        .formElements__checkboxes
+          h3 rich Checkbox Buttons
+          +checkbox({id: 'SuperIDcheckbox33', title: 'Широкий коридор', rich: true, richText: 'Ширина коридоров в номере не менее 91 см.'})
+          +checkbox({id: 'SuperIDcheckbox344', title: 'Помощник для инвалидов', rich: true, richText: 'На 1 этаже вас встретит специалист и проводит до номера.'})
+        .formElements__comment
+          +comment({id: 'UniqIdComment1', title: 'Мурад Сарафанов', date: '5', photo: '../../images/photo.png', text: 'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.'})
     .formElements__thirdColumn
       .formElements__firstBlock
         .formElements__range-slider

@@ -55,16 +55,95 @@
     display: grid;
     grid-template-rows: 676px 270px 525px;
     grid-row-gap: 52px;
+    & .formElements__secondBlock {
+      grid-row: 2 / 3;
+      & .formElements__dropdown {
+        margin-top: 4px;
+      }
+    }
+    & .formElements__thirdBlock {
+      margin-top: 4px;
+      grid-row: 3 / 4;
+    }
   }
   &__thirdColumn {
     display: grid;
     grid-template-rows: 676px 270px 325px;
     grid-row-gap: 52px;
+    & .formElements__secondBlock {
+      grid-row: 2 / 3;
+      & .formElements__dropdown {
+        margin-top: 4px;
+      }
+    }
     & .formElements__thirdBlock {
       grid-row: 3 / 4;
     }
     & .formElements__bullet-list {
       padding-top: 2px;
     }
+  }
+  &__checkbox-button {
+    & h3 {
+      margin: 4px 0 11px 0;
+    }
+    & .checkbox {
+      margin-bottom: 4px;
+    }
+  }
+  &__radio-button {
+    margin-top: 56px;
+    & h3 {
+      margin: 4px 0 9px 0;
+    }
+    &-box {
+      display: flex;
+    }
+    & .radioButton:first-of-type {
+      margin-right: 20px;
+    }
+  }
+  &__toggle {
+    margin-top: 38px;
+    & h3 {
+      margin: 4px 0 15px 0;
+    }
+    & .toggle:last-child {
+      margin-top: 11px;
+    }
+  }
+  &__like-button {
+    margin-top: 40px;
+    & h3 {
+      margin: 4px 0 15px 0;
+    }
+    &-box {
+      display: flex;
+      & .likeButton:first-of-type {
+        margin-right: 9px;
+      }
+    }
+  }
+  &__rate-button {
+    margin-top: 41px;
+    & h3 {
+      margin: 4px 0 15px 0;
+    }
+    &-box {
+      display: flex;
+      margin-top: 16px;
+      & .rateButton:first-of-type {
+        margin-right: 20px;
+      }
+    }
+  }
+  &__checkboxes {
+    & h3 {
+      margin: 4px 0 10px 0;
+    }
+  }
+  &__comment {
+    grid-column: 2 / span 4;
+    margin-top: 226px;
   }
 }
