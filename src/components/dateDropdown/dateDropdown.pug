@@ -1,16 +1,16 @@
 include ../airDatePicker/airDatePicker.pug
 
-mixin dateDropdown({uniqId = 'uniqIdsQQ2', title ='date dropdown', placeholder = 'ДД.ММ.ГГГГ'})
+mixin dateDropdown({uniqId = 'uniqIdsQQ2', firstTitle ='date dropdown', secondTitle = 'date dropdown', placeholder = 'ДД.ММ.ГГГГ', placeholder2 = '19.08.2019'})
   .dateDropdown
     .dateDropdownLeft
-      +textField({id: uniqId, title: 'Dropdown2', description: 'default', value: '', placeholder: '19 авг - 23 авг', readonly: true, classNames: 'dateDropdownLeft__main', styles: 'margin-bottom: 17px', dropdown: true})
+      +textField({id: uniqId, title: firstTitle, description: '', value: '', placeholder: placeholder, readonly: true, classNames: 'dateDropdownLeft__main', styles: 'margin-bottom: 17px', dropdown: true})
       //- .material-icons.md-24.dateDropdown__arrow &#xe5cf;
       //- span.dateDropdownLeft__title= title
       //- .dateDropdownLeft__main
       //-   input.dateDropdownLeft__input(value=placeholder, readonly)
       //-   .material-icons.md-24.dateDropdownLeft__arrow &#xe5cf;
     .dateDropdownRight
-      +textField({id: uniqId, title: 'Dropdown2', description: 'default', value: '', placeholder: '19 авг - 23 авг', readonly: true, classNames: 'dateDropdownRight__main', styles: 'margin-bottom: 17px', dropdown: true})
+      +textField({id: uniqId, title: secondTitle, description: '', value: '', placeholder: placeholder2, readonly: true, classNames: 'dateDropdownRight__main', styles: 'margin-bottom: 17px', dropdown: true})
       //- .material-icons.md-24.dateDropdown__arrow &#xe5cf;
       //- span.dateDropdownRight__title= title
       //- .dateDropdownRight__main
