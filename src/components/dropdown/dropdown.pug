@@ -3,15 +3,15 @@ include ../textField/textField.pug
 
 mixin dropdown(props)
   -
-    const { uniqId, title = "dropdown", description = "", text = "", type = "guests", open = false } = props;
+    const { uniqId, title = "dropdown", description = "", text = "", type = "guests", open = false, small = false } = props;
     const listGuests = ['взрослые', 'дети', 'младенцы'];
     const listFurniture = ['спальни', 'кровати', 'ванные комнаты']
     const list = type === 'guests' ? listGuests : listFurniture
   .dropdown(data-type=`${uniqId}-${type}`)
-    +textField({id: uniqId, title: title, description: description, value: '', placeholder: 'Сколько гостей', readonly: true, classNames: 'dropdown__main', styles: 'margin-bottom: 17px', dropdown: true})
+    +textField({id: uniqId, title: title, description: description, value: '', small: small, placeholder: 'Сколько гостей', readonly: true, classNames: 'dropdown__main', styles: 'margin-bottom: 17px', dropdown: true})
     //- .material-icons.md-24.dropdown__arrow &#xe5cf;
     div(
-      class=type === "guests" ? `dropdown__bottomField ${open ? "" : "dropdown__bottomField--none"}` : `dropdown__bottomField dropdown__furnitureField dropdown__bottomField--none`
+      class=type === "guests" ? `dropdown__bottomField ${open ? "" : "dropdown__bottomField--none"}` : `dropdown__bottomField dropdown__furnitureField ${open ? "" : "dropdown__bottomField--none"}`
     )
       ul.dropdown__list(data-dropdown-list=uniqId) 
         each item, i in list 
