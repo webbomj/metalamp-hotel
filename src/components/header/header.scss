@@ -1,0 +1,47 @@
+@import '../../styles/global';
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 140px;
+  &__logo {
+    margin-right: 287px;
+  }
+  &__right {
+    display: flex;
+  }
+  &__list {
+    display: flex;
+    align-items: center;
+  }
+  &__item {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    margin-right: 20px;
+  }
+  &__text {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    color: $dark50;
+    & .active {
+      font-style: normal;
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 17px;
+      color: $dark75;
+    }
+  }
+  &__buttons {
+    & button:first-child {
+      margin-right: 20px;
+    }
+  }
+  &__user {
+    padding-left: 20px;
+    border-left: 1px solid rgba(31, 32, 65, 0.1);
+  }
+}

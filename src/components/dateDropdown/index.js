@@ -25,8 +25,8 @@ const selectDate = (formDate) => {
   }
 };
 
-dateDropdownLeftInput.parentNode.addEventListener('click', () => openCloseDropdownFunction());
-dateDropdownRightInput.parentNode.addEventListener('click', () => openCloseDropdownFunction());
+dateDropdownLeftInput?.parentNode?.addEventListener('click', () => openCloseDropdownFunction());
+dateDropdownRightInput?.parentNode?.addEventListener('click', () => openCloseDropdownFunction());
 
 // eslint-disable-next-line no-unused-vars
 const airDatePickerInst = new AirDatepicker(

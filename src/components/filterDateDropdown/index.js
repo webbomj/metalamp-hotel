@@ -20,7 +20,7 @@ const selectDate = (formDate) => {
   }
 };
 
-mainBlock.addEventListener('click', () => closeAirDatePickerToogle());
+mainBlock?.addEventListener('click', () => closeAirDatePickerToogle());
 
 // eslint-disable-next-line no-unused-vars
 const airDatePickerInst = new AirDatepicker(

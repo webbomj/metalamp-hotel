@@ -1,0 +1,8 @@
+extends ../../layouts/UI.pug
+include ../../components/header/header.pug
+block content
+  section.headersAndFooters 
+    .headersAndFooters__first
+      +header({id: 'header1'})
+    .headersAndFooters__second
+      +header({id: 'header2', auth: true})
