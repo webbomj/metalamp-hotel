@@ -40,8 +40,8 @@ const clearCount = (e) => {
 
 if (allButtons) {
   allButtons.forEach((el) => {
+    const dataset = el.dataset.button;
     if (el.textContent === 'применить') {
-      const dataset = el.dataset.button;
       const target = document.querySelector(`[data-dropdown=${dataset}]`);
       el.addEventListener('click', () => {
         target.parentNode.nextElementSibling.classList.add('dropdown__bottomField--none');
@@ -50,6 +50,7 @@ if (allButtons) {
     } else if (el.textContent === 'очистить') {
       el.addEventListener('click', (e) => {
         clearCount(e);
+        dropdownChangeTitle(dataset);
       });
     }
   });
