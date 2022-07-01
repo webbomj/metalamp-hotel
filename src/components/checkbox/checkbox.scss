@@ -1,7 +1,10 @@
 @import '../../styles/global';
 
 .checkbox {
-  margin-bottom: 3px;
+  margin-bottom: 5px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: baseline;
   &__input {
     position: absolute;
     z-index: -100;
@@ -38,10 +41,31 @@
   &__richText {
     display: block;
     width: 226px;
-    margin: 2px 0 5px 30px;
+    margin: 2px 0 2px 30px;
     font-weight: 400;
     font-size: 12px;
     line-height: 14px;
     color: $dark50;
+  }
+
+  &__rich {
+    display: block;
+    margin: 0px;
+  }
+
+  &__text {
+    display: inline-block;
+    width: 200px;
+    line-height: 20px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    color: $dark50;
+    &--rich {
+      font-weight: 700;
+      color: $dark75;
+      margin-bottom: 4px;
+      width: 280px;
+    }
   }
 }

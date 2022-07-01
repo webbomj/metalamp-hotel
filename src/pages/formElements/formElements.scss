@@ -18,7 +18,7 @@
       grid-row: 2 / 3;
       padding: 5px 0 0 0;
       & .formElements__dropdown {
-        margin-bottom: -1px;
+        margin-bottom: 14px;
       }
     }
     & .formElements__thirdBlock {
@@ -64,6 +64,9 @@
     & .formElements__thirdBlock {
       margin-top: 4px;
       grid-row: 3 / 4;
+      display: grid;
+      grid-template-columns: 320px 320px;
+      grid-column-gap: 72px;
     }
   }
   &__thirdColumn {
@@ -84,15 +87,13 @@
     }
   }
   &__checkbox-button {
+    width: 245px;
     & h3 {
       margin: 4px 0 11px 0;
     }
-    & .checkbox {
-      margin-bottom: 3px;
-    }
   }
   &__radio-button {
-    margin-top: 33px;
+    margin-top: 39px;
     & h3 {
       margin: 4px 0 9px 0;
     }
@@ -144,8 +145,8 @@
     }
   }
   &__comment {
-    grid-column: 2 / span 4;
-    margin-top: 224px;
+    grid-column: 1 / span 2;
+    margin-top: 208px;
   }
   &__range-slider {
     & h3 {
