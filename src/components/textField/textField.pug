@@ -1,12 +1,12 @@
 mixin textField(props)
-  - const { id = "uniqIdTextField", title = "Default", description = "", placeholder = "", value = "", styles = "", classNames = "", arrow = false, small = false, readonly = false, mask = false, dropdown = false } = props;
+  - const { id = "uniqIdTextField", title = "Default", description = "", placeholder = "", value = "", styles = "", classNames = "", arrow = false, small = false, readonly = false, mask = false, dropdown = false, open = false } = props;
   .textField
     .textField__top(class=small ? "textField__top--small" : "") 
       span.textField__title= title
       span.textField__description= description
     div(class=classNames, data-dropdown=dropdown ? id : false)
       input.textField__input(
-        class=small ? "textField__input--small" : "",
+        class=small ? `textField__input--small ${open ? "dropdown__field--active" : ""}` : `${open ? "dropdown__field--active" : ""}`,
         placeholder=placeholder,
         value=value,
         readonly=readonly,
