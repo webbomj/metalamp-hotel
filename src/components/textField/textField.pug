@@ -1,6 +1,6 @@
 mixin textField(props)
   - const { id = "uniqIdTextField", title = "Default", description = "", placeholder = "", value = "", styles = "", classNames = "", arrow = false, readonly = false, mask = false, dropdown = false } = props;
-  .textField(style=`${styles}`) 
+  .textField
     .textField__top(class=!arrow ? "" : "textField__top--arrow") 
       span.textField__title= title
       span.textField__description= description
