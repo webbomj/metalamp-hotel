@@ -2,6 +2,7 @@
 
 .textField {
   position: relative;
+  max-width: 320px;
   &__top {
     display: flex;
     justify-content: space-between;

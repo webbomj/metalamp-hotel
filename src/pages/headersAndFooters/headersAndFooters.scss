@@ -2,10 +2,14 @@
 
 .headersAndFooters {
   &__first {
-    width: 100%;
   }
   &__second {
-    width: 100%;
     margin-top: 40px;
+  }
+  &__footer {
+    margin-top: 40px;
+    &--small {
+      margin-top: 40px;
+    }
   }
 }
