@@ -1,0 +1,29 @@
+include ../textField/textField.pug
+include ../radioButton/radioButton.pug
+include ../toggle/toggle.pug
+
+mixin registration({id = ''})
+  .registration
+    .registration__header 
+      h1 Регистрация аккаунта
+    .registration__name
+      +textField({uniqId: `registration-textField1-${id}`, title: '', description: '', placeholder: 'Имя'})
+    .registration__surname
+      +textField({uniqId: `registration-textField2-${id}`, title: '', description: '', placeholder: 'Фамилия'})
+    .registration__radioButtons
+      +radioButton({id: 'radioButton1', title:'Мужчина', name: id, checked: true})
+      +radioButton({id: 'radioButton2', title: 'Женщина', name: id})
+    .registration__birthday
+      +textField({uniqId: `registration-textField3-${id}`, title: 'дата рождения', description: '', placeholder: 'ДД.ММ.ГГГГ', mask: true})
+    .registration__email
+      +textField({uniqId: `registration-textField4-${id}`, title: 'данные для входа в сервис', description: '', placeholder: 'Email'})
+    .registration__password
+      +textField({uniqId: `registration-textField5-${id}`, title: '', description: '', placeholder: 'Пароль'})
+    .registration__toggle
+      +toggle({id: 'toggle1', text: 'Получать спецпредложения'})
+    .registration__buttonPay
+      +button({title: 'Перейти к оплате', type: 'big', arrow: true})
+    .registration__hasAccount
+      .registration__text Уже есть аккаунт на Toxin
+      .registration__buttonIn
+        +button({title: 'Войти', type: 'white'})

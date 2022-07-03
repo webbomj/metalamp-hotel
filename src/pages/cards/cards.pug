@@ -2,12 +2,15 @@ extends ../../layouts/UI.pug
 include ../../components/room/room.pug
 include ../../components/airDatePicker/airDatePicker.pug
 include ../../components/findRooms/findRooms.pug
+include ../../components/registration/registration.pug
 
 block content
   .cards 
     .cards__firstColumn
-      +findRooms({})
-      // регистрация
+      .cards__findRooms
+        +findRooms({id: 'cardsFindRooms1'})
+      .cards__registration
+        +registration({})
     .cards__secondColumn
       // заказ
       // войти

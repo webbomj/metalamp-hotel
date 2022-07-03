@@ -11,11 +11,18 @@
   &__thirdColumn {
   }
 
+  &__findRooms {
+    margin-bottom: 40px;
+  }
+
   &__airDatePicker {
   }
 
   &__secondRoom,
   &__firstRoom {
+    margin-top: 40px;
+  }
+  &__registration {
     margin-top: 40px;
   }
 }

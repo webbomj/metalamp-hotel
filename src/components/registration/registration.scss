@@ -1,0 +1,52 @@
+.registration {
+  width: 380px;
+  height: 646px;
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  padding: 25px 30px 30px 30px;
+
+  &__header {
+    & h1 {
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 29px;
+      color: #1f2041;
+    }
+  }
+  &__name {
+    margin-top: 20px;
+  }
+  &__surname {
+    margin-top: 10px;
+  }
+  &__radioButtons {
+    margin-top: 4px;
+    display: flex;
+    & div:first-child {
+      margin-right: 20px;
+    }
+  }
+  &__birthday {
+    margin-top: 16px;
+  }
+  &__email {
+    margin-top: 16px;
+  }
+  &__password,
+  &__toggle {
+    margin-top: 10px;
+  }
+  &__buttonPay {
+    margin-top: 20px;
+  }
+  &__hasAccount {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__text {
+  }
+}
