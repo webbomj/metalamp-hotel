@@ -1,0 +1,11 @@
+mixin numberRoomAndPrice({price = '', type = '', number = '888'})
+  .numberRoomAndPrice
+    .numberRoomAndPrice__info 
+      .numberRoomAndPrice__number-wrapper
+        span.numberRoomAndPrice__number= `№ `
+        span.numberRoomAndPrice__id= number
+        if type === 'люкс'
+          span.numberRoomAndPrice__type= ` люкс`
+      .numberRoomAndPrice__price-wrapper
+        .numberRoomAndPrice__price= `${price}₽`
+        .numberRoomAndPrice__period в сутки

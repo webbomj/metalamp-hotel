@@ -3,6 +3,8 @@ include ../../components/room/room.pug
 include ../../components/airDatePicker/airDatePicker.pug
 include ../../components/findRooms/findRooms.pug
 include ../../components/registration/registration.pug
+include ../../components/booking/booking.pug
+include ../../components/UI-kit/numberRoomAndPrice/numberRoomAndPrice.pug
 
 block content
   .cards 
@@ -12,12 +14,13 @@ block content
       .cards__registration
         +registration({})
     .cards__secondColumn
+      +booking({id: 'cardsBooking1'})
       // заказ
       // войти
     .cards__thirdColumn
       .cards__airDatePicker 
         +airDatePicker({uniqId: 'cardsAirDatePicker1'})
       .cards__firstRoom
-        +room({id: 'room1', type: 'люкс', price: 9990, stars: 5, review: 145, array: ['../../images/room2.png', '../../images/room2.png', '../../images/room2.png', '../../images/room2.png']})
+        +room({id: 'room1', type: 'люкс', price: '9 990', stars: 5, review: 145, array: ['../../images/room2.png', '../../images/room2.png', '../../images/room2.png', '../../images/room2.png']})
       .cards__secondRoom
-        +room({id: 'room2', type: 'люкс', price: 9990, stars: 5, review: 145, array: ['../../images/room.png', '../../images/room.png', '../../images/room.png', '../../images/room.png']})
+        +room({id: 'room2', type: 'люкс', price: '9 990', stars: 5, review: 145, array: ['../../images/room.png', '../../images/room.png', '../../images/room.png', '../../images/room.png']})

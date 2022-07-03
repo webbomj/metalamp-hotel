@@ -6,6 +6,7 @@
   box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
   border-radius: 4px;
   background: #fff;
+  overflow: hidden;
   &__top {
     height: 151px;
   }
@@ -44,46 +45,8 @@
     padding: 19px 20px;
   }
   &__info {
-    display: flex;
-    justify-content: space-between;
-    border-bottom: 1px solid rgba(31, 32, 65, 0.1);
-    padding-bottom: 11px;
+    margin-top: 3px;
   }
-  &__number-wrapper {
-  }
-  &__number {
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 17px;
-    color: $dark100;
-  }
-  &__id {
-    font-weight: 700;
-    font-size: 19px;
-    line-height: 17px;
-    color: $dark100;
-  }
-
-  &__type {
-    font-weight: 700;
-    font-size: 12px;
-    line-height: 15px;
-    text-transform: uppercase;
-    color: $purple;
-  }
-  &__price {
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 18px;
-    color: $dark50;
-  }
-  &__period {
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 18px;
-    color: $dark50;
-  }
-
   &__score {
     display: flex;
     justify-content: space-between;

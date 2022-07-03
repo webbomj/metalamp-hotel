@@ -1,4 +1,5 @@
 include ../rateButton/rateButton.pug
+include ../UI-kit/numberRoomAndPrice/numberRoomAndPrice.pug
 
 mixin room({id, number, type = '', price, stars, review, array = []})
   .room 
@@ -11,14 +12,7 @@ mixin room({id, number, type = '', price, stars, review, array = []})
         .swiper-pagination
     .room__bot
       .room__info 
-        .room__number-wrapper
-          span.room__number= `№ `
-          span.room__id 888
-          if type === 'люкс'
-            span.room__type= ` люкс`
-        .room__price-wrapper
-          span.room__price= `${price} `
-          span.room__period в сутки
+        +numberRoomAndPrice({price: price, type: type})
       .room__score 
         .room__stars
           +rateButton({id: 'cardsRateButton1'})
