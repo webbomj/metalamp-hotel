@@ -18,9 +18,10 @@ module.exports = {
   output: {
     filename: '[name].[contenthash].js',
     path: path.resolve(__dirname, 'dist'),
-    assetModuleFilename: 'assets/[name][ext][query]',
+    assetModuleFilename: 'assets/[name][ext]',
     clean: true,
   },
+
   devtool: 'source-map',
   optimization: {
     splitChunks: {

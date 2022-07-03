@@ -1,16 +1,19 @@
 extends ../../layouts/UI.pug
-include ../../components/UI-kit/ColorBlock/colorBlock.pug
-include ../../components/UI-kit/ColorFonts/colorFonts.pug
+include ../../components/room/room.pug
 
 block content
-  .content 
-    .content__firstColumn
+  .cards 
+    .cards__firstColumn
       // найдем номера
       // регистрация
-    .content__secondColumn
+    .cards__secondColumn
       // заказ
       // войти
-    .content__thirdColumn
+    .cards__thirdColumn
       // аирдатапикер
       // комнаты
+      .cards__firstRoom
+        +room({id: 'room1', type: 'люкс', price: 9990, stars: 5, review: 145, array: ['../../images/room2.png', '../../images/room2.png', '../../images/room2.png', '../../images/room2.png']})
+      .cards__secondRoom
+        +room({id: 'room2', type: 'люкс', price: 9990, stars: 5, review: 145, array: ['../../images/room.png', '../../images/room.png', '../../images/room.png', '../../images/room.png']})
       // комнаты

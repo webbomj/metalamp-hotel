@@ -1,0 +1,108 @@
+@import '../../styles/global';
+
+.room {
+  width: 270px;
+  height: 257px;
+  box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+  border-radius: 4px;
+  background: #fff;
+  &__top {
+    height: 151px;
+  }
+
+  & .swiper {
+    width: 270px;
+    height: 154px;
+    & .swiper-horizontal > .swiper-pagination-bullets,
+    .swiper-pagination-bullets.swiper-pagination-horizontal,
+    .swiper-pagination-custom,
+    .swiper-pagination-fraction {
+      left: 99px;
+    }
+    & .swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
+    .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+      margin: 0 4px;
+      margin: 0 var(--swiper-pagination-bullet-horizontal-gap, 2px);
+    }
+    &-pagination {
+      top: 118px;
+    }
+    &-pagination-bullet {
+      width: 7px;
+      width: var(--swiper-pagination-bullet-width, var(--swiper-pagination-bullet-size, 7px));
+      height: 7px;
+      height: var(--swiper-pagination-bullet-height, var(--swiper-pagination-bullet-size, 7px));
+      border: 1px solid #fff;
+      background: none;
+      &-active {
+        background: #fff;
+      }
+    }
+  }
+
+  &__bot {
+    padding: 19px 20px;
+  }
+  &__info {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(31, 32, 65, 0.1);
+    padding-bottom: 11px;
+  }
+  &__number-wrapper {
+  }
+  &__number {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+    color: $dark100;
+  }
+  &__id {
+    font-weight: 700;
+    font-size: 19px;
+    line-height: 17px;
+    color: $dark100;
+  }
+
+  &__type {
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 15px;
+    text-transform: uppercase;
+    color: $purple;
+  }
+  &__price {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 18px;
+    color: $dark50;
+  }
+  &__period {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    color: $dark50;
+  }
+
+  &__score {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 7px;
+  }
+  &__stars {
+  }
+  &__review {
+    & span:first-child {
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 18px;
+      color: $dark50;
+    }
+    & span:last-child {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 18px;
+      color: $dark50;
+    }
+  }
+}

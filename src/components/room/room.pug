@@ -1,0 +1,27 @@
+include ../rateButton/rateButton.pug
+
+mixin room({id, number, type = '', price, stars, review, array = []})
+  .room 
+    .room__top 
+      .swiper
+        .swiper-wrapper
+          each item in array
+            .swiper-slide
+              img(src=require("../../images/room2.png"))
+        .swiper-pagination
+    .room__bot
+      .room__info 
+        .room__number-wrapper
+          span.room__number= `№ `
+          span.room__id 888
+          if type === 'люкс'
+            span.room__type= ` люкс`
+        .room__price-wrapper
+          span.room__price= `${price} `
+          span.room__period в сутки
+      .room__score 
+        .room__stars
+          +rateButton({id: 'cardsRateButton1'})
+        .room__review
+          span= `${review} `
+          span Отзывов
