@@ -4,6 +4,7 @@ include ../../components/airDatePicker/airDatePicker.pug
 include ../../components/findRooms/findRooms.pug
 include ../../components/registration/registration.pug
 include ../../components/booking/booking.pug
+include ../../components/login/login.pug
 include ../../components/UI-kit/numberRoomAndPrice/numberRoomAndPrice.pug
 
 block content
@@ -14,9 +15,10 @@ block content
       .cards__registration
         +registration({})
     .cards__secondColumn
-      +booking({id: 'cardsBooking1'})
-      // заказ
-      // войти
+      .cards__booking
+        +booking({id: 'cardsBooking1'})
+      .cards__login
+        +login({id: 'cardsLogin1'})
     .cards__thirdColumn
       .cards__airDatePicker 
         +airDatePicker({uniqId: 'cardsAirDatePicker1'})
