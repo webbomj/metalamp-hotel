@@ -1,0 +1,38 @@
+@import '../../styles/global';
+
+.login {
+  width: 380px;
+  height: 358px;
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  padding: 23px 30px 30px 30px;
+  &__header {
+    & h1 {
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 29px;
+      color: $dark100;
+    }
+  }
+  &__email {
+    margin-top: 21px;
+  }
+  &__password {
+    margin-top: 10px;
+  }
+  &__buttonIn {
+    margin-top: 20px;
+  }
+  &__hasAccount {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+  }
+  &__text {
+    transform: translateY(9px);
+  }
+  &__buttonCreate {
+  }
+}
