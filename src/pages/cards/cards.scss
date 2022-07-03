@@ -1,11 +1,21 @@
 .cards {
+  display: flex;
+  &__firstColumn {
+    margin-right: 40px;
+  }
+
+  &__secondColumn {
+    margin-right: 40px;
+  }
+
   &__thirdColumn {
   }
 
-  &__firstRoom {
+  &__airDatePicker {
   }
 
-  &__secondRoom {
+  &__secondRoom,
+  &__firstRoom {
     margin-top: 40px;
   }
 }

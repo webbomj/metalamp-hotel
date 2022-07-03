@@ -1,19 +1,20 @@
 extends ../../layouts/UI.pug
 include ../../components/room/room.pug
+include ../../components/airDatePicker/airDatePicker.pug
+include ../../components/findRooms/findRooms.pug
 
 block content
   .cards 
     .cards__firstColumn
-      // найдем номера
+      +findRooms({})
       // регистрация
     .cards__secondColumn
       // заказ
       // войти
     .cards__thirdColumn
-      // аирдатапикер
-      // комнаты
+      .cards__airDatePicker 
+        +airDatePicker({uniqId: 'cardsAirDatePicker1'})
       .cards__firstRoom
         +room({id: 'room1', type: 'люкс', price: 9990, stars: 5, review: 145, array: ['../../images/room2.png', '../../images/room2.png', '../../images/room2.png', '../../images/room2.png']})
       .cards__secondRoom
         +room({id: 'room2', type: 'люкс', price: 9990, stars: 5, review: 145, array: ['../../images/room.png', '../../images/room.png', '../../images/room.png', '../../images/room.png']})
-      // комнаты

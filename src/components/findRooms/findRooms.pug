@@ -1,0 +1,15 @@
+include ../dateDropdown/dateDropdown.pug
+include ../dropdown/dropdown.pug
+include ../button/button.pug
+
+mixin findRooms({})
+  .findRooms
+    form
+      .findRooms__header
+        h1 Найдём номера под ваши пожелания
+      .findRooms__dateDropdown
+        +dateDropdown({uniqId: 'cards__dateDropdown1', firstTitle: 'прибытие', secondTitle: 'выезд'})
+      .findRooms__guestDropdown
+        +dropdown({uniqId: 'cards__dropdown1', title: 'гости', description: '', text: 'Сколько гостей'})
+      .findRooms__button
+        +button({title: 'Подобрать номер', type: 'big', arrow: true})
