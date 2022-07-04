@@ -1,0 +1,7 @@
+extends ../../layouts/pages/pages.pug
+include ../../components/registration/registration.pug
+
+block content
+  section.registrationPage
+    .registrationPage__registrationForm 
+      +registration({id: 'registrationPage__registration1', textButton: 'зарегистрироваться'})

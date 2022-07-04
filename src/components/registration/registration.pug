@@ -2,7 +2,7 @@ include ../textField/textField.pug
 include ../radioButton/radioButton.pug
 include ../toggle/toggle.pug
 
-mixin registration({id = ''})
+mixin registration({id = '', textButton = 'Перейти к оплате'})
   .registration
     .registration__header 
       h1 Регистрация аккаунта
@@ -22,7 +22,7 @@ mixin registration({id = ''})
     .registration__toggle
       +toggle({id: 'toggle1', text: 'Получать спецпредложения'})
     .registration__buttonPay
-      +button({title: 'Перейти к оплате', type: 'big', arrow: true})
+      +button({title: textButton, type: 'big', arrow: true})
     .registration__hasAccount
       .registration__text Уже есть аккаунт на Toxin
       .registration__buttonIn
