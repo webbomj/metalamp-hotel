@@ -1,0 +1,8 @@
+extends ../../layouts/pages/pages.pug
+include ../../components/findRooms/findRooms.pug
+
+block content
+  section.landingPage
+    .landingPage__findForm 
+      +findRooms({id: 'landingPage__findRooms1'})
+    .landingPage__text Лучшие номера для вашей работы, отдыха и просто вдохновения

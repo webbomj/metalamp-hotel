@@ -1,0 +1,28 @@
+@import '../../styles/global';
+
+.landingPage {
+  position: relative;
+  width: 1534px;
+  min-height: 830px;
+  background-image: url('../../images/image\ 3.png');
+  background-repeat: no-repeat;
+  background-position: 0 100%;
+  padding-top: 68px;
+
+  &__findForm {
+    // margin-top: 163px;
+    margin: 0 0 0 141px;
+  }
+  &__text {
+    position: absolute;
+    bottom: 22px;
+    right: 226px;
+    width: 297px;
+    height: 48px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    text-align: right;
+    color: $dark75;
+  }
+}
