@@ -6,7 +6,12 @@ html(lang="en")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     title Document
   body 
-    - const links = ["colorsAndType", "formElements", "headersAndFooters", "cards"];
+    - const UILinks = ["colorsAndType", "formElements", "headersAndFooters", "cards"];
+    each link in UILinks
+      li
+        a(href=`./${link}.html`)= link
+    hr
+    - const links = ["loginPage"];
     each link in links
       li
         a(href=`./${link}.html`)= link
