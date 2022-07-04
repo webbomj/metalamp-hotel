@@ -1,3 +1,6 @@
+include ../../components/header/header.pug
+include ../../components/footer/footer.pug
+
 doctype html
 html(lang="en")
   head
@@ -11,4 +14,9 @@ html(lang="en")
 
   body 
     .pages__wrapper
-      block content
+      .pages__header
+        +header({id: 'pages__header'}) 
+      .pages__main 
+        block content
+      .pages__footer
+        +footer({id: 'pages__footer', type: 'full'})

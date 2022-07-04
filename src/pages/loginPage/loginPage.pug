@@ -1,0 +1,7 @@
+extends ../../layouts/pages/pages.pug
+include ../../components/login/login.pug
+
+block content
+  section.loginPage
+    .loginPage__loginForm 
+      +login({id: 'loginPageLogin1'})
