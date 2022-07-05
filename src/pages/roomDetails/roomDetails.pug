@@ -1,0 +1,44 @@
+extends ../../layouts/pages/pages.pug
+include ../../components/comment/comment.pug
+include ../../components/booking/booking.pug
+include ../../components/chart/chart.pug
+include ../../components/bulletList/bulletList.pug
+include ../../components/iconTextList/iconTextList.pug
+
+block content
+  section.roomDetails
+    .roomDetails__imgBlock 
+      .roomDetails__leftImgBlock 
+        img(src=require("../../images/room1.png"))
+      .roomDetails__rightImgBlock 
+        .roomDetails__topImg 
+          img(src=require("../../images/room2.png"))
+        .roomDetails__botImg 
+          img(src=require("../../images/room3.png"))
+    .roomDetails__mainContent 
+      .roomDetails__leftContentBlock
+        .roomDetails__topContent 
+          .roomDetails__roomInfo 
+            h2 Сведения о номере
+            +iconTextList({list: [{title: 'Комфорт', text: 'Шумопоглощающие стены', icon: 'insert_emoticon'}, {title: 'Удобство', text: 'Окно в каждой из спален', icon: 'location_city'}, {title: 'Уют', text: 'Номер оснащён камином', icon: 'whatshot'},]})
+          .roomDetails__review 
+            h2 Впечатления от номера
+            +chart({})
+        .roomDetails__comments 
+          .roomDetails__commentHeader
+            h2 Отзывы посетителей номера
+            span 2 отзыва
+          .roomDetails__comment
+            +comment({id: 'UniqIdComment1', title: 'Мурад Сарафанов', date: '5 дней', photo: 'require(`../../images/photo.png`)', text: 'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.'})
+          .roomDetails__comment
+            +comment({id: 'UniqIdComment2', title: 'Патрисия Стёклышкова', date: 'Неделю', photo: 'require(`../../images/photo2.png`)', text: 'Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент'})
+        .roomDetails__botContent
+          .roomDetails__rules 
+            h2 Правила
+            +bulletList({title: 'Правила', list: ['Нельзя с питомцами', 'Без вечеринок и мероприятий', 'Время прибытия — после 13:00, а выезд до 12:00']})
+          .roomDetails__freeCancle
+            h2 Отмена
+            p Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги.
+
+      .roomDetails__rightContentBlock
+        +booking({id: 'roomDetails__booking1'})

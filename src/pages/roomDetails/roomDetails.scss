@@ -1,0 +1,93 @@
+.roomDetails {
+  margin-bottom: 13px;
+  &__imgBlock {
+    display: flex;
+  }
+  &__leftImgBlock {
+    // width: 981px;
+    // height: 451px;
+  }
+  &__rightImgBlock {
+  }
+  &__topImg {
+    width: 461px;
+    height: 243px;
+  }
+  &__botImg {
+    width: 461px;
+    height: 243px;
+  }
+  &__mainContent {
+    display: flex;
+    padding: 48px 140px;
+  }
+
+  &__leftContentBlock {
+    width: 712px;
+    margin-right: 70px;
+  }
+
+  &__topContent {
+    display: flex;
+  }
+  &__roomInfo {
+    margin-right: 80px;
+    & .iconTextList {
+      margin-top: 20px;
+    }
+  }
+
+  &__review {
+    & h2 {
+      margin-bottom: 2px;
+    }
+    & .chart {
+      margin-left: -3px;
+    }
+  }
+  &__comments {
+    margin-top: -4px;
+
+    & h2 {
+      margin-bottom: 13px;
+    }
+  }
+  &__commentHeader {
+    display: flex;
+    justify-content: space-between;
+    & span {
+      transform: translateY(17px);
+    }
+  }
+  &__comment:not(:last-child) {
+    margin-bottom: 16px;
+  }
+
+  &__botContent {
+    display: flex;
+  }
+  &__rules {
+    margin-right: 100px;
+    & h2 {
+      margin: 7px 0 0 20px;
+    }
+    & .bulletList__list {
+      margin: 20px 0 0 0;
+    }
+  }
+
+  &__freeCancle {
+    margin-top: 12px;
+    & h2 {
+      padding: 0;
+      margin-top: -2px;
+    }
+    & p {
+      width: 342px;
+    }
+  }
+
+  &__rightContentBlock {
+    margin-top: 15px;
+  }
+}

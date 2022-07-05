@@ -1,0 +1,33 @@
+.chart {
+  display: flex;
+  width: 160px;
+  height: 160px;
+
+  &__canvas {
+    width: 160px;
+    max-height: 160px;
+  }
+
+  &__list {
+    position: relative;
+    right: 7px;
+    list-style: none;
+    margin-top: 47px;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    line-height: 24px;
+  }
+
+  &__circle {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+  }
+
+  &__name {
+    margin-left: 5px;
+  }
+}
