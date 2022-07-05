@@ -3,7 +3,7 @@ import Chart from 'chart.js/auto';
 
 class DoughnutCreator {
   constructor(node, data) {
-    this._ctx = node.getContext('2d');
+    this._ctx = node?.getContext('2d');
     this._init(data);
   }
 
@@ -21,9 +21,9 @@ class DoughnutCreator {
   }
 
   _setConvasGradient(colors) {
-    const gradient = this._ctx.createLinearGradient(0, 0, 0, 125);
-    gradient.addColorStop(0, colors[0]);
-    gradient.addColorStop(1, colors[1]);
+    const gradient = this._ctx?.createLinearGradient(0, 0, 0, 125);
+    gradient?.addColorStop(0, colors[0]);
+    gradient?.addColorStop(1, colors[1]);
     return gradient;
   }
 

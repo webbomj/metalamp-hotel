@@ -22,8 +22,7 @@ class ChartCreator {
     });
 
     ul.innerHTML = list;
-
-    this.node.append(ul);
+    this.node?.append(ul);
   }
 
   // eslint-disable-next-line class-methods-use-this

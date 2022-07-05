@@ -1,0 +1,39 @@
+extends ../../layouts/pages/pages.pug
+
+include ../../components/textField/textField.pug
+include ../../components/dropdown/dropdown.pug
+include ../../components/filterDateDropdown/filterDateDropdown.pug
+include ../../components/checkbox/checkbox.pug
+include ../../components/expandableCheckboxList/expandableCheckboxList.pug
+include ../../components/pagination/pagination.pug
+include ../../components/room/room.pug
+
+block content
+  section.searchRoom
+    .searchRoom__sidebar
+      .searchRoom__dateDropdown 
+        +filterDateDropdown({uniqId: 'searchRoom__filterDateDropdown1', title: 'даты пребывания в отеле'})
+      .searchRoom__guestDropdown
+        +dropdown({uniqId: 'dropdown1', title: 'гости', description: '', small: true, text: 'Сколько гостей'})
+      .searchRoom__ratePriceSlider
+      .searchRoom__rules
+        h3 правила дома
+        +checkbox({id: 'checkbox1', title: 'Можно курить'})
+        +checkbox({id: 'checkbox2', title: 'Можно с питомцами'})
+        +checkbox({id: 'checkbox3', title: 'Можно пригласить гостей (до 10 человек)'})
+      .searchRoom__availability
+        h3 доступность
+        +checkbox({id: 'SuperIDcheckbox33', title: 'Широкий коридор', rich: true, richText: 'Ширина коридоров в номере не менее 91 см.'})
+        +checkbox({id: 'SuperIDcheckbox344', title: 'Помощник для инвалидов', rich: true, richText: 'На 1 этаже вас встретит специалист и проводит до номера.'})
+      .searchRoom__convenienceDropdown
+        +dropdown({uniqId: 'dropdown2', type: 'furniture', title: 'Удобствa номера', small: true, description: '', text: '2 спальни, 2 кровати...'})
+      .searchRoom__convenienceList
+        +expandableCheckboxList({id: 'expandableCheckbox1', title: 'дополнительные удобства'})
+    .searchRoom__mainContent
+      h1 Номера, которые мы для вас подобрали
+      .searchRoom__hotelList 
+        - const rooms = [{id: 'room1', type: 'люкс', price: '9 990', stars: 5, review: 145, array: ['../../images/room2.png', '../../images/room2.png', '../../images/room2.png', '../../images/room2.png']}, {id: 'room2', type: 'люкс', price: '9 990', stars: 5, review: 145, array: ['../../images/room2.png', '../../images/room2.png', '../../images/room2.png', '../../images/room2.png']}, {id: 'room3', type: 'люкс', price: '9 990', stars: 5, review: 145, array: ['../../images/room2.png', '../../images/room2.png', '../../images/room2.png', '../../images/room2.png']}, {id: 'room4', type: 'люкс', price: '9 990', stars: 5, review: 145, array: ['../../images/room2.png', '../../images/room2.png', '../../images/room2.png', '../../images/room2.png']}, {id: 'room5', type: 'люкс', price: '9 990', stars: 5, review: 145, array: ['../../images/room2.png', '../../images/room2.png', '../../images/room2.png', '../../images/room2.png']}, {id: 'room6', type: 'люкс', price: '9 990', stars: 5, review: 145, array: ['../../images/room2.png', '../../images/room2.png', '../../images/room2.png', '../../images/room2.png']}, {id: 'room7', type: 'люкс', price: '9 990', stars: 5, review: 145, array: ['../../images/room2.png', '../../images/room2.png', '../../images/room2.png', '../../images/room2.png']}, {id: 'room8', type: 'люкс', price: '9 990', stars: 5, review: 145, array: ['../../images/room2.png', '../../images/room2.png', '../../images/room2.png', '../../images/room2.png']}, {id: 'room9', type: 'люкс', price: '9 990', stars: 5, review: 145, array: ['../../images/room2.png', '../../images/room2.png', '../../images/room2.png', '../../images/room2.png']}, {id: 'room10', type: 'люкс', price: '9 990', stars: 5, review: 145, array: ['../../images/room2.png', '../../images/room2.png', '../../images/room2.png', '../../images/room2.png']}, {id: 'room11', type: 'люкс', price: '9 990', stars: 5, review: 145, array: ['../../images/room2.png', '../../images/room2.png', '../../images/room2.png', '../../images/room2.png']}, {id: 'room12', type: 'люкс', price: '9 990', stars: 5, review: 145, array: ['../../images/room2.png', '../../images/room2.png', '../../images/room2.png', '../../images/room2.png']}]
+        each room in rooms 
+          +room({id: 'room1', type: 'люкс', price: '9 990', stars: 5, review: 145, array: ['../../images/room2.png', '../../images/room2.png', '../../images/room2.png', '../../images/room2.png']})
+      .searchRoom__pagination 
+        +pagination({})
