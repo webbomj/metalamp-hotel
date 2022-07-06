@@ -64,7 +64,9 @@ export const airDatePickerOptionsCreator = (fnSelect, fnHandler) => {
         content: 'применить',
         className: 'custom-button-classname',
         onClick: () => {
-          fnHandler();
+          if (fnHandler) {
+            fnHandler();
+          }
         },
       },
     ],

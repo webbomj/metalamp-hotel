@@ -8,9 +8,9 @@ mixin booking({id = 'bookingId'})
     .booking__id 
       +numberRoomAndPrice({price: '9 800', type: 'люкс', number: '888'})
     .booking__dateDropdown 
-      +dateDropdown({uniqId: `cards__dateDropdown-${id}`, firstTitle: 'прибытие', secondTitle: 'выезд'})
+      +dateDropdown({uniqId: `cards__dateDropdown_${id}`, firstTitle: 'прибытие', secondTitle: 'выезд'})
     .booking__guestDropdown 
-      +dropdown({uniqId: `cards__dropdown-${id}`, title: 'гости', description: '', text: 'Сколько гостей'})
+      +dropdown({uniqId: `cards__dropdown_${id}`, title: 'гости', description: '', text: 'Сколько гостей'})
     .booking__list 
       .booking__item 
         .booking__priceToDays 9 990₽ х 4 суток
