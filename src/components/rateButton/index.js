@@ -5,6 +5,19 @@ const rateButton = document.querySelectorAll('.rateButton');
 const starMaterialFont = 'star_border';
 const starFilledMaterialFont = 'star';
 
+const rateButtonInit = () => {
+  [...rateButton].forEach((el) => {
+    const starsClicked = +el.dataset.ratebuttonstars;
+    const allStars = el.querySelectorAll('.rateButton__icon');
+
+    allStars.forEach((star) => {
+      if (Number(star.dataset.ratebutton.split('-')[1]) < starsClicked) {
+        star.textContent = starFilledMaterialFont;
+      }
+    });
+  });
+};
+
 const clickHandler = (e) => {
   const { target } = e;
   const rateButtonId = target.dataset.ratebutton.split('-')[0];
@@ -23,3 +36,5 @@ const clickHandler = (e) => {
 [...rateButton].forEach((el) => {
   el.addEventListener('click', (e) => clickHandler(e));
 });
+
+document.addEventListener('DOMContentLoaded', rateButtonInit);
