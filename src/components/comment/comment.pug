@@ -1,14 +1,14 @@
 include ../likeButton/likeButton.pug
 
-mixin comment({id = 'UniqIdComment', title = 'Мурад Сарафанов', date = '5', text = 'Лучший матрас', photo = '#' })
+mixin comment({id = 'UniqIdComment', title = 'Мурад Сарафанов', date = '5', text = 'Лучший матрас', photo = '#', likes = 0, liked = false })
   .comment
     .comment__top 
       .comment__photo
-        img(src=require("../../images/photo.png"))
+        img(src=require(`../../images/${photo}`))
       .comment__header
         .comment__title= title
         .comment__date= `${date} назад`
     .comment__bottom
       .comment__likeButton
-        +likeButton({number: 12, clicked: true}) 
+        +likeButton({number: likes, clicked: liked}) 
       .comment__text= text

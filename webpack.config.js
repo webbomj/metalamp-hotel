@@ -2,6 +2,7 @@ const fs = require('fs');
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const CopyPlugin = require('copy-webpack-plugin');
 
 let mode = 'development';
 if (process.env.NODE_ENV === 'production') {
@@ -29,6 +30,15 @@ module.exports = {
     },
   },
   plugins: [
+    new CopyPlugin({
+      patterns: [
+        {
+          from: path.resolve(__dirname, 'src/images/*'),
+          to: path.resolve(__dirname, 'dist', 'assets', `[name][ext]`),
+          noErrorOnMissing: true,
+        },
+      ],
+    }),
     new MiniCssExtractPlugin({
       filename: '[name].[contenthash].css',
     }),
@@ -83,7 +93,9 @@ module.exports = {
         // use: {
         //   loader: 'file-loader',
         //   options: {
-        //     name: '[path][name].[ext]',
+        //     name: '[name].[ext]',
+        //     outputPath: 'assets',
+        //     publicPath: 'assets',
         //   },
         // },
       },

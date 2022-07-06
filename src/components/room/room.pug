@@ -8,11 +8,12 @@ mixin room({id, number, type = '', price, stars, review, array = []})
         .swiper-wrapper
           each item in array
             .swiper-slide
-              img(src=require("../../images/room2.png"))
+              //- img(src=`assets/${item}`)
+              img(src=require(`../../images/${item}`))
         .swiper-pagination
     .room__bot
       .room__info 
-        +numberRoomAndPrice({price: price, type: type})
+        +numberRoomAndPrice({price: price, type: type, number: number})
       .room__score 
         .room__stars
           +rateButton({id: 'cardsRateButton1'})

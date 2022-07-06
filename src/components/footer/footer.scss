@@ -22,20 +22,23 @@
   &__topBlock {
     padding: 92px 140px 83px 140px;
     display: flex;
-    justify-content: space-between;
   }
   &__first {
     width: 260px;
     padding: 8px 0 0 0;
   }
   &__second {
+    margin-left: 40px;
   }
   &__third {
+    margin-left: 58px;
   }
   &__forth {
+    margin-left: 92px;
   }
   &__fith {
     width: 260px;
+    margin-left: 52px;
     & .textField {
       margin-top: 23px;
     }
@@ -66,7 +69,7 @@
   &__botBlock {
     display: flex;
     justify-content: space-between;
-    padding: 26px 140px 26px 140px;
+    padding: 23px 140px 26px 140px;
     border-top: 1px solid $dark5;
     height: 70px;
   }
@@ -84,7 +87,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 204px 104px 100px 104px;
+    padding: 187px 104px 100px 104px;
     background-color: #fff;
     & .footer__socialButtons {
       margin-top: 21px;

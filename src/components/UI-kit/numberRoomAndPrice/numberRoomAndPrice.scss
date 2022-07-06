@@ -24,7 +24,7 @@
 
   &__type {
     display: inline-block;
-    transform: translate(2px, 1px);
+    transform: translate(8px, 1px);
     font-weight: 700;
     font-size: 12px;
     line-height: 15px;
@@ -34,7 +34,7 @@
   &__price-wrapper {
     display: flex;
     justify-content: space-between;
-    margin-top: 3px;
+    margin-top: 2px;
   }
   &__price {
     transform: translate(-1px, 1px);

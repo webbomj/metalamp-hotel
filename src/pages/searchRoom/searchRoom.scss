@@ -39,18 +39,18 @@
   &__hotelList {
     display: flex;
     flex-wrap: wrap;
-    margin-top: 20px;
+    margin-top: 22px;
     & .room:not(:nth-child(3n)) {
       margin-right: 12px;
     }
     & .room:not(:nth-child(n + 10)) {
-      margin-bottom: 20px;
+      margin-bottom: 21px;
     }
   }
   &__pagination {
     display: flex;
-    margin-top: 44px;
-    transform: translateX(-8px);
+    margin-top: 42px;
+    transform: translateX(-7px);
     justify-content: center;
   }
 }

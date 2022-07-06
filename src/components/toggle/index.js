@@ -2,13 +2,13 @@ const toggleBlock = document.querySelectorAll('.toggle__Block');
 
 const toggleChange = (e) => {
   const { target } = e;
-  const toggleId = target.dataset.toggle;
-  const toggleCircle = target.firstChild;
+  const toggleId = target.parentNode.dataset.toggle;
 
   toggleBlock.forEach((el) => {
-    if (el.dataset.toggle === toggleId) {
-      toggleCircle.classList.toggle('toggle__Circle--active');
-      toggleBlock.classList.toggle('toggle__Block--active');
+    if (el.parentNode.dataset.toggle === toggleId) {
+      console.log('выполнено1!');
+      el.firstChild.classList.toggle('toggle__Circle--active');
+      el.classList.toggle('toggle__Block--active');
     }
   });
 };

@@ -84,7 +84,7 @@ block content
           +checkbox({id: 'SuperIDcheckbox33', title: 'Широкий коридор', rich: true, richText: 'Ширина коридоров в номере не менее 91 см.'})
           +checkbox({id: 'SuperIDcheckbox344', title: 'Помощник для инвалидов', rich: true, richText: 'На 1 этаже вас встретит специалист и проводит до номера.'})
         .formElements__comment
-          +comment({id: 'UniqIdComment1', title: 'Мурад Сарафанов', date: '5', photo: '../../images/photo.png', text: 'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.'})
+          +comment({id: 'UniqIdComment1', title: 'Мурад Сарафанов', date: '5 дней', photo: 'photo.png', likes: 12, liked: true, text: 'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.'})
     .formElements__thirdColumn
       .formElements__firstBlock
         .formElements__range-slider
@@ -110,4 +110,5 @@ block content
           +dropdown({uniqId: 'dropdown5', title: 'dropdown', description: 'expanded', text: 'Сколько гостей', open: true})
       .formElements__thirdBlock
         .formElements__bullet-list
+          h3 Bullet list
           +bulletList({title: 'bullet list', list: ['Нельзя с питомцами', 'Без вечеринок и мероприятий', 'Время прибытия — после 13:00, а выезд до 12:00']})
