@@ -1,7 +1,7 @@
 include ../rateButton/rateButton.pug
 include ../UI-kit/numberRoomAndPrice/numberRoomAndPrice.pug
 
-mixin room({id, number, type = '', price, stars, review, array = []})
+mixin room({id, number, type = '', price, review, array = [], stars = 0})
   .room 
     .room__top 
       .swiper
@@ -16,7 +16,7 @@ mixin room({id, number, type = '', price, stars, review, array = []})
         +numberRoomAndPrice({price: price, type: type, number: number})
       .room__score 
         .room__stars
-          +rateButton({id: 'cardsRateButton1'})
+          +rateButton({id: id, size: stars})
         .room__review
           span= `${review} `
           span Отзывов
