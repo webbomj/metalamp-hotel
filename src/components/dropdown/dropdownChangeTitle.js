@@ -4,7 +4,7 @@ import { counter } from './dropdownCounterState';
 export const allDropdown = {};
 
 export const dropdownSaveStartTitle = (uniqId) => {
-  const dropdownInput = document.querySelector(`[date-dropdown-input=${uniqId}]`);
+  const dropdownInput = document.querySelector(`[data-dropdown-input=${uniqId}]`);
   const dropdownTitle = dropdownInput.value;
   allDropdown[uniqId] = dropdownTitle;
   console.log(allDropdown);
@@ -12,7 +12,7 @@ export const dropdownSaveStartTitle = (uniqId) => {
 
 // eslint-disable-next-line no-unused-vars
 const setStartTitle = (uniqId) => {
-  const dropdownInput = document.querySelector(`[date-dropdown-input=${uniqId}]`);
+  const dropdownInput = document.querySelector(`[data-dropdown-input=${uniqId}]`);
   dropdownInput.value = allDropdown[uniqId];
 };
 
@@ -171,6 +171,7 @@ const setNewTitle = (uniqId) => {
 
 export const dropdownChangeTitle = (uniqId) => {
   if (counter[uniqId] === 0) {
+    console.log('counter here', counter, uniqId);
     setStartTitle(uniqId);
   } else {
     setNewTitle(uniqId);

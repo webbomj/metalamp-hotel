@@ -1,6 +1,6 @@
 mixin textField(props)
   - const { id = "uniqIdTextField", title = "Default", description = "", placeholder = "", value = "", styles = "", classNames = "", arrow = false, small = false, readonly = false, mask = false, dropdown = false, open = false } = props;
-  .textField
+  .textField(class=small ? "textField__small" : "")
     .textField__top(class=small ? "textField__top--small" : "") 
       span.textField__title= title
       span.textField__description= description
@@ -17,4 +17,4 @@ mixin textField(props)
       if dropdown === true
         .material-icons.md-24.dropdown__arrow(class=small ? "dropdown__arrow--small" : "") &#xe5cf;
     if arrow === true
-      span.material-icons.md-24.textField__arrow &#xe5c8;
+      span.material-icons.md-24.textField__arrow(class=small ? "textField__arrow--small" : "") &#xe5c8;
