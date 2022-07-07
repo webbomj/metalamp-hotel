@@ -33,14 +33,12 @@ export const decrementCounter = (name) => {
 };
 
 export const clearState = (name) => {
-  console.log('очстка стейта', 'пришел', name, 'сам стейте', counter);
   // eslint-disable-next-line no-restricted-syntax
   for (const key in counter) {
     if (key.includes(name)) {
       counter[key] = 0;
     }
   }
-  console.log('очищенный стейт', 'пришел', name, 'сам стейте', counter);
 };
 
 initCounter();

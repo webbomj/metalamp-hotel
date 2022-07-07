@@ -6,7 +6,6 @@ const toggleChange = (e) => {
 
   toggleBlock.forEach((el) => {
     if (el.parentNode.dataset.toggle === toggleId) {
-      console.log('выполнено1!');
       el.firstChild.classList.toggle('toggle__Circle--active');
       el.classList.toggle('toggle__Block--active');
     }

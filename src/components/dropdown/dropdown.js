@@ -12,8 +12,6 @@ const allButtons = [...buttons];
 document.addEventListener('DOMContentLoaded', () => {
   allList.forEach((el) => {
     const uniqId = el.dataset.dropdownList;
-    console.log('uniqid', uniqId);
-    console.log('el', el);
     dropdownSaveStartTitle(uniqId);
   });
 });
@@ -57,7 +55,6 @@ if (allButtons) {
 }
 
 const changeVisibility = (e) => {
-  console.log(e.target);
   const datasetParent = e.target.parentNode.dataset.dropdown;
   if (!datasetParent) return;
   const target = allInputs.find((el) => el.dataset.dropdown === datasetParent);
