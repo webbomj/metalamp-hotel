@@ -10,6 +10,9 @@ mixin room({id, number, type = '', price, review, array = [], stars = 0})
             .swiper-slide
               //- img(src=`assets/${item}`)
               img(src=require(`../../images/${item}`))
+
+        .swiper-button-next
+        .swiper-button-prev
         .swiper-pagination
     .room__bot
       .room__info 
