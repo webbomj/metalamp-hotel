@@ -55,17 +55,17 @@ export const airDatePickerOptionsCreator = (fnSelect, fnHandler) => {
         </div>
         `,
     },
-    onSelect({ formattedDate }) {
-      fnSelect(formattedDate);
+    onSelect({ formattedDate, datepicker }) {
+      fnSelect(formattedDate, datepicker);
     },
     buttons: [
       'clear',
       {
         content: 'применить',
         className: 'custom-button-classname',
-        onClick: () => {
+        onClick: (e) => {
           if (fnHandler) {
-            fnHandler();
+            fnHandler(e);
           }
         },
       },
