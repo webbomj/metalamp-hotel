@@ -4,6 +4,8 @@
   position: relative;
   &__header {
     display: flex;
+    justify-content: space-between;
+    width: 266px;
   }
   &__title {
     font-weight: 700;
@@ -18,8 +20,9 @@
     }
   }
   &__arrow {
-    margin-left: 40px;
+    margin-right: 10px;
     transform: translateY(-4px);
+    cursor: pointer;
     &--rotate {
       transform: rotate(180deg) translateY(4px);
     }
