@@ -1,32 +1,42 @@
 .searchRoom {
   display: flex;
-  padding: 26px 140px 70px 140px;
+  padding: 26px 140px 70px;
+
   &__sidebar {
     width: 266px;
     margin-right: 60px;
   }
+
   &__dateDropdown {
   }
+
   &__guestDropdown {
     margin-top: 16px;
   }
+
   &__ratePriceSlider {
     height: 120px;
   }
+
   &__rules {
   }
+
   &__availability {
     margin-top: 28px;
   }
+
   &__convenienceDropdown {
     margin-top: 25px;
   }
+
   &__convenienceList {
     margin-top: 29px;
   }
+
   &__mainContent {
     width: 846px;
     margin-top: 4px;
+
     & h1 {
       font-style: normal;
       font-weight: 700;
@@ -36,17 +46,21 @@
       margin: 0;
     }
   }
+
   &__hotelList {
     display: flex;
     flex-wrap: wrap;
     margin-top: 22px;
+
     & .room:not(:nth-child(3n)) {
       margin-right: 12px;
     }
+
     & .room:not(:nth-child(n + 10)) {
       margin-bottom: 21px;
     }
   }
+
   &__pagination {
     display: flex;
     margin-top: 42px;

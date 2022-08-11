@@ -1,25 +1,30 @@
-@import '../../styles/global';
+@import "../../styles/global";
 
 .js-airDatePicker {
   width: 318px !important;
   height: 367px !important;
+
   & .air-datepicker--pointer {
     border-bottom: none !important;
+
     & .air-datepicker-nav--action {
       visibility: visible !important;
       background-color: transparent !important;
+
       &:hover,
       &:active {
         background-color: transparent !important;
       }
     }
   }
+
   & .air-datepicker--content {
-    margin: 0px 15px 0 17px !important;
+    margin: 0 15px 0 17px !important;
   }
 
   & .air-datepicker-nav {
     border-bottom: none;
+
     & .air-datepicker-nav--action {
       visibility: visible !important;
       background-color: transparent !important;
@@ -37,6 +42,7 @@
       grid-auto-rows: 40px !important;
       margin-top: 8px !important;
     }
+
     &[data-date] {
       font-size: 12px !important;
       font-weight: 400 !important;
@@ -45,43 +51,51 @@
     & .air-datepicker-cell {
       color: $dark50;
       font-size: 12px;
+
       &.-in-range- {
         // background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
-        background: linear-gradient(
-          180deg,
-          rgba(188, 156, 255, 0.25) 0%,
-          rgba(139, 164, 249, 0.25) 100%
-        ) !important;
+        background:
+          linear-gradient(
+            180deg,
+            rgb(188 156 255 / 25%) 0%,
+            rgb(139 164 249 / 25%) 100%
+          ) !important;
+
         // opacity: 0.5;
       }
+
       &.-range-from- {
         &::after {
-          content: '';
+          content: "";
           position: absolute;
           width: 100%;
           height: 100%;
           border-radius: 50% 0 0 50%;
-          background: linear-gradient(
-            180deg,
-            rgba(188, 156, 255, 0.25) 0%,
-            rgba(139, 164, 249, 0.25) 100%
-          );
+          background:
+            linear-gradient(
+              180deg,
+              rgb(188 156 255 / 25%) 0%,
+              rgb(139 164 249 / 25%) 100%
+            );
         }
       }
+
       &.-range-to- {
         &::after {
-          content: '';
+          content: "";
           position: absolute;
           width: 100%;
           height: 100%;
           border-radius: 0 50% 50% 0;
-          background: linear-gradient(
-            180deg,
-            rgba(188, 156, 255, 0.25) 0%,
-            rgba(139, 164, 249, 0.25) 100%
-          );
+          background:
+            linear-gradient(
+              180deg,
+              rgb(188 156 255 / 25%) 0%,
+              rgb(139 164 249 / 25%) 100%
+            );
         }
       }
+
       &.-other-month- {
         &.-selected- {
           background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%) !important;
@@ -89,16 +103,18 @@
       }
 
       &.-selected- {
-        color: #ffffff;
+        color: #fff;
         font-weight: 700;
+
         &.-focus- {
           background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%) !important;
         }
       }
 
       &.-current- {
-        color: #ffffff;
+        color: #fff;
         font-weight: 700;
+
         &.-selected- {
           background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%) !important;
         }
@@ -111,33 +127,38 @@
     }
   }
 
-  & [class*='air-datepicker-cell'][class*='-current-'] {
+  & [class*="air-datepicker-cell"][class*="-current-"] {
     border-radius: 50% !important;
     background: linear-gradient(180deg, #6fcf97 0%, #66d2ea 100%) !important;
-    color: #ffffff !important;
+    color: #fff !important;
   }
 
   &__arrowBack {
     color: $purple;
     transform: translate(11px, -3px);
   }
+
   &__arrowForward {
     color: $purple;
     transform: translate(-11px, -3px);
   }
+
   &__title {
     display: inline-block;
     font-size: 19px;
     font-weight: 700;
     transform: translateX(2px);
   }
+
   &__header {
     height: 60px;
     padding-top: 14px;
+
     &:hover {
-      background-color: #ffffff;
+      background-color: #fff;
     }
   }
+
   &__date {
     &--current {
       width: 40px;
@@ -145,6 +166,7 @@
       border-radius: 50%;
       background-color: $green;
     }
+
     &--selected {
       width: 40px;
       height: 40px;
@@ -152,10 +174,12 @@
       background-color: $purple;
     }
   }
+
   &__contentGrid {
     grid-auto-rows: 40px !important;
     margin-top: 8px !important;
   }
+
   &__shortMonth {
     color: #bc9cff !important;
     font-weight: 700 !important;
@@ -165,22 +189,26 @@
   &__dateDays {
     font-size: 12px !important;
     font-weight: 400 !important;
+
     &.-selected- {
       background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%) !important;
       border-radius: 50% !important;
     }
+
     &.-focus- {
       border-radius: 50% !important;
     }
+
     &.-in-range- {
       background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%) !important;
       opacity: 0.25 !important;
     }
   }
+
   &__currentDay {
     border-radius: 50% !important;
     background: linear-gradient(180deg, #6fcf97 0%, #66d2ea 100%) !important;
-    color: #ffffff !important;
+    color: #fff !important;
   }
 
   & .air-datepicker--buttons {
@@ -191,6 +219,7 @@
       justify-content: space-between;
       padding: 0 8px 0 10px;
     }
+
     & .air-datepicker-button {
       & span {
         width: auto;
@@ -202,11 +231,13 @@
         text-transform: uppercase;
         font-weight: 700;
         font-size: 12px;
+
         &:hover {
           opacity: 1;
           color: $dark50;
         }
       }
+
       &:hover {
         background: none;
         opacity: 1;
@@ -214,11 +245,13 @@
       }
     }
   }
+
   & .air-datepicker-nav--title {
     &:hover {
       background: none;
     }
   }
+
   &__open {
     display: block;
   }

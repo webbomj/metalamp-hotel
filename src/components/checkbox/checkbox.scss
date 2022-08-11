@@ -1,16 +1,18 @@
-@import '../../styles/global';
+@import "../../styles/global";
 
 .checkbox {
   margin-bottom: 5px;
   display: flex;
   justify-content: flex-start;
   align-items: baseline;
+
   &__input {
     position: absolute;
     z-index: -100;
     opacity: 0;
+
     &:checked + label::before {
-      background-image: url('../../images/Vector.png');
+      background-image: url("../../images/Vector.png");
       background-repeat: no-repeat;
       background-position: center center;
     }
@@ -22,22 +24,25 @@
     line-height: 18px;
     color: $dark50;
     cursor: pointer;
+
     &::before {
-      content: '';
+      content: "";
       display: inline-block;
       width: 18px;
       height: 18px;
-      background: #ffffff;
+      background: #fff;
       border: 1px solid #bc9cff;
       border-radius: 4px;
       margin-right: 10px;
       transform: translateY(6px);
     }
+
     &--rich {
       font-weight: 700;
       color: $dark75;
     }
   }
+
   &__richText {
     display: block;
     width: 226px;
@@ -50,7 +55,7 @@
 
   &__rich {
     display: block;
-    margin: 0px;
+    margin: 0;
   }
 
   &__text {
@@ -61,6 +66,7 @@
     font-weight: 400;
     font-size: 14px;
     color: $dark50;
+
     &--rich {
       font-weight: 700;
       color: $dark75;

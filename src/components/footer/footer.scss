@@ -3,12 +3,14 @@
 .footer {
   display: flex;
   justify-content: center;
-  border-top: 1px solid rgba(31, 32, 65, 0.1);
+  border-top: 1px solid rgb(31 32 65 / 10%);
+
   &__full {
     width: 100%;
     height: 442px;
     background-color: #fff;
   }
+
   & span.icon {
     display: inline-block;
     height: 100px;
@@ -19,67 +21,92 @@
     background-image: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
     cursor: pointer;
   }
+
   &__topBlock {
-    padding: 92px 140px 83px 140px;
+    padding: 92px 140px 83px;
     display: flex;
+    @media (max-width: 1240px) {
+      padding: 50px 30px 50px;
+    }
+    @media (max-width: 910px) {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
   }
+
   &__first {
     width: 260px;
-    padding: 8px 0 0 0;
+    padding: 8px 0 0;
   }
+
   &__second {
     margin-left: 40px;
   }
+
   &__third {
     margin-left: 58px;
   }
+
   &__forth {
     margin-left: 92px;
   }
+
   &__fith {
     width: 260px;
     margin-left: 52px;
+
     & .textField {
       margin-top: 23px;
     }
+
     & .textField__arrow {
       top: 11px;
       right: 10px;
     }
+
     & .textField__input--small {
       width: 260px;
     }
   }
+
   &__list {
     padding-top: 6px;
   }
+
   &__item {
     margin-bottom: 14px;
+
     & a {
       text-decoration: none;
     }
   }
+
   &__span {
     display: inline-block;
     margin-top: 6px;
   }
+
   &__logo {
     margin-bottom: 4px;
   }
+
   &__botBlock {
     display: flex;
     justify-content: space-between;
-    padding: 23px 140px 26px 140px;
+    padding: 23px 140px 26px;
     border-top: 1px solid $dark5;
     height: 70px;
   }
+
   &__copyright {
   }
+
   &__socialButtons {
     display: flex;
     justify-content: space-between;
     width: 112px;
   }
+
   &__small {
     width: 768px;
     height: 367px;
@@ -87,11 +114,13 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 187px 104px 100px 104px;
+    padding: 187px 104px 100px;
     background-color: #fff;
+
     & .footer__socialButtons {
       margin-top: 21px;
     }
+
     & img {
       transform: translateY(-15px);
     }

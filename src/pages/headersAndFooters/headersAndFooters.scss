@@ -1,14 +1,18 @@
-@import '../../styles/global';
+@import "../../styles/global";
 
 .headersAndFooters {
   margin-top: 56px;
+
   &__first {
   }
+
   &__second {
     margin-top: 40px;
   }
+
   &__footer {
     margin-top: 40px;
+
     &--small {
       margin-top: 40px;
     }

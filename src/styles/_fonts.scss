@@ -1,19 +1,21 @@
 @font-face {
-  font-family: 'Montserrat';
-  src: url('../fonts/Montserrat-Regular.ttf') format('truetype');
+  font-family: Montserrat;
+  src: url("../fonts/Montserrat-Regular.ttf") format("truetype");
   font-weight: 400;
 }
 
 @font-face {
-  font-family: 'Montserrat';
-  src: url('../fonts/Montserrat-Bold.ttf') format('truetype');
+  font-family: Montserrat;
+  src: url("../fonts/Montserrat-Bold.ttf") format("truetype");
   font-weight: 700;
 }
 
 @font-face {
-  font-family: 'Material Icons';
+  font-family: "Material Icons";
   font-style: normal;
   font-weight: 400;
-  src: local('Material Icons'), local('MaterialIcons-Regular'),
-    url('../fonts/MaterialIcons-Regular.ttf') format('ttf');
+  src:
+    local("Material Icons"),
+    local("MaterialIcons-Regular"),
+    url("../fonts/MaterialIcons-Regular.ttf") format("ttf");
 }

@@ -1,4 +1,4 @@
-@import '../../styles/global';
+@import "../../styles/global";
 
 .button {
   width: 99px;
@@ -8,46 +8,54 @@
   font-weight: 700;
   font-size: 12px;
   text-transform: uppercase;
-  background: #ffffff;
+  background: #fff;
   text-align: center;
   color: #bc9cff;
   cursor: pointer;
+
   &:hover {
     opacity: 0.5;
   }
+
   &__wrapper {
     position: relative;
   }
+
   &__default {
     background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
     border: none;
-    color: #ffffff;
+    color: #fff;
   }
+
   &__white {
-    background: linear-gradient(#fff, #fff) padding-box,
+    background:
+      linear-gradient(#fff, #fff) padding-box,
       linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%) border-box;
     border: 2px solid transparent;
   }
+
   &__without {
     width: auto;
     height: 37px;
-
     color: #bc9cff;
     border: none;
     text-align: left;
     padding: 0;
+
     &:hover {
       opacity: 1;
       color: $dark50;
     }
   }
+
   &__big {
     width: 320px;
     height: 44px;
     background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
-    color: #ffffff;
+    color: #fff;
     border: none;
   }
+
   &__arrow {
     position: absolute;
     top: 10px;

@@ -1,31 +1,36 @@
-@import '../../styles/global';
+@import "../../styles/global";
 
 .radioButton {
   margin-bottom: 3px;
   display: flex;
   align-items: center;
+
   &__input {
     position: absolute;
     z-index: -1;
     opacity: 0;
+
     &:checked + label {
       color: $dark75;
+
       &::before {
-        background: url('../../images/Rectangle.png');
+        background: url("../../images/Rectangle.png");
         border-color: $purple;
         background-repeat: no-repeat;
         background-position: center center;
       }
     }
   }
+
   &__label {
     font-weight: 400;
     font-size: 14px;
     line-height: 24px;
     color: $dark50;
     cursor: pointer;
+
     &::before {
-      content: '';
+      content: "";
       display: inline-block;
       width: 18px;
       height: 18px;

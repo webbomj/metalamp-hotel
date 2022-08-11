@@ -1,35 +1,96 @@
 @import '../../styles/global';
 
 .header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
   width: 100%;
-  height: 70px;
+
   padding: 0 140px;
-  background: #ffffff;
-  box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+  background: #fff;
+  box-shadow: 0 10px 20px rgb(31 32 65 / 5%);
+
+  @media (max-width: 1400px) {
+    padding: 0 40px;
+  }
+  @media (max-width: 980px) {
+    padding: 0 5px;
+  }
   &__logo {
     margin-right: 287px;
+    @media (max-width: 1250px) {
+      margin-right: 10px;
+    }
   }
+
+  &__menu {
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__dropdown-menu {
+    display: none;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    background: #fff;
+    padding: 0;
+    box-shadow: 0 10px 20px rgb(31 32 65 / 5%);
+    z-index: 20;
+  }
+
+  &__dropdown-menu--active {
+    display: flex;
+    @media (min-width: 992px) {
+      display: none;
+    }
+  }
+
   &__right {
     display: flex;
+    @media (max-width: 992px) {
+      display: none;
+    }
+    &--mobile {
+      display: none;
+      @media (max-width: 992px) {
+        display: block;
+      }
+    }
   }
+
+  &__burger {
+    background-color: transparent;
+    border: 0;
+  }
+
+  &__icon {
+    color: #bc9cff;
+  }
+
   &__list {
     display: flex;
     align-items: center;
+    @media (max-width: 560px) {
+      flex-wrap: wrap;
+      flex-direction: column;
+    }
   }
+
   &__item {
     display: flex;
     align-items: center;
     list-style-type: none;
     margin-right: 20px;
   }
+
   &__text {
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
     color: $dark50;
+
     &.active {
       font-style: normal;
       font-weight: 700;
@@ -38,13 +99,15 @@
       color: $dark75;
     }
   }
+
   &__buttons {
     & button:first-child {
       margin-right: 20px;
     }
   }
+
   &__user {
     padding-left: 20px;
-    border-left: 1px solid rgba(31, 32, 65, 0.1);
+    border-left: 1px solid rgb(31 32 65 / 10%);
   }
 }

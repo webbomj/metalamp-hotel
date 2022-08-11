@@ -1,4 +1,4 @@
-@import '../../../styles/global';
+@import "../../../styles/global";
 
 .numberRoomAndPrice {
   &__info {
@@ -9,12 +9,14 @@
 
   &__number-wrapper {
   }
+
   &__number {
     font-weight: 700;
     font-size: 14px;
     line-height: 17px;
     color: $dark100;
   }
+
   &__id {
     font-weight: 700;
     font-size: 19px;
@@ -31,11 +33,13 @@
     text-transform: uppercase;
     color: $purple;
   }
+
   &__price-wrapper {
     display: flex;
     justify-content: space-between;
     margin-top: 2px;
   }
+
   &__price {
     transform: translate(-1px, 1px);
     font-weight: 700;
@@ -43,6 +47,7 @@
     line-height: 18px;
     color: $dark50;
   }
+
   &__period {
     transform: translate(2px, 1px);
     font-weight: 400;

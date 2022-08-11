@@ -1,4 +1,4 @@
-@import '../../../styles/global';
+@import "../../../styles/global";
 
 .colorFonts__item {
   display: flex;
@@ -7,11 +7,11 @@
 }
 
 .colorFonts__tagFonts {
-  font-family: 'Montserrat';
+  font-family: Montserrat;
   font-style: normal;
   font-weight: 400;
   margin-right: 30px;
-  color: rgba(31, 32, 65, 0.25);
+  color: rgb(31 32 65 / 25%);
 }
 
 .colorFonts__h1 {
@@ -34,7 +34,7 @@
 
 .colorFonts__body {
   font-size: 14px;
-  transform: translate(0px, -13px);
+  transform: translate(0, -13px);
 }
 
 .colorFonts__body::first-letter {
@@ -47,7 +47,7 @@
 
 .colorFonts__textFonts {
   display: block;
-  font-family: 'Montserrat';
+  font-family: Montserrat;
   font-style: normal;
   font-weight: 700;
 }
@@ -56,7 +56,7 @@
   font-size: 24px;
   line-height: 29px;
   color: $dark100;
-  transform: translate(9px, 0px);
+  transform: translate(9px, 0);
 }
 
 .colorFonts__text--h2 {

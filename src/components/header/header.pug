@@ -1,11 +1,28 @@
 include ../../components/button/button.pug
 
 mixin header({id = 'uniqIdHeader', auth = false})
-  .header 
-    img.header__logo(src=require("../../images/Logo.png"), alt="Logo", width="106px", height="40px")
-    .header__right 
+  - const list = [{title: 'О нас', children: false}, {title: 'Услуги', children: true},{title: 'Вакансии', children: false},{title: 'Новости', children: false},{title: 'Соглашения', children: true}];
+  .header(data-header=id) 
+    nav.header__menu
+      img.header__logo(src=require("../../images/Logo.png"), alt="Logo", width="106px", height="40px")
+      .header__right 
+        ul.header__list 
+          each item, indx in list 
+            li.header__item 
+              span.header__text(class=indx === 0 ? "active" : "")= item.title
+              if item.children
+                .material-icons.md-24.header__arrow expand_more
+        if !auth
+          .header__buttons
+            +button({title: 'Войти', type: 'white', style: 'width: 87px; height: 34px'})
+            +button({title: 'Зарегистрироваться', type: 'big', style: 'width: 196px; height: 34px'})
+        else
+          .header__user Юлий Цезарь
+      .header__right--mobile
+        button.header__burger.js-header__burger
+          span.icon__material.js-icon__material.material-icons.header__icon menu
+    .header__dropdown-menu
       ul.header__list 
-        - const list = [{title: 'О нас', children: false}, {title: 'Услуги', children: true},{title: 'Вакансии', children: false},{title: 'Новости', children: false},{title: 'Соглашения', children: true}];
         each item, indx in list 
           li.header__item 
             span.header__text(class=indx === 0 ? "active" : "")= item.title

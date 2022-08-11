@@ -1,12 +1,14 @@
-@import '../../styles/global';
+@import "../../styles/global";
 
 .dateDropdown {
   display: flex;
   width: 320px;
   margin-bottom: 5px;
+
   &__close {
     display: none;
   }
+
   &__open {
     display: block;
     position: absolute;
@@ -16,11 +18,14 @@
   & .dateDropdownLeft {
     position: relative;
     margin-right: 20px;
+
     &__main {
       position: relative;
+
       & .textField__input {
         width: 150px;
       }
+
       & .dropdown__arrow {
         position: absolute;
         top: 11px;
@@ -28,14 +33,18 @@
       }
     }
   }
+
   & .dateDropdownRight {
     position: relative;
     margin-right: 20px;
+
     &__main {
       position: relative;
+
       & .textField__input {
         width: 150px;
       }
+
       & .dropdown__arrow {
         position: absolute;
         top: 11px;
@@ -43,6 +52,7 @@
       }
     }
   }
+
   &__arrow {
     cursor: pointer;
   }

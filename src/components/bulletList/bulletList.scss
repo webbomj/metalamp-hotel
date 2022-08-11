@@ -1,4 +1,4 @@
-@import '../../styles/global';
+@import "../../styles/global";
 
 .bulletList {
   &__title {
@@ -8,16 +8,17 @@
     text-transform: uppercase;
     color: $dark100;
   }
+
   &__list {
     list-style-type: none;
-
-    margin: 9px 0 0 0;
+    margin: 9px 0 0;
   }
+
   &__item {
     display: flex;
-
     margin-bottom: 10px;
   }
+
   &__circle {
     width: 10px;
     height: 10px;
@@ -26,6 +27,7 @@
     margin-top: 7px;
     background: $dark25;
   }
+
   &__text {
     width: 240px;
     font-weight: 400;

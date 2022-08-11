@@ -9,58 +9,73 @@
     grid-template-rows: 676px 270px 525px;
     grid-row-gap: 52px;
     grid-column: 1 / 2;
+
     & .formElements__firstBlock {
       grid-column: 1 / 2;
       grid-row: 1 / 2;
     }
+
     & .formElements__secondBlock {
       grid-column: 1 / 2;
       grid-row: 2 / 3;
-      padding: 5px 0 0 0;
+      padding: 5px 0 0;
+
       & .formElements__dropdown {
         margin-bottom: 14px;
       }
     }
+
     & .formElements__thirdBlock {
       grid-column: 1 / 2;
       grid-row: 3 / 4;
-      padding: 6px 0 0 0;
+      padding: 6px 0 0;
     }
+
     & .formElements {
       &__text-field {
         margin-bottom: 16px;
+
         &--masked {
           margin-bottom: 36px;
         }
       }
+
       &__dropdown {
         margin-bottom: 19px;
+
         &--date {
           margin-bottom: 37px;
         }
+
         &--filter {
           margin-bottom: 37px;
         }
       }
+
       &__expandable-checkbox {
         margin-bottom: 41px;
       }
+
       &__icon-text-list {
         margin-top: 36px;
       }
     }
   }
+
   &__secondColumn {
     padding: 0 0 0 54px;
     display: grid;
     grid-template-rows: 676px 270px 525px;
     grid-row-gap: 52px;
+
     & .formElements__secondBlock {
       grid-row: 2 / 3;
+
       & .formElements__dropdown {
         margin-top: 4px;
       }
     }
+
     & .formElements__thirdBlock {
       margin-top: 4px;
       grid-row: 3 / 4;
@@ -69,124 +84,161 @@
       grid-column-gap: 72px;
     }
   }
+
   &__thirdColumn {
     display: grid;
     grid-template-rows: 676px 270px 325px;
     grid-row-gap: 52px;
+
     & .formElements__secondBlock {
       grid-row: 2 / 3;
+
       & .formElements__dropdown {
         margin-top: 4px;
       }
     }
+
     & .formElements__thirdBlock {
       grid-row: 3 / 4;
     }
+
     & .formElements__bullet-list {
       padding-top: 2px;
+
       & h3 {
         margin-top: 5px;
       }
     }
   }
+
   &__checkbox-button {
     width: 245px;
+
     & h3 {
-      margin: 4px 0 11px 0;
+      margin: 4px 0 11px;
     }
   }
+
   &__radio-button {
     margin-top: 39px;
+
     & h3 {
-      margin: 4px 0 9px 0;
+      margin: 4px 0 9px;
     }
+
     &-box {
       display: flex;
       margin-top: 10px;
     }
+
     & .radioButton:first-of-type {
       margin-right: 20px;
     }
   }
+
   &__toggle {
     margin-top: 38px;
+
     & h3 {
-      margin: 4px 0 15px 0;
+      margin: 4px 0 15px;
     }
+
     & .toggle:last-child {
       margin-top: 11px;
     }
   }
+
   &__like-button {
     margin-top: 40px;
+
     & h3 {
-      margin: 4px 0 15px 0;
+      margin: 4px 0 15px;
     }
+
     &-box {
       display: flex;
+
       & .likeButton:first-of-type {
         margin-right: 9px;
       }
     }
   }
+
   &__rate-button {
     margin-top: 41px;
+
     & h3 {
-      margin: 4px 0 15px 0;
+      margin: 4px 0 15px;
     }
+
     &-box {
       display: flex;
       margin-top: 16px;
+
       & .rateButton:first-of-type {
         margin-right: 20px;
       }
     }
   }
+
   &__checkboxes {
     & h3 {
-      margin: 4px 0 10px 0;
+      margin: 4px 0 10px;
     }
   }
+
   &__comment {
     grid-column: 1 / span 2;
     margin-top: 208px;
   }
+
   &__range-slider {
     & h3 {
-      margin: 4px 0 10px 0;
+      margin: 4px 0 10px;
     }
   }
+
   &__buttons {
     margin-top: 73px;
+
     & h3 {
-      margin: 4px 0 10px 0;
+      margin: 4px 0 10px;
     }
+
     & .formElements__topButtons {
       margin-top: 16px;
+
       & button:first-of-type {
         margin-right: 20px;
       }
     }
+
     & .formElements__middleButtons {
       margin-top: 30px;
+
       & button:first-of-type {
         margin-right: 20px;
       }
     }
+
     & .formElements__botButtons {
       margin-top: 20px;
+
       & button:first-of-type {
         margin-right: 21px;
       }
     }
+
     & .button__wrapper {
       margin-top: 19px;
     }
   }
+
   &__pagination {
     margin-top: 40px;
+
     & h3 {
-      margin: 4px 0 16px 0;
+      margin: 4px 0 16px;
     }
   }
 }

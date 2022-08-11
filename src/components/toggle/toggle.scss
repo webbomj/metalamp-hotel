@@ -1,7 +1,8 @@
-@import '../../styles/global';
+@import "../../styles/global";
 
 .toggle {
   display: flex;
+
   &__Block {
     display: flex;
     justify-content: flex-start;
@@ -12,22 +13,26 @@
     border-radius: 10px;
     margin-right: 10px;
     cursor: pointer;
+
     &--active {
       border: 1px solid #bc9cff;
     }
   }
+
   &__Circle {
     width: 12px;
     height: 12px;
     background: $dark25;
     border-radius: 10px;
     transition: 200ms;
+
     &--active {
       background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
       transform: translateX(22px);
       transition: 200ms;
     }
   }
+
   &__Text {
     font-weight: 400;
     font-size: 14px;

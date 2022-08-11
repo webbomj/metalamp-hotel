@@ -2,11 +2,14 @@
   "name": "hotel",
   "version": "1.0.0",
   "description": "Metalamp Practice Hotel",
+  "homepage": "https://webbomj.github.io/metalamp-hotel",
   "main": "index.js",
   "scripts": {
     "start": "set NODE_ENV=development&&webpack serve --open",
     "dev": "set NODE_ENV=development&&webpack",
     "build": "set NODE_ENV=production&&webpack",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist",
     "lint": "eslint \"*/**/*.{js,ts}\" --quiet --fix",
     "style": "stylelint \"**/*.scss\" --fix"
   },
@@ -36,6 +39,7 @@
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-import": "^2.26.0",
+    "gh-pages": "^4.0.0",
     "html-loader": "^3.1.2",
     "html-webpack-plugin": "^5.5.0",
     "mini-css-extract-plugin": "^2.6.1",

@@ -1,14 +1,17 @@
-@import '../../styles/global';
+@import "../../styles/global";
 
 .filterDateDropdown {
   width: 266px;
+
   &__main {
     width: 266px;
     position: relative;
+
     & .textField__input {
       width: 266px;
     }
   }
+
   &__arrow {
     position: absolute;
     top: 37px;

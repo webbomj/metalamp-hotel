@@ -1,11 +1,12 @@
 .findRooms {
   width: 380px;
   height: 374px;
-  padding: 24px 30px 30px 30px;
-  background: #ffffff;
-  border: 1px solid rgba(0, 0, 0, 0.12);
-  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+  padding: 24px 30px 30px;
+  background: #fff;
+  border: 1px solid rgb(0 0 0 / 12%);
+  box-shadow: 0 0 25px rgb(0 0 0 / 20%);
   border-radius: 4px;
+
   &__header {
     & h1 {
       font-weight: 700;
@@ -13,12 +14,15 @@
       line-height: 29px;
     }
   }
+
   &__dateDropdown {
     margin-top: 18px;
   }
+
   &__guestDropdown {
     margin-top: 17px;
   }
+
   &__button {
     margin-top: 31px;
   }

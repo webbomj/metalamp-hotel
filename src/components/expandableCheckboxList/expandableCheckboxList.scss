@@ -1,12 +1,14 @@
-@import '../../styles/global';
+@import "../../styles/global";
 
 .expandableCheckboxes {
   position: relative;
+
   &__header {
     display: flex;
     justify-content: space-between;
     width: 266px;
   }
+
   &__title {
     font-weight: 700;
     font-size: 12px;
@@ -14,25 +16,30 @@
     text-transform: uppercase;
     color: $dark100;
     cursor: pointer;
+
     &.active,
     &::hover {
       background-color: #ccc;
     }
   }
+
   &__arrow {
     margin-right: 10px;
     transform: translateY(-4px);
     cursor: pointer;
+
     &--rotate {
       transform: rotate(180deg) translateY(4px);
     }
   }
+
   &__content {
     margin-top: 3px;
     display: none;
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.2s ease-out;
+
     &--open {
       display: block !important;
     }

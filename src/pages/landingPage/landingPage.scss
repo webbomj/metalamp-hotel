@@ -1,10 +1,10 @@
-@import '../../styles/global';
+@import "../../styles/global";
 
 .landingPage {
   position: relative;
   width: 1534px;
   min-height: 830px;
-  background-image: url('../../images/image\ 3.png');
+  background-image: url("../../images/image\ 3.png");
   background-repeat: no-repeat;
   background-position: 0 100%;
   padding-top: 68px;
@@ -13,6 +13,7 @@
     // margin-top: 163px;
     margin: 1px 0 0 139px;
   }
+
   &__text {
     position: absolute;
     bottom: 21px;

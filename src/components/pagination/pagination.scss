@@ -1,25 +1,30 @@
-@import '../../styles/global';
+@import "../../styles/global";
+
 .paginationjs {
   line-height: 1.6;
-  font-family: Marmelad, 'Lucida Grande', Arial, 'Hiragino Sans GB', Georgia, sans-serif;
+  font-family: Marmelad, "Lucida Grande", Arial, "Hiragino Sans GB", Georgia, sans-serif;
   font-size: 14px;
   box-sizing: initial;
   display: flex;
   flex-direction: column;
 }
-.paginationjs:after {
+
+.paginationjs::after {
   display: table;
-  content: ' ';
+  content: " ";
   clear: both;
 }
+
 .paginationjs .paginationjs-pages {
   float: left;
 }
+
 .paginationjs .paginationjs-pages ul {
   float: left;
   margin: 0;
   padding: 0;
 }
+
 .paginationjs .paginationjs-go-button,
 .paginationjs .paginationjs-go-input,
 .paginationjs .paginationjs-nav {
@@ -27,6 +32,7 @@
   margin-left: 10px;
   font-size: 14px;
 }
+
 .paginationjs .paginationjs-pages li {
   float: left;
   border-right: none;
@@ -37,6 +43,7 @@
   justify-content: center;
   align-items: center;
 }
+
 .paginationjs .paginationjs-pages li > a {
   min-width: 40px;
   height: 40px;
@@ -49,15 +56,18 @@
   text-decoration: none;
   text-align: center;
 }
+
 .paginationjs .paginationjs-pages li > a:hover {
   background: #eee;
 }
+
 .paginationjs .paginationjs-pages li.active {
   border: none;
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
 .paginationjs .paginationjs-pages li.active > a {
   display: inline-block;
   height: 40px;
@@ -66,19 +76,24 @@
   color: #fff;
   border-radius: 50%;
 }
+
 .paginationjs .paginationjs-pages li.disabled > a {
   opacity: 0.3;
 }
+
 .paginationjs .paginationjs-pages li.disabled > a:hover {
   background: 0 0;
 }
+
 .paginationjs .paginationjs-pages li:last-child {
   border-radius: 0 3px 3px 0;
 }
+
 .paginationjs .paginationjs-pages li:last-child > a {
   border-radius: 0 3px 3px 0;
 }
-.paginationjs .paginationjs-go-input > input[type='text'] {
+
+.paginationjs .paginationjs-go-input > input[type="text"] {
   width: 30px;
   height: 28px;
   background: #fff;
@@ -92,7 +107,8 @@
   box-shadow: none;
   box-sizing: initial;
 }
-.paginationjs .paginationjs-go-button > input[type='button'] {
+
+.paginationjs .paginationjs-go-button > input[type="button"] {
   min-width: 40px;
   height: 30px;
   line-height: 28px;
@@ -109,7 +125,8 @@
   cursor: pointer;
   vertical-align: middle\9;
 }
-.paginationjs.paginationjs-theme-blue .paginationjs-go-input > input[type='text'],
+
+.paginationjs.paginationjs-theme-blue .paginationjs-go-input > input[type="text"],
 .paginationjs.paginationjs-theme-blue .paginationjs-pages li {
   border-color: #289de9;
 }
@@ -118,91 +135,110 @@
   background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%) !important;
 }
 
-.paginationjs .paginationjs-go-button > input[type='button']:hover {
+.paginationjs .paginationjs-go-button > input[type="button"]:hover {
   background-color: #f8f8f8;
 }
+
 .paginationjs .paginationjs-nav {
   height: 30px;
   line-height: 30px;
   margin: 4px 0 0 6px;
   color: $dark75;
 }
+
 .paginationjs .paginationjs-go-button,
 .paginationjs .paginationjs-go-input {
   margin-left: 5px\9;
 }
+
 .paginationjs.paginationjs-small {
   font-size: 12px;
 }
+
 .paginationjs.paginationjs-small .paginationjs-pages li > a {
   min-width: 26px;
   height: 24px;
   line-height: 24px;
   font-size: 12px;
 }
+
 .paginationjs.paginationjs-small .paginationjs-pages li.active > a {
   height: 26px;
   line-height: 26px;
 }
+
 .paginationjs.paginationjs-small .paginationjs-go-input {
   font-size: 12px;
 }
-.paginationjs.paginationjs-small .paginationjs-go-input > input[type='text'] {
+
+.paginationjs.paginationjs-small .paginationjs-go-input > input[type="text"] {
   width: 26px;
   height: 24px;
   font-size: 12px;
 }
+
 .paginationjs.paginationjs-small .paginationjs-go-button {
   font-size: 12px;
 }
-.paginationjs.paginationjs-small .paginationjs-go-button > input[type='button'] {
+
+.paginationjs.paginationjs-small .paginationjs-go-button > input[type="button"] {
   min-width: 30px;
   height: 26px;
   line-height: 24px;
   padding: 0 6px;
   font-size: 12px;
 }
+
 .paginationjs.paginationjs-small .paginationjs-nav {
   height: 26px;
   line-height: 26px;
   font-size: 12px;
 }
+
 .paginationjs.paginationjs-big {
   font-size: 16px;
 }
+
 .paginationjs.paginationjs-big .paginationjs-pages li > a {
   min-width: 36px;
   height: 34px;
   line-height: 34px;
   font-size: 16px;
 }
+
 .paginationjs.paginationjs-big .paginationjs-pages li.active > a {
   height: 36px;
   line-height: 36px;
 }
+
 .paginationjs.paginationjs-big .paginationjs-go-input {
   font-size: 16px;
 }
-.paginationjs.paginationjs-big .paginationjs-go-input > input[type='text'] {
+
+.paginationjs.paginationjs-big .paginationjs-go-input > input[type="text"] {
   width: 36px;
   height: 34px;
   font-size: 16px;
 }
+
 .paginationjs.paginationjs-big .paginationjs-go-button {
   font-size: 16px;
 }
-.paginationjs.paginationjs-big .paginationjs-go-button > input[type='button'] {
+
+.paginationjs.paginationjs-big .paginationjs-go-button > input[type="button"] {
   min-width: 50px;
   height: 36px;
   line-height: 34px;
   padding: 0 12px;
   font-size: 16px;
 }
+
 .paginationjs.paginationjs-big .paginationjs-nav {
   height: 36px;
   line-height: 36px;
   font-size: 16px;
 }
+
 .paginationjs.paginationjs-theme-blue .paginationjs-pages li > a {
   color: $dark50;
 }
@@ -211,90 +247,114 @@
   background: #289de9;
   color: #fff;
 }
+
 .paginationjs.paginationjs-theme-blue .paginationjs-pages li.disabled > a:hover {
   background: 0 0;
 }
-.paginationjs.paginationjs-theme-blue .paginationjs-go-button > input[type='button'] {
+
+.paginationjs.paginationjs-theme-blue .paginationjs-go-button > input[type="button"] {
   background: #289de9;
   border-color: #289de9;
   color: #fff;
 }
-.paginationjs.paginationjs-theme-green .paginationjs-go-input > input[type='text'],
+
+.paginationjs.paginationjs-theme-green .paginationjs-go-input > input[type="text"],
 .paginationjs.paginationjs-theme-green .paginationjs-pages li {
   border-color: #449d44;
 }
-.paginationjs.paginationjs-theme-blue .paginationjs-go-button > input[type='button']:hover {
+
+.paginationjs.paginationjs-theme-blue .paginationjs-go-button > input[type="button"]:hover {
   background-color: #3ca5ea;
 }
+
 .paginationjs.paginationjs-theme-green .paginationjs-pages li > a {
   color: #449d44;
 }
+
 .paginationjs.paginationjs-theme-green .paginationjs-pages li > a:hover {
   background: #ebf4eb;
 }
+
 .paginationjs.paginationjs-theme-green .paginationjs-pages li.active > a {
   background: #449d44;
   color: #fff;
 }
+
 .paginationjs.paginationjs-theme-green .paginationjs-pages li.disabled > a:hover {
   background: 0 0;
 }
-.paginationjs.paginationjs-theme-green .paginationjs-go-button > input[type='button'] {
+
+.paginationjs.paginationjs-theme-green .paginationjs-go-button > input[type="button"] {
   background: #449d44;
   border-color: #449d44;
   color: #fff;
 }
-.paginationjs.paginationjs-theme-yellow .paginationjs-go-input > input[type='text'],
+
+.paginationjs.paginationjs-theme-yellow .paginationjs-go-input > input[type="text"],
 .paginationjs.paginationjs-theme-yellow .paginationjs-pages li {
   border-color: #ec971f;
 }
-.paginationjs.paginationjs-theme-green .paginationjs-go-button > input[type='button']:hover {
+
+.paginationjs.paginationjs-theme-green .paginationjs-go-button > input[type="button"]:hover {
   background-color: #55a555;
 }
+
 .paginationjs.paginationjs-theme-yellow .paginationjs-pages li > a {
   color: #ec971f;
 }
+
 .paginationjs.paginationjs-theme-yellow .paginationjs-pages li > a:hover {
   background: #fdf5e9;
 }
+
 .paginationjs.paginationjs-theme-yellow .paginationjs-pages li.active > a {
   background: #ec971f;
   color: #fff;
 }
+
 .paginationjs.paginationjs-theme-yellow .paginationjs-pages li.disabled > a:hover {
   background: 0 0;
 }
-.paginationjs.paginationjs-theme-yellow .paginationjs-go-button > input[type='button'] {
+
+.paginationjs.paginationjs-theme-yellow .paginationjs-go-button > input[type="button"] {
   background: #ec971f;
   border-color: #ec971f;
   color: #fff;
 }
-.paginationjs.paginationjs-theme-red .paginationjs-go-input > input[type='text'],
+
+.paginationjs.paginationjs-theme-red .paginationjs-go-input > input[type="text"],
 .paginationjs.paginationjs-theme-red .paginationjs-pages li {
   border-color: #c9302c;
 }
-.paginationjs.paginationjs-theme-yellow .paginationjs-go-button > input[type='button']:hover {
+
+.paginationjs.paginationjs-theme-yellow .paginationjs-go-button > input[type="button"]:hover {
   background-color: #eea135;
 }
+
 .paginationjs.paginationjs-theme-red .paginationjs-pages li > a {
   color: #c9302c;
 }
+
 .paginationjs.paginationjs-theme-red .paginationjs-pages li > a:hover {
   background: #faeaea;
 }
+
 .paginationjs.paginationjs-theme-red .paginationjs-pages li.active > a {
   background: #c9302c;
   color: #fff;
 }
+
 .paginationjs.paginationjs-theme-red .paginationjs-pages li.disabled > a:hover {
   background: 0 0;
 }
-.paginationjs.paginationjs-theme-red .paginationjs-go-button > input[type='button'] {
+
+.paginationjs.paginationjs-theme-red .paginationjs-go-button > input[type="button"] {
   background: #c9302c;
   border-color: #c9302c;
   color: #fff;
 }
-.paginationjs.paginationjs-theme-red .paginationjs-go-button > input[type='button']:hover {
+
+.paginationjs.paginationjs-theme-red .paginationjs-go-button > input[type="button"]:hover {
   background-color: #ce4541;
 }
 
@@ -311,57 +371,59 @@
 }
 
 .paginationjs-prev::before {
-  content: '';
+  content: "";
   position: absolute;
   height: 2px;
   width: 14px;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: #ffffff;
+  background-color: #fff;
 }
 
 .paginationjs-prev::after {
-  content: '';
+  content: "";
   position: absolute;
   top: 50%;
   left: 45%;
   transform: translate(-50%, -50%) rotate(-45deg);
-  border: solid #ffffff;
+  border: solid #fff;
   border-width: 2px 0 0 2px;
   padding: 4px;
 }
 
 .paginationjs-next::before {
-  content: '';
+  content: "";
   position: absolute;
   height: 2px;
   width: 14px;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: #ffffff;
+  background-color: #fff;
 }
 
 .paginationjs-next::after {
-  content: '';
+  content: "";
   position: absolute;
   top: 50%;
   left: 55%;
   transform: translate(-50%, -50%) rotate(135deg);
-  border: solid #ffffff;
+  border: solid #fff;
   border-width: 2px 0 0 2px;
   padding: 4px;
 }
 
-.paginationjs .paginationjs-go-input > input[type='text'] {
+.paginationjs .paginationjs-go-input > input[type="text"] {
   line-height: 28px\9;
   vertical-align: middle\9;
 }
+
 .paginationjs.paginationjs-big .paginationjs-pages li > a {
   line-height: 36px\9;
 }
-.paginationjs.paginationjs-big .paginationjs-go-input > input[type='text'] {
+
+.paginationjs.paginationjs-big .paginationjs-go-input > input[type="text"] {
   height: 36px\9;
   line-height: 36px\9;
 }
