@@ -1,10 +1,45 @@
 .searchRoom {
   display: flex;
-  padding: 26px 140px 70px;
+  padding: 26px 10px 70px 140px;
+  @media (max-width: 1350px) {
+    padding: 26px 10px 70px 10px;
+  }
+  @media (max-width: 900px) {
+    flex-direction: column;
+  }
+  @media (max-width: 900px) {
+    padding: 26px 0 20px;
+  }
+
+  &__button {
+    display: none;
+    margin: 0 auto;
+    @media (max-width: 900px) {
+      display: block;
+    }
+  }
 
   &__sidebar {
     width: 266px;
     margin-right: 60px;
+    @media (max-width: 900px) {
+      display: none;
+    }
+  }
+
+  &__dropdown-filter {
+    display: none;
+  }
+
+  &__filter-menu {
+    margin-right: 5px;
+  }
+
+  &__dropdown-filter--active {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
   }
 
   &__dateDropdown {
@@ -36,6 +71,9 @@
   &__mainContent {
     width: 846px;
     margin-top: 4px;
+    @media (max-width: 900px) {
+      width: 100%;
+    }
 
     & h1 {
       font-style: normal;
@@ -47,17 +85,37 @@
     }
   }
 
+  &__header {
+  }
+
   &__hotelList {
     display: flex;
     flex-wrap: wrap;
     margin-top: 22px;
 
-    & .room:not(:nth-child(3n)) {
+    @media (max-width: 1192px) {
+      justify-content: center;
+    }
+
+    & .room {
+      margin-right: 12px;
+      margin-bottom: 21px;
+    }
+
+    & .room:nth-child(2n) {
+      @media (max-width: 1192px) {
+        margin-right: 12px;
+      }
+    }
+
+    & .room:nth-child(3n) {
       margin-right: 12px;
     }
 
-    & .room:not(:nth-child(n + 10)) {
-      margin-bottom: 21px;
+    & .room:nth-child(n + 10) {
+      @media (max-width: 1192px) {
+        margin-bottom: 21px;
+      }
     }
   }
 

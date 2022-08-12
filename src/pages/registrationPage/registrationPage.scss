@@ -1,14 +1,19 @@
 .registrationPage {
   width: 1534px;
   min-height: 684px;
-  background-image: url("../../images/image\ 4.png");
+  background-image: url('../../images/image\ 4.png');
   background-repeat: no-repeat;
   background-position: 0% 100%;
   display: flex;
-  justify-content: center;
   align-items: center;
+  @media (max-width: 1500px) {
+    width: 100%;
+  }
 
   &__registrationForm {
-    margin-left: -87px;
+    margin-left: 533px;
+    @media (max-width: 1500px) {
+      margin: 0 auto;
+    }
   }
 }

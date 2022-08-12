@@ -1,17 +1,28 @@
-@import "../../styles/global";
+@import '../../styles/global';
 
 .landingPage {
   position: relative;
   width: 1534px;
   min-height: 830px;
-  background-image: url("../../images/image\ 3.png");
+  background-image: url('../../images/image\ 3.png');
   background-repeat: no-repeat;
   background-position: 0 100%;
   padding-top: 68px;
 
+  @media (max-width: 1500px) {
+    width: 100%;
+  }
+  @media (max-width: 620px) {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
   &__findForm {
-    // margin-top: 163px;
     margin: 1px 0 0 139px;
+    @media (max-width: 620px) {
+      margin: 0;
+    }
   }
 
   &__text {
@@ -25,5 +36,8 @@
     line-height: 24px;
     text-align: right;
     color: $dark75;
+    @media (max-width: 500px) {
+      position: static;
+    }
   }
 }

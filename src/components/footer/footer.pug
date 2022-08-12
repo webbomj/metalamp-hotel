@@ -43,15 +43,11 @@ mixin footer({id = "uniqIdFooter", type = "full"})
             h3 Подписка
             span.footer__span Получайте специальные предложения и новости сервиса
             +textField({uniqId: id, title: '', description: '', placeholder: 'Email', arrow: true, small: true})
+        .footer__middleBlock 
+          img.footer__logo(src=require("../../images/Logo.png"), alt="Логотип")
         .footer__botBlock
           span.footer__copyright Copyright © 2018 Toxin отель. Все права защищены.
           .footer__socialButtons
-            //- img(src=require("../../images/twitter.png"), alt="twitter")
-            //- img(src=require("../../images/facebook.png"), alt="facebook")
-            //- img(src=require("../../images/inst.png"), alt="instagram")
-            //- i.fa-brands.fa-facebook-square &#f082;
-            //- i.fa-brands.fa-twitter &#f099;
-            //- i.fa-brands.fa-instagram &#f16d;
             span.icon &#xf099;
             span.icon &#xf082;
             span.icon &#xf16d;
@@ -60,12 +56,6 @@ mixin footer({id = "uniqIdFooter", type = "full"})
         img.footer__logo(src=require("../../images/Logo.png"), alt="Логотип")
         span.footer__copyright Copyright © 2018 Toxin отель. Все права защищены.
         .footer__socialButtons
-          //- img(src=require("../../images/twitter.png"), alt="twitter")
-          //- img(src=require("../../images/facebook.png"), alt="facebook")
-          //- img(src=require("../../images/inst.png"), alt="instagram")
-          //- i.fa-brands.fa-facebook-square &#f082;
-          //- i.fa-brands.fa-twitter &#f099;
-          //- i.fa-brands.fa-instagram &#f16d;
           span.icon &#xf099;
           span.icon &#xf082;
           span.icon &#xf16d;
