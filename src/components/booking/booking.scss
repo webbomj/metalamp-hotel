@@ -1,4 +1,4 @@
-@import "../../styles/global";
+@import '../../styles/global';
 
 .booking {
   width: 380px;
@@ -8,6 +8,12 @@
   box-shadow: 0 0 25px rgb(0 0 0 / 20%);
   border-radius: 4px;
   padding: 45px 30px 30px;
+
+  @media (max-width: 380px) {
+    width: 100%;
+    padding: 35px 0px 25px;
+    border: none;
+  }
 
   &__id {
     & .numberRoomAndPrice__id {

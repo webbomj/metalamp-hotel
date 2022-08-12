@@ -120,6 +120,10 @@
 
   &__comment:not(:last-child) {
     margin-bottom: 16px;
+    @media (max-width: 700px) {
+      flex-direction: column;
+      align-items: center;
+    }
   }
 
   &__botContent {
