@@ -1,4 +1,4 @@
-@import '../../styles/global';
+@use 'src/styles/global.scss';
 
 .bulletList {
   &__title {
@@ -6,7 +6,7 @@
     font-size: 12px;
     line-height: 15px;
     text-transform: uppercase;
-    color: $dark100;
+    color: global.$dark100;
   }
 
   &__list {
@@ -25,7 +25,7 @@
     border-radius: 50%;
     margin-right: 11px;
     margin-top: 7px;
-    background: $dark25;
+    background: global.$dark25;
   }
 
   &__text {
@@ -33,7 +33,7 @@
     font-weight: 400;
     font-size: 14px;
     line-height: 24px;
-    color: $dark75;
+    color: global.$dark75;
     @media (max-width: 380px) {
       width: 100%;
     }

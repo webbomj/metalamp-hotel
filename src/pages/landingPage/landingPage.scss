@@ -1,4 +1,4 @@
-@import '../../styles/global';
+@use 'src/styles/global.scss';
 
 .landingPage {
   position: relative;
@@ -36,7 +36,7 @@
     font-size: 14px;
     line-height: 24px;
     text-align: right;
-    color: $dark75;
+    color: global.$dark75;
     @media (max-width: 620px) {
       position: static;
       color: #fff;

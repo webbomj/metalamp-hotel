@@ -1,4 +1,4 @@
-@import '../../styles/global';
+@use 'src/styles/global';
 
 .header {
   width: 100%;
@@ -89,14 +89,14 @@
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
-    color: $dark50;
+    color: global.$dark50;
 
     &.active {
       font-style: normal;
       font-weight: 700;
       font-size: 14px;
       line-height: 17px;
-      color: $dark75;
+      color: global.$dark75;
     }
   }
 

@@ -1,4 +1,4 @@
-@import '../../styles/global';
+@use 'src/styles/global';
 
 .comment {
   padding: 10px 0 0 4px;
@@ -27,7 +27,7 @@
     font-weight: 700;
     font-size: 14px;
     line-height: 18px;
-    color: $dark75;
+    color: global.$dark75;
     transform: translate(-7px, 1px);
   }
 
@@ -35,7 +35,7 @@
     font-weight: 400;
     font-size: 14px;
     line-height: 24px;
-    color: $dark75;
+    color: global.$dark75;
     transform: translate(-3px, 5px);
   }
 
@@ -52,6 +52,6 @@
     font-weight: 400;
     font-size: 14px;
     line-height: 24px;
-    color: $dark75;
+    color: global.$dark75;
   }
 }

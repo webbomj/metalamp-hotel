@@ -1,4 +1,4 @@
-@import "../../styles/global";
+@use 'src/styles/global';
 
 .textField {
   position: relative;
@@ -20,38 +20,38 @@
   &__title {
     font-weight: 700;
     font-size: 12px;
-    color: $dark100;
+    color: global.$dark100;
     text-transform: uppercase;
   }
 
   &__description {
     font-weight: 400;
     font-size: 12px;
-    color: $dark50;
+    color: global.$dark50;
     text-transform: uppercase;
   }
 
   &__input {
     width: 320px;
     height: 44px;
-    border: 1px solid $dark25;
+    border: 1px solid global.$dark25;
     border-radius: 4px;
     padding-left: 15px;
     padding-right: 40px;
     font-size: 14px;
-    color: $dark75;
+    color: global.$dark75;
     letter-spacing: -0.05px;
     word-spacing: -1px;
 
     &::placeholder {
       font-weight: 400;
       font-size: 14px;
-      color: $dark25;
+      color: global.$dark25;
     }
 
     &:hover,
     &:focus {
-      border: 1px solid $dark50;
+      border: 1px solid global.$dark50;
       outline: none;
     }
 
@@ -68,7 +68,7 @@
     position: absolute;
     top: 34px;
     right: 63px;
-    color: $purple;
+    color: global.$purple;
 
     &--small {
       right: 10px;

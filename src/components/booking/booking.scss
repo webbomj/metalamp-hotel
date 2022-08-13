@@ -1,4 +1,4 @@
-@import '../../styles/global';
+@use 'src/styles/global.scss';
 
 .booking {
   width: 380px;
@@ -62,12 +62,12 @@
     width: 20px;
     height: 20px;
     border-radius: 50%;
-    border: 1px solid $dark25;
+    border: 1px solid global.$dark25;
     transform: translateY(-1px);
   }
 
   &__priceSymbol {
-    color: $dark25;
+    color: global.$dark25;
     font-weight: 700;
     font-size: 12px;
     text-align: center;
@@ -84,11 +84,11 @@
     font-weight: 700;
     font-size: 19px;
     line-height: 23px;
-    color: $dark100;
+    color: global.$dark100;
   }
 
   &__totalPrice-underline {
-    border-bottom: 1px dotted $dark25;
+    border-bottom: 1px dotted global.$dark25;
     height: 23px;
     max-width: 180px;
     width: 100%;

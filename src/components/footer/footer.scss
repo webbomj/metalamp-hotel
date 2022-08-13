@@ -1,4 +1,4 @@
-@import '../../styles/global';
+@use 'src/styles/global';
 
 .footer {
   display: flex;
@@ -111,7 +111,7 @@
     display: flex;
     justify-content: space-between;
     padding: 23px 140px 26px;
-    border-top: 1px solid $dark5;
+    border-top: 1px solid global.$dark5;
     height: 70px;
     @media (max-width: 768px) {
       flex-direction: column;

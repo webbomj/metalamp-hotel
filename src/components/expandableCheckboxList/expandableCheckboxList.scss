@@ -1,4 +1,4 @@
-@import "../../styles/global";
+@use 'src/styles/global';
 
 .expandableCheckboxes {
   position: relative;
@@ -14,7 +14,7 @@
     font-size: 12px;
     line-height: 15px;
     text-transform: uppercase;
-    color: $dark100;
+    color: global.$dark100;
     cursor: pointer;
 
     &.active,

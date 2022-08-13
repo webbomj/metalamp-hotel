@@ -1,4 +1,4 @@
-@import "../../../styles/_global.scss";
+@use 'src/styles/global.scss';
 
 .colorBlock__item {
   display: flex;
@@ -19,7 +19,7 @@
   font-weight: 400;
   font-size: 19px;
   line-height: 28px;
-  color: $dark100;
+  color: global.$dark100;
 }
 
 .colorBlock__colors {
@@ -30,29 +30,29 @@
 }
 
 .colorBlock__dark100 {
-  background-color: $dark100;
+  background-color: global.$dark100;
 }
 
 .colorBlock__dark75 {
-  background-color: $dark75;
+  background-color: global.$dark75;
 }
 
 .colorBlock__dark50 {
-  background-color: $dark50;
+  background-color: global.$dark50;
 }
 
 .colorBlock__dark25 {
-  background-color: $dark25;
+  background-color: global.$dark25;
 }
 
 .colorBlock__dark5 {
-  background-color: $dark5;
+  background-color: global.$dark5;
 }
 
 .colorBlock__purple {
-  background-color: $purple;
+  background-color: global.$purple;
 }
 
 .colorBlock__green {
-  background-color: $green;
+  background-color: global.$green;
 }

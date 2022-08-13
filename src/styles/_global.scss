@@ -5,36 +5,3 @@ $dark25: rgb(31 32 65 / 25%);
 $dark5: rgb(31 32 65 / 5%);
 $purple: #bc9cff;
 $green: #6fcf97;
-
-* {
-  box-sizing: border-box;
-  font-family: Montserrat;
-  color: $dark100;
-}
-
-body {
-  color: $dark75;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 24px;
-}
-
-h1 {
-  text-shadow: 0 4px 4px rgb(0 0 0 / 25%);
-  font-weight: 700;
-  font-size: 24px;
-  line-height: 29px;
-}
-
-h2 {
-  font-weight: 700;
-  font-size: 19px;
-  line-height: 23px;
-}
-
-h3 {
-  font-weight: 700;
-  font-size: 12px;
-  line-height: 15px;
-  text-transform: uppercase;
-}

@@ -1,4 +1,4 @@
-@import "../../styles/global";
+@use 'src/styles/global';
 
 .room {
   width: 270px;
@@ -73,14 +73,14 @@
       font-weight: 700;
       font-size: 14px;
       line-height: 18px;
-      color: $dark50;
+      color: global.$dark50;
     }
 
     & span:last-child {
       font-weight: 400;
       font-size: 14px;
       line-height: 18px;
-      color: $dark50;
+      color: global.$dark50;
     }
   }
 }
@@ -104,13 +104,12 @@
 .swiper:hover .swiper-button-next,
 .swiper:hover .swiper-button-prev {
   opacity: 1;
-  background:
-    linear-gradient(
-      90deg,
-      rgb(0 0 0 / 50%) 0%,
-      rgb(0 0 0 / 0%) 99.99%,
-      rgb(255 255 255 / 0%) 100%
-    );
+  background: linear-gradient(
+    90deg,
+    rgb(0 0 0 / 50%) 0%,
+    rgb(0 0 0 / 0%) 99.99%,
+    rgb(255 255 255 / 0%) 100%
+  );
   color: #fff;
 }
 
@@ -157,7 +156,7 @@
 
 .swiper-button-prev::after,
 .swiper-rtl .swiper-button-next::after {
-  content: "prev";
+  content: 'prev';
 }
 
 .swiper-button-next,
@@ -169,7 +168,7 @@
 
 .swiper-button-next::after,
 .swiper-rtl .swiper-button-prev::after {
-  content: "next";
+  content: 'next';
 }
 
 .swiper-button-next {

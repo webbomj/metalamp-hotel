@@ -1,4 +1,4 @@
-@import "../../styles/global";
+@use 'src/styles/global';
 
 .iconTextItem {
   width: 280px;
@@ -24,6 +24,6 @@
     font-weight: 700;
     font-size: 14px;
     line-height: 18px;
-    color: $dark75;
+    color: global.$dark75;
   }
 }
