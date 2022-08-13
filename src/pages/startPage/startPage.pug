@@ -5,13 +5,17 @@ html(lang="en")
     meta(http-equiv="X-UA-Compatible", content="IE=edge")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     title Document
-  body 
-    - const UILinks = ["colorsAndType", "formElements", "headersAndFooters", "cards"];
-    each link in UILinks
-      li
-        a(href=`./${link}.html`)= link
-    hr
-    - const links = ["loginPage", "registrationPage", "landingPage", "roomDetails", "searchRoom"];
-    each link in links
-      li
-        a(href=`./${link}.html`)= link
+  body
+    .start-page
+      .start-page__links 
+        - const UILinks = ["colorsAndType", "formElements", "headersAndFooters", "cards"];
+        ul
+          each link in UILinks
+            li
+              a(href=`./${link}.html`)= link
+          hr
+        ul 
+          - const links = ["loginPage", "registrationPage", "landingPage", "roomDetails", "searchRoom"];
+          each link in links
+            li
+              a(href=`./${link}.html`)= link

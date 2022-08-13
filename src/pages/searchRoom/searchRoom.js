@@ -1,4 +1,4 @@
-const filterButton = document.querySelector('.searchRoom__button');
+const filterButton = document.querySelector('.js-searchRoom__button');
 
 const handleButtonPointerdown = () => {
   const dropdownFilterMenu = document.querySelector('.js-searchRoom__dropdown-filter');
@@ -9,4 +9,6 @@ const setFilterButtonListener = () => {
   filterButton.addEventListener('pointerdown', () => handleButtonPointerdown());
 };
 
-document.addEventListener('DOMContentLoaded', () => setFilterButtonListener());
+if (filterButton) {
+  document.addEventListener('DOMContentLoaded', () => setFilterButtonListener());
+}

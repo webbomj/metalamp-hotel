@@ -1,4 +1,4 @@
-@import "../../styles/global";
+@import '../../styles/global';
 
 .bulletList {
   &__title {
@@ -34,5 +34,8 @@
     font-size: 14px;
     line-height: 24px;
     color: $dark75;
+    @media (max-width: 380px) {
+      width: 100%;
+    }
   }
 }

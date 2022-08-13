@@ -29,6 +29,7 @@
 
   &__dropdown-filter {
     display: none;
+    margin-bottom: 20px;
   }
 
   &__filter-menu {
@@ -89,6 +90,9 @@
   }
 
   &__header {
+    @media (max-width: 1190px) {
+      text-align: center;
+    }
   }
 
   &__hotelList {

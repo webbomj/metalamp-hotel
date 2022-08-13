@@ -16,6 +16,7 @@
     display: flex;
     align-items: center;
     flex-direction: column;
+    min-height: auto;
   }
 
   &__findForm {
@@ -36,8 +37,10 @@
     line-height: 24px;
     text-align: right;
     color: $dark75;
-    @media (max-width: 500px) {
+    @media (max-width: 620px) {
       position: static;
+      color: #fff;
+      text-align: center;
     }
   }
 }
