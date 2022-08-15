@@ -11,13 +11,13 @@ Hotel Toxin - приложение по поиску номеров отеля. 
 
 ## Страницы
 
-В проекте содержится 4 UI страницы:
+В проекте содержится 4 UI страницы:<br>
 [colorsAndType](https://webbomj.github.io/metalamp-hotel/colorsAndType.html)<br>
 [formElements](https://webbomj.github.io/metalamp-hotel/formElements.html)<br>
 [headersAndFooters](https://webbomj.github.io/metalamp-hotel/headersAndFooters.html)<br>
 [cards](https://webbomj.github.io/metalamp-hotel/cards.html)<br>
 
-В проекте содержатся 5 основных страниц:
+В проекте содержатся 5 основных страниц:<br>
 [loginPage](https://webbomj.github.io/metalamp-hotel/loginPage.html)<br>
 [registrationPage](https://webbomj.github.io/metalamp-hotel/registrationPage.html)<br>
 [landingPage](https://webbomj.github.io/metalamp-hotel/landingPage.html)<br>
