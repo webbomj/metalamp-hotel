@@ -9,12 +9,12 @@ block content
   section.roomDetails
     .roomDetails__imgBlock 
       .roomDetails__leftImgBlock 
-        img.roomDetails__leftImg(src=require("../../images/room1.png"))
+        img.roomDetails__leftImg(src=require("../../images/room1.png"), alt="room1")
       .roomDetails__rightImgBlock 
         .roomDetails__topImg 
-          img.roomDetails__firstRightImage(src=require("../../images/room2.png"))
+          img.roomDetails__firstRightImage(src=require("../../images/room2.png"), alt="room2")
         .roomDetails__botImg 
-          img.roomDetails__secondRightImage(src=require("../../images/room3.png"))
+          img.roomDetails__secondRightImage(src=require("../../images/room3.png"), alt="room3")
     .roomDetails__mainContent 
       .roomDetails__leftContentBlock
         .roomDetails__topContent 
@@ -25,9 +25,9 @@ block content
             h2 Впечатления от номера
             +chart({})
         .roomDetails__comments 
-          .roomDetails__commentHeader
-            h2 Отзывы посетителей номера
-            span 2 отзыва
+          .roomDetails__comment-header-wrapper
+            h2.roomDetails__comment-header Отзывы посетителей номера
+            span.roomDetails__comment-count 2 отзыва
           .roomDetails__comment
             +comment({id: 'UniqIdComment1', title: 'Мурад Сарафанов', date: '5 дней', photo: 'photo.png', likes: 12, liked: true, text: 'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.'})
           .roomDetails__comment

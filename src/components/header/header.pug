@@ -4,7 +4,7 @@ mixin header({id = 'uniqIdHeader', auth = false})
   - const list = [{title: 'О нас', children: false}, {title: 'Услуги', children: true},{title: 'Вакансии', children: false},{title: 'Новости', children: false},{title: 'Соглашения', children: true}];
   .header(data-header=id) 
     nav.header__menu
-      img.header__logo(src=require("../../images/Logo.png"), alt="Logo", width="106px", height="40px")
+      img.header__logo(src=require("../../images/Logo.png"), alt="Logo", width="106", height="40")
       .header__right 
         ul.header__list 
           each item, indx in list 

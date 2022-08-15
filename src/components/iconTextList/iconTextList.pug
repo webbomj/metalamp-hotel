@@ -4,5 +4,5 @@ mixin iconTextList({list = []})
   .iconTextList
     ul.iconTextList__list
       each item in list
-        .iconTextList__item
+        li.iconTextList__item
           +iconTextItem({title: item.title, text: item.text, icon: item.icon})

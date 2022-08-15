@@ -1,5 +1,5 @@
 .roomDetails {
-  margin-bottom: 13px;
+  margin-bottom: 15px;
 
   &__imgBlock {
     width: 100%;
@@ -56,7 +56,7 @@
 
   &__mainContent {
     display: flex;
-    padding: 48px 140px;
+    padding: 46px 140px;
     @media (max-width: 1300px) {
       padding: 48px 0;
       flex-direction: column;
@@ -102,20 +102,24 @@
   }
 
   &__comments {
-    margin-top: -4px;
+    margin-top: 34px;
 
     & h2 {
       margin-bottom: 13px;
     }
   }
 
-  &__commentHeader {
+  &__comment-header-wrapper {
     display: flex;
     justify-content: space-between;
+  }
 
-    & span {
-      transform: translateY(17px);
-    }
+  &__comment-count {
+    transform: translateY(3px);
+  }
+
+  &__comment-header {
+    margin: 0;
   }
 
   &__comment:not(:last-child) {
@@ -128,6 +132,7 @@
 
   &__botContent {
     display: flex;
+    margin-top: 20px;
     @media (max-width: 700px) {
       flex-direction: column;
       align-items: center;
@@ -135,8 +140,7 @@
   }
 
   &__rules {
-    margin-right: 100px;
-
+    margin: 4px 100px 0 0;
     & h2 {
       margin: 7px 0 0 20px;
     }
@@ -147,7 +151,7 @@
   }
 
   &__freeCancle {
-    margin-top: 12px;
+    margin-top: 15px;
 
     & h2 {
       padding: 0;

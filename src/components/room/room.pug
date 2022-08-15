@@ -8,8 +8,7 @@ mixin room({id, number, type = '', price, review, array = [], stars = 0})
         .swiper-wrapper
           each item in array
             .swiper-slide
-              //- img(src=`assets/${item}`)
-              img(src=require(`../../images/${item}`))
+              img(src=require(`../../images/${item}`), alt="slide")
 
         .swiper-button-next
         .swiper-button-prev

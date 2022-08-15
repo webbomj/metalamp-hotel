@@ -4,7 +4,7 @@ mixin comment({id = 'UniqIdComment', title = 'Мурад Сарафанов', da
   .comment
     .comment__top 
       .comment__photo
-        img(src=require(`../../images/${photo}`))
+        img(src=require(`../../images/${photo}`), alt=title)
       .comment__header
         .comment__title= title
         .comment__date= `${date} назад`
