@@ -1,6 +1,11 @@
 extends ../../layouts/pages/pages.pug
 include ../../components/findRooms/findRooms.pug
 
+block header
+  title Landing page
+  meta(name="description", content="Landing page - metalamp 2 step")
+  meta(name="keywords", content="landing page")
+
 block content
   section.landingPage
     .landingPage__findForm 

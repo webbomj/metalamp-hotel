@@ -1,6 +1,12 @@
 extends ../../layouts/UI/UI.pug
 include ../../components/header/header.pug
 include ../../components/footer/footer.pug
+
+block header
+  title Headers and footers
+  meta(name="description", content="Headers and footers - metalamp 2 step")
+  meta(name="keywords", content="Headers and footers")
+
 block content
   section.headersAndFooters 
     .headersAndFooters__first
