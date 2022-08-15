@@ -9,7 +9,8 @@ mixin expandableCheckboxList({id = 'uniqIdExpandable', title = '', open = false}
         class=open ? "expandableCheckboxes__arrow--rotate" : ""
       ) &#xe5cf;
     ul.expandableCheckboxes__content(
-      style=open ? "display: block; max-height: 240px;" : "display: none: max-height: null"
+      style=open ? "display: block; max-height: 240px;" : "display: none; max-height: null"
     )
       each item, indx in list 
-        +checkbox({id: `${id}${indx}`, title: item})
+        li.expandableCheckboxes__item
+          +checkbox({id: `${id}${indx}`, title: item})
