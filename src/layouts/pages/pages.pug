@@ -20,9 +20,9 @@ html(lang="en")
 
   body 
     .pages__wrapper
-      .pages__header
+      header.pages__header
         +header({id: 'pages__header'}) 
-      .pages__main 
+      main.pages__main 
         block content
-      .pages__footer
+      footer.pages__footer
         +footer({id: 'pages__footer', type: 'full'})
