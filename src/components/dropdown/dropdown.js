@@ -64,7 +64,7 @@ const changeVisibility = (e) => {
 
 allInputs.forEach((el) => el.addEventListener('click', (e) => changeVisibility(e)));
 
-const counterHandler = (e) => {
+const handleListCounterClick = (e) => {
   const dataset = e.target.dataset.dropdownbutton;
   if (!dataset) return;
 
@@ -98,4 +98,4 @@ const counterHandler = (e) => {
   }
 };
 
-allList.forEach((el) => el.addEventListener('click', (e) => counterHandler(e)));
+allList.forEach((el) => el.addEventListener('click', (e) => handleListCounterClick(e)));

@@ -1,6 +1,6 @@
 const toggleBlock = document.querySelectorAll('.toggle__Block');
 
-const toggleChange = (e) => {
+const toggleClass = (e) => {
   const { target } = e;
   const toggleId = target.parentNode.dataset.toggle;
 
@@ -13,5 +13,5 @@ const toggleChange = (e) => {
 };
 
 toggleBlock.forEach((el) => {
-  el.addEventListener('click', (e) => toggleChange(e));
+  el.addEventListener('click', (e) => toggleClass(e));
 });

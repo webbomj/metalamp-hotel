@@ -16,26 +16,6 @@
     }
   }
 
-  &__firstRightImage {
-    @media (max-width: 1400px) {
-      width: 100%;
-    }
-  }
-
-  &__secondRightImage {
-    @media (max-width: 1400px) {
-      width: 100%;
-    }
-  }
-
-  &__leftImgBlock {
-    // width: 981px;
-    // height: 451px;
-  }
-
-  &__rightImgBlock {
-  }
-
   &__topImg {
     width: 461px;
     height: 243px;
@@ -45,12 +25,24 @@
     }
   }
 
+  &__firstRightImage {
+    @media (max-width: 1400px) {
+      width: 100%;
+    }
+  }
+
   &__botImg {
     width: 461px;
     height: 243px;
     @media (max-width: 1400px) {
       width: 100%;
       height: auto;
+    }
+  }
+
+  &__secondRightImage {
+    @media (max-width: 1400px) {
+      width: 100%;
     }
   }
 

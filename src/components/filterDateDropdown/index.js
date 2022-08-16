@@ -1,10 +1,11 @@
 import AirDatepicker from 'air-datepicker';
+
 import 'air-datepicker/air-datepicker.css';
-import { airDatePickerOptionsCreator, dateConversion } from '../airDatePicker/index';
+
+import { createAirDatePickerOptions, converseDate } from '../airDatePicker/index';
 
 const mainBlock = document.querySelectorAll('.filterDateDropdown__main');
 const airDatePickerBlocks = document.querySelectorAll('.filterDateDropdown__close');
-// const airDatePickerInput = document.querySelector('.filterDateDropdown__main .textField__input');
 
 // eslint-disable-next-line no-return-assign, no-param-reassign
 const changeTitle = (el, dateString = '') => (el.value = dateString);
@@ -31,7 +32,7 @@ const selectDate = (formDate, datePicker) => {
   if (formDate.length === 0) {
     changeTitle(currentInput);
   } else if (formDate.length === 2) {
-    changeTitle(currentInput, dateConversion(formDate).resultDate);
+    changeTitle(currentInput, converseDate(formDate).resultDate);
   }
 };
 
@@ -41,6 +42,6 @@ const selectDate = (formDate, datePicker) => {
   // eslint-disable-next-line no-unused-vars
   const airDatePickerInst = new AirDatepicker(
     el,
-    airDatePickerOptionsCreator(selectDate, closeAirDatePickerToggle)
+    createAirDatePickerOptions(selectDate, closeAirDatePickerToggle)
   );
 });

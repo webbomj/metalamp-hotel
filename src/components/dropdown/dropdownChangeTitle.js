@@ -1,9 +1,9 @@
 /* eslint-disable prefer-destructuring */
 import { counter } from './dropdownCounterState';
 
-export const allDropdown = {};
+const allDropdown = {};
 
-export const dropdownSaveStartTitle = (uniqId) => {
+const dropdownSaveStartTitle = (uniqId) => {
   const dropdownInput = document.querySelector(`[data-dropdown-input=${uniqId}]`);
   const dropdownTitle = dropdownInput.value;
   allDropdown[uniqId] = dropdownTitle;
@@ -168,10 +168,12 @@ const setNewTitle = (uniqId) => {
   }
 };
 
-export const dropdownChangeTitle = (uniqId) => {
+const dropdownChangeTitle = (uniqId) => {
   if (counter[uniqId] === 0) {
     setStartTitle(uniqId);
   } else {
     setNewTitle(uniqId);
   }
 };
+
+export { dropdownChangeTitle, allDropdown, dropdownSaveStartTitle };

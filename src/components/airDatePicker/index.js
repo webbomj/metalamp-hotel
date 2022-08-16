@@ -1,10 +1,11 @@
 /* eslint-disable arrow-body-style */
 import AirDatepicker from 'air-datepicker';
+
 import 'air-datepicker/air-datepicker.css';
 
 const airDatepickerContainer = document.getElementById('airDatePicker');
 
-export const dateConversion = (dates) => {
+const converseDate = (dates) => {
   if (dates.length !== 2) return;
 
   const [from, to] = dates;
@@ -39,7 +40,7 @@ export const dateConversion = (dates) => {
   };
 };
 
-export const airDatePickerOptionsCreator = (fnSelect, fnHandler) => {
+const createAirDatePickerOptions = (fnSelect, fnHandler) => {
   return {
     classes: 'js-airDatePicker',
     moveToOtherMonthsOnSelect: false,
@@ -73,7 +74,9 @@ export const airDatePickerOptionsCreator = (fnSelect, fnHandler) => {
   };
 };
 // eslint-disable-next-line no-unused-vars
-export const airDatePickerInst = new AirDatepicker(
+const initAirDatePickerInst = new AirDatepicker(
   airDatepickerContainer,
-  airDatePickerOptionsCreator(dateConversion)
+  createAirDatePickerOptions(converseDate)
 );
+
+export { initAirDatePickerInst, createAirDatePickerOptions, converseDate };

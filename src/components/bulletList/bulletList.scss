@@ -1,14 +1,6 @@
 @use 'src/styles/global.scss';
 
 .bulletList {
-  &__title {
-    font-weight: 700;
-    font-size: 12px;
-    line-height: 15px;
-    text-transform: uppercase;
-    color: global.$dark100;
-  }
-
   &__list {
     list-style-type: none;
     margin: 9px 0 0;
@@ -37,5 +29,13 @@
     @media (max-width: 380px) {
       width: 100%;
     }
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 15px;
+    text-transform: uppercase;
+    color: global.$dark100;
   }
 }

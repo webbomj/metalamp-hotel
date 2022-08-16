@@ -1,7 +1,7 @@
 /* eslint-disable import/no-mutable-exports */
 const allCountersQuantity = document.querySelectorAll('[data-dropdowncounter]');
 
-export let counter = {};
+let counter = {};
 
 const initCounter = () => {
   [...allCountersQuantity].forEach((el) => {
@@ -15,7 +15,7 @@ const initCounter = () => {
   });
 };
 
-export const incrementCounter = (name) => {
+const incrementCounter = (name) => {
   counter = {
     ...counter,
     [name]: counter[name] + 1,
@@ -23,7 +23,7 @@ export const incrementCounter = (name) => {
   };
 };
 
-export const decrementCounter = (name) => {
+const decrementCounter = (name) => {
   if (counter[name] <= 0) return;
   counter = {
     ...counter,
@@ -32,7 +32,7 @@ export const decrementCounter = (name) => {
   };
 };
 
-export const clearState = (name) => {
+const clearState = (name) => {
   // eslint-disable-next-line no-restricted-syntax
   for (const key in counter) {
     if (key.includes(name)) {
@@ -42,3 +42,5 @@ export const clearState = (name) => {
 };
 
 initCounter();
+
+export { counter, incrementCounter, decrementCounter, clearState };

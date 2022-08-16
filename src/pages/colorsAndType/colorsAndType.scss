@@ -1,16 +1,18 @@
 @use 'src/styles/global.scss';
 
-.pageColors__content {
-  display: flex;
-  margin-top: 60px;
-  padding-left: 150px;
-}
+.pageColors {
+  &__content {
+    display: flex;
+    margin-top: 60px;
+    padding-left: 150px;
+  }
 
-.pageColors__leftBlock {
-  display: block;
-  margin-right: 415px;
-}
+  &__leftBlock {
+    display: block;
+    margin-right: 415px;
+  }
 
-.pageColors__rightBlock {
-  display: block;
+  &__rightBlock {
+    display: block;
+  }
 }

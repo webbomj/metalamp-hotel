@@ -1,11 +1,13 @@
 import AirDatepicker from 'air-datepicker';
+
+import { createAirDatePickerOptions, converseDate } from '../airDatePicker/index';
+
 import 'air-datepicker/air-datepicker.css';
-import { airDatePickerOptionsCreator, dateConversion } from '../airDatePicker/index';
 
 const dateDropdownLeftInput = document.querySelectorAll('.dateDropdownLeft__main .textField__input');
 const dateDropdownRightInput = document.querySelectorAll('.dateDropdownRight__main .textField__input');
 
-const openCloseDropdownFunction = (e) => {
+const toggleDropdownFunction = (e) => {
   if (e.target) {
     const inputDataset = e.target.parentNode?.dataset?.dropdown;
     if (!inputDataset) return;
@@ -30,16 +32,16 @@ const selectDate = (formDate, datepicker) => {
     changeTitleLeft('ДД.ММ.ГГГГ', leftInput);
     changeTitleRight('ДД.ММ.ГГГГ', rightInput);
   } else if (formDate.length === 2) {
-    changeTitleLeft(dateConversion(formDate).from, leftInput);
-    changeTitleRight(dateConversion(formDate).to, rightInput);
+    changeTitleLeft(converseDate(formDate).from, leftInput);
+    changeTitleRight(converseDate(formDate).to, rightInput);
   }
 };
 
 dateDropdownLeftInput?.forEach((el) => {
-  el.parentNode?.addEventListener('click', (e) => openCloseDropdownFunction(e));
+  el.parentNode?.addEventListener('click', (e) => toggleDropdownFunction(e));
 });
 dateDropdownRightInput?.forEach((el) => {
-  el.parentNode?.addEventListener('click', (e) => openCloseDropdownFunction(e));
+  el.parentNode?.addEventListener('click', (e) => toggleDropdownFunction(e));
 });
 
 const dropdownEl = document.querySelectorAll('.dateDropdown__close');
@@ -48,6 +50,6 @@ dropdownEl.forEach((el) => {
   // eslint-disable-next-line no-unused-vars
   const airDatePickerInst = new AirDatepicker(
     el,
-    airDatePickerOptionsCreator(selectDate, (e) => openCloseDropdownFunction(e))
+    createAirDatePickerOptions(selectDate, (e) => toggleDropdownFunction(e))
   );
 });

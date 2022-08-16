@@ -4,7 +4,7 @@ mixin textField(props)
     .textField__top(class=small ? "textField__top--small" : "") 
       span.textField__title= title
       span.textField__description= description
-    div(class=classNames, data-dropdown=dropdown ? id : false)
+    .textField__input-wrapper(class=classNames, data-dropdown=dropdown ? id : false)
       input.textField__input(
         class=small ? `textField__input--small ${open ? "dropdown__field--active" : ""}` : `${open ? "dropdown__field--active" : ""}`,
         placeholder=placeholder,

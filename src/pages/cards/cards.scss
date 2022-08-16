@@ -7,15 +7,23 @@
     margin-right: 40px;
   }
 
+  &__findRooms {
+    margin-bottom: 40px;
+  }
+
+  &__registration {
+    margin-top: 40px;
+  }
+
   &__secondColumn {
     margin-right: 40px;
   }
 
-  &__thirdColumn {
+  &__login {
+    margin-top: 40px;
   }
 
-  &__findRooms {
-    margin-bottom: 40px;
+  &__thirdColumn {
   }
 
   &__airDatePicker {
@@ -23,14 +31,6 @@
 
   &__secondRoom,
   &__firstRoom {
-    margin-top: 40px;
-  }
-
-  &__registration {
-    margin-top: 40px;
-  }
-
-  &__login {
     margin-top: 40px;
   }
 }

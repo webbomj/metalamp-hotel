@@ -18,17 +18,6 @@
     }
   }
 
-  & span.icon {
-    display: inline-block;
-    height: 100px;
-    font-family: FontAwesome;
-    font-size: 24px;
-    color: transparent;
-    background-clip: text;
-    background-image: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
-    cursor: pointer;
-  }
-
   &__topBlock {
     padding: 92px 140px 83px;
     display: flex;
@@ -49,8 +38,30 @@
     padding: 8px 0 0;
   }
 
+  &__logo {
+    margin-bottom: 4px;
+    cursor: pointer;
+  }
+
+  &__span {
+    display: inline-block;
+    margin-top: 6px;
+  }
+
   &__second {
     margin-left: 40px;
+  }
+
+  &__list {
+    padding-top: 6px;
+  }
+
+  &__item {
+    margin-bottom: 14px;
+  }
+
+  &__link {
+    text-decoration: none;
   }
 
   &__third {
@@ -79,25 +90,15 @@
     }
   }
 
-  &__list {
-    padding-top: 6px;
-  }
-
-  &__item {
-    margin-bottom: 14px;
-
-    & a {
-      text-decoration: none;
-    }
-  }
-
-  &__span {
+  &__icon {
     display: inline-block;
-    margin-top: 6px;
-  }
-
-  &__logo {
-    margin-bottom: 4px;
+    height: 100px;
+    font-family: FontAwesome;
+    font-size: 24px;
+    color: transparent;
+    background-clip: text;
+    background-image: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+    cursor: pointer;
   }
 
   &__middleBlock {

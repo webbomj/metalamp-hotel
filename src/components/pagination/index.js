@@ -5,15 +5,6 @@ require('paginationjs');
 
 const pagination = document.querySelector('#pagination');
 
-// function template(data) {
-//   let html = '<ul>';
-//   jQuery.each(data, (index, item) => {
-//     html += `<li>${item}</li>`;
-//   });
-//   html += '</ul>';
-//   return html;
-// }
-
 const defineNavigatorText = (currentPage) =>
   `${currentPage * 12 - 11} - ${currentPage * 12} из 100+ вариантов аренды`;
 
@@ -28,10 +19,5 @@ if (pagination) {
     prevText: '',
     showNavigator: true,
     formatNavigator: defineNavigatorText,
-    // callback(data) {
-    //   const html = template(data);
-
-    //   jQuery('#data-container').html(html);
-    // },
   });
 }

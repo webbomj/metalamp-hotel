@@ -7,8 +7,6 @@ import 'swiper/css/pagination';
 // eslint-disable-next-line no-unused-vars
 const swiper = new Swiper('.swiper', {
   modules: [Pagination, HashNavigation, Navigation],
-  // direction: 'vertical',
-  // loop: true,
   spaceBetween: 30,
   hashNavigation: {
     watchState: true,

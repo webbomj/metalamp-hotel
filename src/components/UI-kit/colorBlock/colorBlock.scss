@@ -6,22 +6,6 @@
   margin-bottom: 20px;
 }
 
-.colorBlock__title {
-  margin: 10px 0 0;
-  font-weight: 700;
-  font-size: 19px;
-}
-
-.colorBlock__hash {
-  display: inline-block;
-  margin-top: 3px;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 19px;
-  line-height: 28px;
-  color: global.$dark100;
-}
-
 .colorBlock__colors {
   width: 70px;
   height: 70px;
@@ -55,4 +39,20 @@
 
 .colorBlock__green {
   background-color: global.$green;
+}
+
+.colorBlock__title {
+  margin: 10px 0 0;
+  font-weight: 700;
+  font-size: 19px;
+}
+
+.colorBlock__hash {
+  display: inline-block;
+  margin-top: 3px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 19px;
+  line-height: 28px;
+  color: global.$dark100;
 }
