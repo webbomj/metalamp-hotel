@@ -1,6 +1,6 @@
 import Inputmask from 'inputmask';
 
-const IMaskSelector = document.querySelectorAll('[date-masked="masked"]');
+const IMaskSelector = document.querySelectorAll('[data-masked="masked"]');
 
 // Inputmask({ mask: '30.12.2060', maskPlaceholder: 'ДД.ММ.ГГГГ', value: '12' }).mask(IMaskSelector);
 // Inputmask({

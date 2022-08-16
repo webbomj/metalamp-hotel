@@ -1,6 +1,6 @@
 mixin colorBlock({color, title, hash})
   li.colorBlock__item
     div(class=`colorBlock__colors colorBlock__${color}`)
-    div
+    .colorBlock__right-block
       h2.colorBlock__title= title
       span.colorBlock__hash= hash

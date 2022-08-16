@@ -14,20 +14,20 @@ block content
   section.roomDetails
     .roomDetails__imgBlock 
       .roomDetails__leftImgBlock 
-        img.roomDetails__leftImg(src=require("../../images/room1.png"), alt="room1")
+        img.roomDetails__leftImg(src=require("../../images/room1.jpg"), alt="room1")
       .roomDetails__rightImgBlock 
         .roomDetails__topImg 
-          img.roomDetails__firstRightImage(src=require("../../images/room2.png"), alt="room2")
+          img.roomDetails__firstRightImage(src=require("../../images/room2.jpg"), alt="room2")
         .roomDetails__botImg 
-          img.roomDetails__secondRightImage(src=require("../../images/room3.png"), alt="room3")
+          img.roomDetails__secondRightImage(src=require("../../images/room3.jpg"), alt="room3")
     .roomDetails__mainContent 
       .roomDetails__leftContentBlock
         .roomDetails__topContent 
           .roomDetails__roomInfo 
-            h2 Сведения о номере
+            h2.roomDetails__header Сведения о номере
             +iconTextList({list: [{title: 'Комфорт', text: 'Шумопоглощающие стены', icon: 'insert_emoticon'}, {title: 'Удобство', text: 'Окно в каждой из спален', icon: 'location_city'}, {title: 'Уют', text: 'Номер оснащён камином', icon: 'whatshot'},]})
           .roomDetails__review 
-            h2 Впечатления от номера
+            h2.roomDetails__header Впечатления от номера
             +chart({})
         .roomDetails__comments 
           .roomDetails__comment-header-wrapper
@@ -39,11 +39,11 @@ block content
             +comment({id: 'UniqIdComment2', title: 'Патрисия Стёклышкова', date: 'Неделю', photo: 'photo2.png', likes: 2, liked: false, text: 'Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент'})
         .roomDetails__botContent
           .roomDetails__rules 
-            h2 Правила
+            h2.roomDetails__header Правила
             +bulletList({title: 'Правила', list: ['Нельзя с питомцами', 'Без вечеринок и мероприятий', 'Время прибытия — после 13:00, а выезд до 12:00']})
           .roomDetails__freeCancle
-            h2 Отмена
-            p Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги.
+            h2.roomDetails__header Отмена
+            p.roomDetails__text Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги.
 
       .roomDetails__rightContentBlock
         +booking({id: 'roomDetails__booking1'})

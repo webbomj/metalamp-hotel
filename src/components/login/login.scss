@@ -21,13 +21,14 @@
     border: none;
   }
 
+  &__header-wrapper {
+  }
+
   &__header {
-    & h1 {
-      font-weight: 700;
-      font-size: 24px;
-      line-height: 29px;
-      color: global.$dark100;
-    }
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+    color: global.$dark100;
   }
 
   &__email {

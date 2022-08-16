@@ -12,13 +12,14 @@
     padding: 25px 0 30px;
   }
 
+  &__header-wrapper {
+  }
+
   &__header {
-    & h1 {
-      font-weight: 700;
-      font-size: 24px;
-      line-height: 29px;
-      color: #1f2041;
-    }
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+    color: #1f2041;
   }
 
   &__name {

@@ -4,8 +4,8 @@ include ../toggle/toggle.pug
 
 mixin registration({id = '', textButton = 'Перейти к оплате'})
   .registration
-    .registration__header 
-      h1 Регистрация аккаунта
+    .registration__header-wrapper 
+      h1.registration__header Регистрация аккаунта
     .registration__name
       +textField({uniqId: `registration-textField1-${id}`, title: '', description: '', placeholder: 'Имя'})
     .registration__surname

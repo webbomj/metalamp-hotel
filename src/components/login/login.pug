@@ -3,8 +3,8 @@ include ../button/button.pug
 
 mixin login({id = 'loginId'})
   .login
-    .login__header 
-      h1 Войти
+    .login__header-wrapper 
+      h1.login__header Войти
     .login__email 
       +textField({uniqId: `login-textField1-${id}`, title: '', description: '', placeholder: 'Email'})
     .login__password 

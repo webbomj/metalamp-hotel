@@ -14,7 +14,7 @@ mixin dropdown(props)
     )
       ul.dropdown__list(data-dropdown-list=uniqId) 
         each item, i in list 
-          li
+          li.dropdown__item
             span.dropdown__title= item
             .dropdown__counter 
               - const IdPlusIdx = `${uniqId}-${i}`;

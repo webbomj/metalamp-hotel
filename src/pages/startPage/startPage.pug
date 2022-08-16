@@ -11,13 +11,13 @@ html(lang="en")
     .start-page
       .start-page__links 
         - const UILinks = ["colorsAndType", "formElements", "headersAndFooters", "cards"];
-        ul
+        ul.start-page__list
           each link in UILinks
-            li
-              a(href=`./${link}.html`)= link
-          hr
-        ul 
+            li.start-page__item
+              a.start-page__link(href=`./${link}.html`)= link
+          hr.start-page__hr
+        ul.start-page__list 
           - const links = ["loginPage", "registrationPage", "landingPage", "roomDetails", "searchRoom"];
           each link in links
-            li
-              a(href=`./${link}.html`)= link
+            li.start-page__item
+              a.start-page__link(href=`./${link}.html`)= link

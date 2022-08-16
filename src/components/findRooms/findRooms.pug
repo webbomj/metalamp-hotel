@@ -4,9 +4,9 @@ include ../button/button.pug
 
 mixin findRooms({id = ''})
   .findRooms
-    form
-      .findRooms__header
-        h1 Найдём номера под ваши пожелания
+    form.findRooms__form
+      .findRooms__header-wrapper
+        h1.findRooms__header Найдём номера под ваши пожелания
       .findRooms__dateDropdown
         +dateDropdown({uniqId: `cards__dateDropdown_${id}`, firstTitle: 'прибытие', secondTitle: 'выезд'})
       .findRooms__guestDropdown

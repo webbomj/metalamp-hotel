@@ -33,8 +33,8 @@ module.exports = {
     new CopyPlugin({
       patterns: [
         {
-          from: path.resolve(__dirname, 'src/images/*'),
-          to: path.resolve(__dirname, 'dist', 'assets', `[name][ext]`),
+          from: 'favicon/*',
+          to: path.resolve(__dirname, 'dist', 'assets/favicon', `[name][ext]`),
           noErrorOnMissing: true,
         },
       ],
@@ -42,6 +42,7 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: '[name].[contenthash].css',
     }),
+
     ...PAGES.map((page) => {
       if (page === 'startPage') {
         return new HtmlWebpackPlugin({
