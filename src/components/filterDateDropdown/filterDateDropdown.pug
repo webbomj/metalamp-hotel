@@ -1,7 +1,0 @@
-include ../airDatePicker/airDatePicker.pug
-include ../textField/textField.pug
-
-mixin filterDateDropdown({uniqId = 'uniqIdsQQ', title ='filter date dropdown', placeholder = 'Выберите даты'})
-  .filterDateDropdown
-    +textField({id: uniqId, title: title, value: '', placeholder: '19 авг - 23 авг', readonly: true, classNames: 'filterDateDropdown__main js-filterDateDropdown__main', styles: 'margin-bottom: 17px', dropdown: true})
-  .filterDateDropdown__close.js-filterDateDropdown__close(data-filterDateDropdown=uniqId)

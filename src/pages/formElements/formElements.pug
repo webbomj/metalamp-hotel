@@ -3,7 +3,7 @@ include ../../components/textField/textField.pug
 include ../../components/button/button.pug
 include ../../components/dropdown/dropdown.pug
 include ../../components/airDatePicker/airDatePicker.pug
-include ../../components/filterDateDropdown/filterDateDropdown.pug
+include ../../components/filter-date-dropdown/filter-date-dropdown.pug
 include ../../components/date-dropdown/date-dropdown.pug
 include ../../components/checkbox/checkbox.pug
 include ../../components/bullet-list/bullet-list.pug
@@ -37,7 +37,7 @@ block content
         .formElements__dropdown--date
           +date-dropdown({uniqId: 'dateDropdown1', firstTitle: 'date dropdown', secondTitle: 'date dropdown'})
         .formElements__dropdown--filter
-          +filterDateDropdown({uniqId: 'filterDateDropdown1'})
+          +filter-date-dropdown({uniqId: 'filterDateDropdown1'})
         .formElements__text-field--sub
           +textField({uniqId: 'textField4', title: 'subscription text field', description: '', placeholder: 'Email', arrow: true, small: true})
       .formElements__secondBlock

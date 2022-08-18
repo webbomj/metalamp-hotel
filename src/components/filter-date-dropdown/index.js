@@ -4,29 +4,29 @@ import 'air-datepicker/air-datepicker.css';
 
 import { createAirDatePickerOptions, converseDate } from '../airDatePicker/index';
 
-const mainBlock = document.querySelectorAll('.js-filterDateDropdown__main');
-const airDatePickerBlocks = document.querySelectorAll('.js-filterDateDropdown__close');
+const mainBlock = document.querySelectorAll('.js-filter-date-dropdown__main');
+const airDatePickerBlocks = document.querySelectorAll('.js-filter-date-dropdown__close');
 
 // eslint-disable-next-line no-return-assign, no-param-reassign
 const changeTitle = (el, dateString = '') => (el.value = dateString);
 
 const toggleAirDatePicker = (el) => {
   const airDatePickerNode = el.parentNode.parentNode.parentNode.querySelector(
-    '.js-filterDateDropdown__close'
+    '.js-filter-date-dropdown__close'
   );
-  airDatePickerNode.classList.toggle('filterDateDropdown__dateOpen');
+  airDatePickerNode.classList.toggle('filter-date-dropdown__dateOpen');
 };
 
 const closeAirDatePickerToggle = ({ $datepicker }) => {
   const datePickerNode = $datepicker.parentNode;
 
-  datePickerNode.classList.toggle('filterDateDropdown__dateOpen');
+  datePickerNode.classList.toggle('filter-date-dropdown__dateOpen');
 };
 
 const selectDate = (formDate, datePicker) => {
   const datePickerNode = datePicker.$datepicker.parentNode;
   const currentInput = datePickerNode.parentNode.querySelector(
-    '.js-filterDateDropdown__main .textField__input'
+    '.js-filter-date-dropdown__main .textField__input'
   );
 
   if (formDate.length === 0) {
