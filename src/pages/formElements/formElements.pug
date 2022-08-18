@@ -8,7 +8,7 @@ include ../../components/date-dropdown/date-dropdown.pug
 include ../../components/checkbox/checkbox.pug
 include ../../components/bullet-list/bullet-list.pug
 include ../../components/radioButton/radioButton.pug
-include ../../components/expandableCheckboxList/expandableCheckboxList.pug
+include ../../components/expandable-checkbox-list/expandable-checkbox-list.pug
 include ../../components/iconTextItem/iconTextItem.pug
 include ../../components/iconTextList/iconTextList.pug
 include ../../components/likeButton/likeButton.pug
@@ -47,9 +47,9 @@ block content
           +dropdown({uniqId: 'dropdown3', type: 'furniture', title: 'dropdown', small: true, description: 'expanded', text: '2 спальни, 2 кровати...', open: true})
       .formElements__thirdBlock
         .formElements__expandable-checkbox
-          +expandableCheckboxList({id: 'expandableCheckbox1', title: 'expandable checkbox list'})
+          +expandable-checkbox-list({id: 'expandableCheckbox1', title: 'expandable checkbox list'})
         .formElements__expandable-checkbox--open
-          +expandableCheckboxList({id: 'expandableCheckbox2', title: 'expandable checkbox list', open: true})
+          +expandable-checkbox-list({id: 'expandableCheckbox2', title: 'expandable checkbox list', open: true})
         .formElements__icon-text-list
           +iconTextList({list: [{title: 'Комфорт', text: 'Шумопоглощающие стены', icon: 'insert_emoticon'}, {title: 'Удобство', text: 'Окно в каждой из спален', icon: 'location_city'}]})
     .formElements__secondColumn

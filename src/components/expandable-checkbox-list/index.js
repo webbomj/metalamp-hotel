@@ -1,4 +1,4 @@
-const coll = document.querySelectorAll('.js-expandableCheckboxes__header');
+const coll = document.querySelectorAll('.js-expandable-checkboxes__header');
 
 const displayBlock = 'block';
 
@@ -13,7 +13,7 @@ const displayBlock = 'block';
       content.style.display = 'block';
     }
 
-    el.lastChild.classList.toggle('expandableCheckboxes__arrow--rotate');
+    el.lastChild.classList.toggle('expandable-checkboxes__arrow--rotate');
 
     if (content.style.maxHeight) {
       content.style.maxHeight = null;

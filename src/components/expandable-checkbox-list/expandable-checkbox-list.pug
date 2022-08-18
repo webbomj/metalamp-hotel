@@ -1,16 +1,16 @@
 include ../checkbox/checkbox.pug
 
-mixin expandableCheckboxList({id = 'uniqIdExpandable', title = '', open = false})
+mixin expandable-checkbox-list({id = 'uniqIdExpandable', title = '', open = false})
   - const list = ["Завтрак", "Письменный стол", "Стул для кормления", "Кроватка", "Телевизор", "Шампунь", "Телевизор", "Шампунь"];
-  .expandableCheckboxes
-    .expandableCheckboxes__header.js-expandableCheckboxes__header
-      .expandableCheckboxes__title= title
-      .material-icons.md-24.expandableCheckboxes__arrow(
-        class=open ? "expandableCheckboxes__arrow--rotate" : ""
+  .expandable-checkboxes
+    .expandable-checkboxes__header.js-expandable-checkboxes__header
+      .expandable-checkboxes__title= title
+      .material-icons.md-24.expandable-checkboxes__arrow(
+        class=open ? "expandable-checkboxes__arrow--rotate" : ""
       ) &#xe5cf;
-    ul.expandableCheckboxes__content(
+    ul.expandable-checkboxes__content(
       style=open ? "display: block; max-height: 240px;" : "display: none; max-height: null"
     )
       each item, indx in list 
-        li.expandableCheckboxes__item
+        li.expandable-checkboxes__item
           +checkbox({id: `${id}${indx}`, title: item})

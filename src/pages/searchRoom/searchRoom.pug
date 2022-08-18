@@ -4,7 +4,7 @@ include ../../components/textField/textField.pug
 include ../../components/dropdown/dropdown.pug
 include ../../components/filterDateDropdown/filterDateDropdown.pug
 include ../../components/checkbox/checkbox.pug
-include ../../components/expandableCheckboxList/expandableCheckboxList.pug
+include ../../components/expandable-checkbox-list/expandable-checkbox-list.pug
 include ../../components/pagination/pagination.pug
 include ../../components/room/room.pug
 
@@ -35,7 +35,7 @@ block content
       .searchRoom__filter-menu 
         +dropdown({uniqId: 'dropdown3', type: 'furniture', title: 'Удобствa номера', small: true, description: '', text: '2 спальни, 2 кровати...'})
       .searchRoom__filter-menu 
-        +expandableCheckboxList({id: 'expandableCheckbox2', title: 'дополнительные удобства'})
+        +expandable-checkbox-list({id: 'expandableCheckbox2', title: 'дополнительные удобства'})
     .searchRoom__sidebar
       form.searchRoom__form.js-searchRoom__form
         .searchRoom__date-dropdown 
@@ -55,7 +55,7 @@ block content
         .searchRoom__convenienceDropdown
           +dropdown({uniqId: 'dropdown2', type: 'furniture', title: 'Удобствa номера', small: true, description: '', text: '2 спальни, 2 кровати...'})
         .searchRoom__convenienceList
-          +expandableCheckboxList({id: 'expandableCheckbox1', title: 'дополнительные удобства'})
+          +expandable-checkbox-list({id: 'expandableCheckbox1', title: 'дополнительные удобства'})
     .searchRoom__mainContent
       h1.searchRoom__header Номера, которые мы для вас подобрали
       .searchRoom__hotelList 
