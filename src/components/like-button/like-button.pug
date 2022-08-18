@@ -1,0 +1,4 @@
+mixin like-button({number = 2, clicked = false})
+  .like-button.js-like-button(class=clicked ? "like-button__clicked" : "")
+    .material-icons.like-button__icon= "favorite"
+    span.like-button__number= number

@@ -1,4 +1,4 @@
-include ../likeButton/likeButton.pug
+include ../like-button/like-button.pug
 
 mixin comment({id = 'UniqIdComment', title = 'Мурад Сарафанов', date = '5', text = 'Лучший матрас', photo = '#', likes = 0, liked = false })
   .comment
@@ -9,6 +9,6 @@ mixin comment({id = 'UniqIdComment', title = 'Мурад Сарафанов', da
         .comment__title= title
         .comment__date= `${date} назад`
     .comment__bottom
-      .comment__likeButton
-        +likeButton({number: likes, clicked: liked}) 
+      .comment__like-button
+        +like-button({number: likes, clicked: liked}) 
       .comment__text= text

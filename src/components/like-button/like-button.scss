@@ -1,6 +1,6 @@
 @use 'src/styles/global';
 
-.likeButton {
+.like-button {
   width: 40px;
   height: 20px;
   border: 1px solid global.$dark25;
@@ -10,12 +10,12 @@
   &__clicked {
     border: 1px solid #bc9cff;
 
-    & .likeButton__icon {
+    & .like-button__icon {
       font-size: 10px;
       color: #bc9cff;
     }
 
-    & .likeButton__number {
+    & .like-button__number {
       color: #bc9cff;
     }
   }

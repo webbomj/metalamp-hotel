@@ -10,7 +10,7 @@ include ../../components/bullet-list/bullet-list.pug
 include ../../components/radioButton/radioButton.pug
 include ../../components/expandable-checkbox-list/expandable-checkbox-list.pug
 include ../../components/icon-text-list/icon-text-list.pug
-include ../../components/likeButton/likeButton.pug
+include ../../components/like-button/like-button.pug
 include ../../components/rateButton/rateButton.pug
 include ../../components/comment/comment.pug
 include ../../components/pagination/pagination.pug
@@ -70,8 +70,8 @@ block content
         .formElements__like-button
           h3.formElements__header like button
           .formElements__like-button-box
-            +likeButton({number: 2, clicked: false})
-            +likeButton({number: 12, clicked: true})
+            +like-button({number: 2, clicked: false})
+            +like-button({number: 12, clicked: true})
         .formElements__rate-button
           h3.formElements__header rate button
             .formElements__rate-button-box
