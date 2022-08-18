@@ -1,5 +1,5 @@
 include ../textField/textField.pug
-include ../radioButton/radioButton.pug
+include ../radio-button/radio-button.pug
 include ../toggle/toggle.pug
 
 mixin registration({id = '', textButton = 'Перейти к оплате'})
@@ -10,9 +10,9 @@ mixin registration({id = '', textButton = 'Перейти к оплате'})
       +textField({uniqId: `registration-textField1-${id}`, title: '', description: '', placeholder: 'Имя'})
     .registration__surname
       +textField({uniqId: `registration-textField2-${id}`, title: '', description: '', placeholder: 'Фамилия'})
-    .registration__radioButtons
-      +radioButton({id: 'radioButton1', title:'Мужчина', name: id, checked: true})
-      +radioButton({id: 'radioButton2', title: 'Женщина', name: id})
+    .registration__radio-buttons
+      +radio-button({id: 'radio-button1', title:'Мужчина', name: id, checked: true})
+      +radio-button({id: 'radio-button2', title: 'Женщина', name: id})
     .registration__birthday
       +textField({uniqId: `registration-textField3-${id}`, title: 'дата рождения', description: '', placeholder: 'ДД.ММ.ГГГГ', mask: true})
     .registration__email

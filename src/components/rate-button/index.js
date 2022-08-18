@@ -1,6 +1,6 @@
 /* eslint-disable no-param-reassign */
-const stars = document.querySelectorAll('.material-icons.js-rateButton__icon');
-const rateButton = document.querySelectorAll('.js-rateButton');
+const stars = document.querySelectorAll('.material-icons.js-rate-button__icon');
+const rateButton = document.querySelectorAll('.js-rate-button');
 
 const starMaterialFont = 'star_border';
 const starFilledMaterialFont = 'star';
@@ -8,7 +8,7 @@ const starFilledMaterialFont = 'star';
 const initRateButton = () => {
   [...rateButton].forEach((el) => {
     const starsClicked = +el.dataset.ratebuttonstars;
-    const allStars = el.querySelectorAll('.js-rateButton__icon');
+    const allStars = el.querySelectorAll('.js-rate-button__icon');
 
     allStars.forEach((star) => {
       if (Number(star.dataset.ratebutton.split('-')[1]) < starsClicked) {

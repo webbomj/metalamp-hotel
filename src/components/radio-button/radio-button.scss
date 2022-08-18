@@ -1,6 +1,6 @@
 @use 'src/styles/global';
 
-.radioButton {
+.radio-button {
   margin-bottom: 3px;
   display: flex;
   align-items: center;
@@ -10,7 +10,7 @@
     z-index: -1;
     opacity: 0;
 
-    &:checked + .radioButton__label {
+    &:checked + .radio-button__label {
       color: global.$dark75;
 
       &::before {

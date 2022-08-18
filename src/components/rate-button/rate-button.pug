@@ -1,0 +1,4 @@
+mixin rate-button({id = 'uniqIdRateButton', size = 0})
+  .rate-button.js-rate-button(id=id, data-rateButtonStars=size)
+    each item, indx in [1, 2, 3, 4, 5]
+      .material-icons.rate-button__icon.js-rate-button__icon(data-rateButton=`${id}-${indx}`)= "star_border"
