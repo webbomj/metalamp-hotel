@@ -4,18 +4,22 @@ import { createAirDatePickerOptions, converseDate } from '../airDatePicker/index
 
 import 'air-datepicker/air-datepicker.css';
 
-const dateDropdownLeftInput = document.querySelectorAll('.dateDropdownLeft__main .textField__input');
-const dateDropdownRightInput = document.querySelectorAll('.dateDropdownRight__main .textField__input');
+const dateDropdownLeftInput = document.querySelectorAll(
+  '.js-date-dropdown__left--main .textField__input'
+);
+const dateDropdownRightInput = document.querySelectorAll(
+  '.js-date-dropdown__right--main .textField__input'
+);
 
 const toggleDropdownFunction = (e) => {
   if (e.target) {
     const inputDataset = e.target.parentNode?.dataset?.dropdown;
     if (!inputDataset) return;
     const airDatePickerWrapper = document.querySelector(`[data-datedropdown=${inputDataset}]`);
-    airDatePickerWrapper.classList.toggle('dateDropdown__open');
+    airDatePickerWrapper.classList.toggle('date-dropdown__open');
   }
   if (e.$el) {
-    e.$el.classList.toggle('dateDropdown__open');
+    e.$el.classList.toggle('date-dropdown__open');
   }
 };
 
@@ -25,8 +29,8 @@ const changeTitleLeft = (dateString, leftInput) => (leftInput.value = dateString
 const changeTitleRight = (dateString, rightInput) => (rightInput.value = dateString);
 
 const selectDate = (formDate, datepicker) => {
-  const leftInput = datepicker.$el.parentNode.querySelector('.dateDropdownLeft__main input');
-  const rightInput = datepicker.$el.parentNode.querySelector('.dateDropdownRight__main input');
+  const leftInput = datepicker.$el.parentNode.querySelector('.js-date-dropdown__left--main input');
+  const rightInput = datepicker.$el.parentNode.querySelector('.js-date-dropdown__right--main input');
 
   if (formDate.length === 0) {
     changeTitleLeft('ДД.ММ.ГГГГ', leftInput);
@@ -44,7 +48,7 @@ dateDropdownRightInput?.forEach((el) => {
   el.parentNode?.addEventListener('click', (e) => toggleDropdownFunction(e));
 });
 
-const dropdownEl = document.querySelectorAll('.dateDropdown__close');
+const dropdownEl = document.querySelectorAll('.js-date-dropdown__close');
 
 dropdownEl.forEach((el) => {
   // eslint-disable-next-line no-unused-vars

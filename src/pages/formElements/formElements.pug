@@ -4,7 +4,7 @@ include ../../components/button/button.pug
 include ../../components/dropdown/dropdown.pug
 include ../../components/airDatePicker/airDatePicker.pug
 include ../../components/filterDateDropdown/filterDateDropdown.pug
-include ../../components/dateDropdown/dateDropdown.pug
+include ../../components/date-dropdown/date-dropdown.pug
 include ../../components/checkbox/checkbox.pug
 include ../../components/bullet-list/bullet-list.pug
 include ../../components/radioButton/radioButton.pug
@@ -35,7 +35,7 @@ block content
         .formElements__text-field--masked
           +textField({uniqId: 'textField3', title: 'Masked text field', description: '', placeholder: 'ДД.ММ.ГГГГ', mask: true})
         .formElements__dropdown--date
-          +dateDropdown({uniqId: 'dateDropdown1', firstTitle: 'date dropdown', secondTitle: 'date dropdown'})
+          +date-dropdown({uniqId: 'dateDropdown1', firstTitle: 'date dropdown', secondTitle: 'date dropdown'})
         .formElements__dropdown--filter
           +filterDateDropdown({uniqId: 'filterDateDropdown1'})
         .formElements__text-field--sub

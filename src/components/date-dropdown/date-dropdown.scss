@@ -1,6 +1,6 @@
 @use 'src/styles/global';
 
-.dateDropdown {
+.date-dropdown {
   display: flex;
   width: 320px;
   margin-bottom: 5px;
@@ -15,11 +15,11 @@
     z-index: 3;
   }
 
-  & .dateDropdownLeft {
+  & .date-dropdown__left {
     position: relative;
     margin-right: 20px;
 
-    &__main {
+    &--main {
       position: relative;
 
       & .textField__input {
@@ -34,11 +34,11 @@
     }
   }
 
-  & .dateDropdownRight {
+  & .date-dropdown__right {
     position: relative;
     margin-right: 20px;
 
-    &__main {
+    &--main {
       position: relative;
 
       & .textField__input {

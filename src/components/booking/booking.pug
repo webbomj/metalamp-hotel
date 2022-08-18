@@ -1,4 +1,4 @@
-include ../dateDropdown/dateDropdown.pug
+include ../date-dropdown/date-dropdown.pug
 include ../dropdown/dropdown.pug
 include ../button/button.pug
 include ../UI-kit/numberRoomAndPrice/numberRoomAndPrice.pug
@@ -7,8 +7,8 @@ mixin booking({id = 'bookingId'})
   form.booking.js-booking
     .booking__id 
       +numberRoomAndPrice({price: '9 800', type: 'люкс', number: '888'})
-    .booking__dateDropdown 
-      +dateDropdown({uniqId: `cards__dateDropdown_${id}`, firstTitle: 'прибытие', secondTitle: 'выезд'})
+    .booking__date-dropdown 
+      +date-dropdown({uniqId: `cards__dateDropdown_${id}`, firstTitle: 'прибытие', secondTitle: 'выезд'})
     .booking__guestDropdown 
       +dropdown({uniqId: `cards__dropdown_${id}`, title: 'гости', description: '', text: 'Сколько гостей'})
     .booking__list 
