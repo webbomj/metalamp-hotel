@@ -2,7 +2,7 @@ include ../../components/button/button.pug
 
 mixin header({id = 'uniqIdHeader', auth = false})
   - const list = [{title: 'О нас', children: false}, {title: 'Услуги', children: true},{title: 'Вакансии', children: false},{title: 'Новости', children: false},{title: 'Соглашения', children: true}];
-  .header(data-header=id) 
+  .header.js-header(data-header=id) 
     nav.header__menu
       img.header__logo(src=require("../../images/Logo.png"), alt="Logo", width="106", height="40")
       .header__right 
@@ -21,7 +21,7 @@ mixin header({id = 'uniqIdHeader', auth = false})
       .header__right--mobile
         button.header__burger.js-header__burger
           span.icon__material.js-icon__material.material-icons.header__icon menu
-    .header__dropdown-menu
+    .header__dropdown-menu.js-header__dropdown-menu
       ul.header__list 
         each item, indx in list 
           li.header__item 

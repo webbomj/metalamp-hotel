@@ -4,9 +4,16 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
 
+const environments = {
+  production: 'production',
+  development: 'development',
+};
+
+const startPage = 'startPage';
+
 let mode = 'development';
-if (process.env.NODE_ENV === 'production') {
-  mode = 'production';
+if (process.env.NODE_ENV === environments.production) {
+  mode = environments.production;
 }
 
 const PAGES_DIR = path.resolve(__dirname, 'src/pages');
@@ -44,7 +51,7 @@ module.exports = {
     }),
 
     ...PAGES.map((page) => {
-      if (page === 'startPage') {
+      if (page === startPage) {
         return new HtmlWebpackPlugin({
           filename: `index.html`,
           template: `${PAGES_DIR}/${page}/${page}.pug`,

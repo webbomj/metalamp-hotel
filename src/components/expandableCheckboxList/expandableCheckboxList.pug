@@ -3,7 +3,7 @@ include ../checkbox/checkbox.pug
 mixin expandableCheckboxList({id = 'uniqIdExpandable', title = '', open = false})
   - const list = ["Завтрак", "Письменный стол", "Стул для кормления", "Кроватка", "Телевизор", "Шампунь", "Телевизор", "Шампунь"];
   .expandableCheckboxes
-    .expandableCheckboxes__header
+    .expandableCheckboxes__header.js-expandableCheckboxes__header
       .expandableCheckboxes__title= title
       .material-icons.md-24.expandableCheckboxes__arrow(
         class=open ? "expandableCheckboxes__arrow--rotate" : ""

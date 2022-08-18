@@ -7,12 +7,12 @@ mixin dropdown(props)
     const listGuests = ['взрослые', 'дети', 'младенцы'];
     const listFurniture = ['спальни', 'кровати', 'ванные комнаты']
     const list = type === 'guests' ? listGuests : listFurniture
-  .dropdown(data-type=`${uniqId}-${type}`)
-    +textField({id: uniqId, title: title, description: description, open: open, value: text, small: small, placeholder: 'Сколько гостей', readonly: true, classNames: 'dropdown__main', styles: 'margin-bottom: 17px', dropdown: true})
+  .dropdown.js-dropdown(data-type=`${uniqId}-${type}`)
+    +textField({id: uniqId, title: title, description: description, open: open, value: text, small: small, placeholder: 'Сколько гостей', readonly: true, classNames: 'dropdown__main js-dropdown__main', styles: 'margin-bottom: 17px', dropdown: true})
     div(
       class=type === "guests" ? `dropdown__bottomField ${open ? "" : "dropdown__bottomField--none"}` : `dropdown__bottomField dropdown__furnitureField ${open ? "" : "dropdown__bottomField--none"}`
     )
-      ul.dropdown__list(data-dropdown-list=uniqId) 
+      ul.dropdown__list.js-dropdown__list(data-dropdown-list=uniqId) 
         each item, i in list 
           li.dropdown__item
             span.dropdown__title= item
@@ -21,7 +21,7 @@ mixin dropdown(props)
               .dropdown__circle.dropdown__circle--none(data-dropdownbutton=IdPlusIdx, id=IdPlusIdx) -
               .dropdown__count(data-dropdowncounter=IdPlusIdx) 0
               .dropdown__circle(data-dropdownbutton=IdPlusIdx) +
-      .dropdown__buttons
+      .dropdown__buttons.js-dropdown__buttons
         if type === 'guests'
           +button({title: 'очистить', type: 'without', visible: false, data: uniqId})
           +button({title: 'применить', type: 'without', data: uniqId})

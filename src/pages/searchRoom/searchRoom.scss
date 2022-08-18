@@ -46,7 +46,7 @@
     }
   }
 
-  &__dateDropdown {
+  &__date-dropdown {
   }
 
   &__guestDropdown {
@@ -78,18 +78,15 @@
     @media (max-width: 900px) {
       width: 100%;
     }
-
-    & h1 {
-      font-style: normal;
-      font-weight: 700;
-      font-size: 24px;
-      line-height: 29px;
-      color: #1f2041;
-      margin: 0;
-    }
   }
 
   &__header {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+    color: #1f2041;
+    margin: 0;
     @media (max-width: 1190px) {
       text-align: center;
     }

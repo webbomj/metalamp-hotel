@@ -1,4 +1,4 @@
-const allButtons = document.querySelectorAll('.likeButton');
+const allButtons = document.querySelectorAll('.js-likeButton');
 
 const toggleLikeButtonClass = (el) => el.classList.toggle('likeButton__clicked');
 

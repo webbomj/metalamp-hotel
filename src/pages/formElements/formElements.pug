@@ -6,7 +6,7 @@ include ../../components/airDatePicker/airDatePicker.pug
 include ../../components/filterDateDropdown/filterDateDropdown.pug
 include ../../components/dateDropdown/dateDropdown.pug
 include ../../components/checkbox/checkbox.pug
-include ../../components/bulletList/bulletList.pug
+include ../../components/bullet-list/bullet-list.pug
 include ../../components/radioButton/radioButton.pug
 include ../../components/expandableCheckboxList/expandableCheckboxList.pug
 include ../../components/iconTextItem/iconTextItem.pug
@@ -113,4 +113,4 @@ block content
       .formElements__thirdBlock
         .formElements__bullet-list
           h3.formElements__header Bullet list
-          +bulletList({title: 'bullet list', list: ['Нельзя с питомцами', 'Без вечеринок и мероприятий', 'Время прибытия — после 13:00, а выезд до 12:00']})
+          +bullet-list({title: 'bullet list', list: ['Нельзя с питомцами', 'Без вечеринок и мероприятий', 'Время прибытия — после 13:00, а выезд до 12:00']})

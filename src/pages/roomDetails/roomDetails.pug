@@ -2,7 +2,7 @@ extends ../../layouts/pages/pages.pug
 include ../../components/comment/comment.pug
 include ../../components/booking/booking.pug
 include ../../components/chart/chart.pug
-include ../../components/bulletList/bulletList.pug
+include ../../components/bullet-list/bullet-list.pug
 include ../../components/iconTextList/iconTextList.pug
 
 block header
@@ -40,7 +40,7 @@ block content
         .roomDetails__botContent
           .roomDetails__rules 
             h2.roomDetails__header Правила
-            +bulletList({title: 'Правила', list: ['Нельзя с питомцами', 'Без вечеринок и мероприятий', 'Время прибытия — после 13:00, а выезд до 12:00']})
+            +bullet-list({title: 'Правила', list: ['Нельзя с питомцами', 'Без вечеринок и мероприятий', 'Время прибытия — после 13:00, а выезд до 12:00']})
           .roomDetails__freeCancle
             h2.roomDetails__header Отмена
             p.roomDetails__text Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги.

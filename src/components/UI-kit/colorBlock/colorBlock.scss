@@ -1,58 +1,60 @@
 @use 'src/styles/global.scss';
 
-.colorBlock__item {
-  display: flex;
-  list-style-type: none;
-  margin-bottom: 20px;
-}
+.colorBlock {
+  &__item {
+    display: flex;
+    list-style-type: none;
+    margin-bottom: 20px;
+  }
 
-.colorBlock__colors {
-  width: 70px;
-  height: 70px;
-  border-radius: 6px;
-  margin-right: 40px;
-}
+  &__colors {
+    width: 70px;
+    height: 70px;
+    border-radius: 6px;
+    margin-right: 40px;
+  }
 
-.colorBlock__dark100 {
-  background-color: global.$dark100;
-}
+  &__dark100 {
+    background-color: global.$dark100;
+  }
 
-.colorBlock__dark75 {
-  background-color: global.$dark75;
-}
+  &__dark75 {
+    background-color: global.$dark75;
+  }
 
-.colorBlock__dark50 {
-  background-color: global.$dark50;
-}
+  &__dark50 {
+    background-color: global.$dark50;
+  }
 
-.colorBlock__dark25 {
-  background-color: global.$dark25;
-}
+  &__dark25 {
+    background-color: global.$dark25;
+  }
 
-.colorBlock__dark5 {
-  background-color: global.$dark5;
-}
+  &__dark5 {
+    background-color: global.$dark5;
+  }
 
-.colorBlock__purple {
-  background-color: global.$purple;
-}
+  &__purple {
+    background-color: global.$purple;
+  }
 
-.colorBlock__green {
-  background-color: global.$green;
-}
+  &__green {
+    background-color: global.$green;
+  }
 
-.colorBlock__title {
-  margin: 10px 0 0;
-  font-weight: 700;
-  font-size: 19px;
-}
+  &__title {
+    margin: 10px 0 0;
+    font-weight: 700;
+    font-size: 19px;
+  }
 
-.colorBlock__hash {
-  display: inline-block;
-  margin-top: 3px;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 19px;
-  line-height: 28px;
-  color: global.$dark100;
+  &__hash {
+    display: inline-block;
+    margin-top: 3px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 19px;
+    line-height: 28px;
+    color: global.$dark100;
+  }
 }

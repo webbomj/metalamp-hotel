@@ -1,4 +1,4 @@
-const toggleBlock = document.querySelectorAll('.toggle__Block');
+const toggleBlock = document.querySelectorAll('.js-toggle__Block');
 
 const toggleClass = (e) => {
   const { target } = e;

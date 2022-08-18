@@ -50,12 +50,12 @@
 
   &__priceToDays {
     display: flex;
+  }
 
-    & span {
-      margin-right: 5px;
-      width: 214px;
-      line-height: 18px;
-    }
+  &__price-item {
+    margin-right: 5px;
+    width: 214px;
+    line-height: 18px;
   }
 
   &__priceInfo {

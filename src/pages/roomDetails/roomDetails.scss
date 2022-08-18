@@ -84,7 +84,7 @@
   }
 
   &__review {
-    & h2 {
+    & .roomDetails__header {
       margin-bottom: 2px;
     }
 
@@ -96,7 +96,7 @@
   &__comments {
     margin-top: 34px;
 
-    & h2 {
+    & .roomDetails__comment-header {
       margin-bottom: 13px;
     }
   }
@@ -133,11 +133,11 @@
 
   &__rules {
     margin: 4px 100px 0 0;
-    & h2 {
+    & .roomDetails__header {
       margin: 7px 0 0 20px;
     }
 
-    & .bulletList__list {
+    & .bullet-list__list {
       margin: 20px 0 0;
     }
   }
@@ -145,12 +145,12 @@
   &__freeCancle {
     margin-top: 15px;
 
-    & h2 {
+    & .roomDetails__header {
       padding: 0;
       margin-top: -2px;
     }
 
-    & p {
+    & .roomDetails__text {
       width: 342px;
       @media (max-width: 380px) {
         width: 100%;

@@ -45,7 +45,6 @@ const createAirDatePickerOptions = (fnSelect, fnHandler) => {
     classes: 'js-airDatePicker',
     moveToOtherMonthsOnSelect: false,
     minDate: [new Date()],
-    // multipleDates: true,
     multipleDatesSeparator: '-',
     range: true,
     prevHtml: "<span class='js-airDatePicker__arrowBack material-icons md-24'>&#xe5c4;</span>",

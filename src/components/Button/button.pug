@@ -1,6 +1,7 @@
 mixin button(props)
   - const { title = "button", type = "default", arrow = false, visible = true, data = "", style = "" } = props;
-  if (arrow === true && type === 'big')
+  - const arrowAndBigButton = arrow === true && type === "big";
+  if (arrowAndBigButton)
     .button__wrapper
       button.button(class=`button__${type} `, type="button", style=style)= title
       span.material-icons.md-24.button__arrow &#xe5c8;

@@ -4,7 +4,7 @@ include ../button/button.pug
 include ../UI-kit/numberRoomAndPrice/numberRoomAndPrice.pug
 
 mixin booking({id = 'bookingId'})
-  .booking
+  form.booking.js-booking
     .booking__id 
       +numberRoomAndPrice({price: '9 800', type: 'люкс', number: '888'})
     .booking__dateDropdown 

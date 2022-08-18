@@ -36,16 +36,22 @@ const getGuestsValue = (uniqId) => {
   let firstWord = '';
   let secondWord = '';
 
+  const adultsMoreThenOneAndLessOrEqualFour = adults > 1 && adults <= 4;
+  const babiesMoreThenOneAndLessOrEqualFour = babies > 1 && babies <= 4;
+  const adultsEqualZeroAndBabiesMoreZero = adults === 0 && babies > 0;
+  const adultsMoreZeroAndBabiesEqualZero = adults > 0 && babies === 0;
+  const adultsMoreZeroAndBabiesMoreZero = adults > 0 && babies > 0;
+
   if (adults === 1) {
     firstWord = guestsWords[0][0];
   }
   if (babies === 1) {
     secondWord = guestsWords[0][1];
   }
-  if (adults > 1 && adults <= 4) {
+  if (adultsMoreThenOneAndLessOrEqualFour) {
     firstWord = guestsWords[1][0];
   }
-  if (babies > 1 && babies <= 4) {
+  if (babiesMoreThenOneAndLessOrEqualFour) {
     secondWord = guestsWords[1][1];
   }
   if (adults > 4) {
@@ -55,13 +61,13 @@ const getGuestsValue = (uniqId) => {
     secondWord = guestsWords[2][1];
   }
 
-  if (adults === 0 && babies > 0) {
+  if (adultsEqualZeroAndBabiesMoreZero) {
     return `${babies} ${secondWord}`;
   }
-  if (adults > 0 && babies === 0) {
+  if (adultsMoreZeroAndBabiesEqualZero) {
     return `${adults} ${firstWord}`;
   }
-  if (adults > 0 && babies > 0) {
+  if (adultsMoreZeroAndBabiesMoreZero) {
     return `${adults} ${firstWord}, ${babies} ${secondWord}`;
   }
 
@@ -92,6 +98,17 @@ const getFurnitureValue = (uniqId) => {
   let secondWord = '';
   let thirdWord = '';
 
+  const bedroomMoreOneAndLessOrEqualFour = bedroom > 1 && bedroom <= 4;
+  const bedMoreOneAndLessOrEqualFour = bed > 1 && bed <= 4;
+  const bathroomMoreOneAndLessOrEqualFour = bathroom > 1 && bathroom <= 4;
+  const bedroomAndBedAndBathroomMoreZero = bedroom > 0 && bed > 0 && bathroom > 0;
+  const bedroomAndBathroomEqualZeroAndBedMoreZero = bedroom === 0 && bed > 0 && bathroom === 0;
+  const bedroomAndBedEqualZeroAndBathroomMoreZero = bedroom === 0 && bed === 0 && bathroom > 0;
+  const bathroomAndBedEqualZeroAndBedroomMoreZero = bedroom > 0 && bed === 0 && bathroom === 0;
+  const bedroomAndBedMoreZeroAndBathroomEqualZero = bedroom > 0 && bed > 0 && bathroom === 0;
+  const bathroomAndBedroomMoreZeroAndBedEqualZero = bedroom > 0 && bed === 0 && bathroom > 0;
+  const bedroomAndBathroomMoreZeroAndBedEqualZero = bedroom === 0 && bed > 0 && bathroom > 0;
+
   if (bedroom === 1) {
     firstWord = furnitureWords[0][0];
   }
@@ -102,13 +119,13 @@ const getFurnitureValue = (uniqId) => {
     thirdWord = furnitureWords[0][2];
   }
 
-  if (bedroom > 1 && bedroom <= 4) {
+  if (bedroomMoreOneAndLessOrEqualFour) {
     firstWord = furnitureWords[1][0];
   }
-  if (bed > 1 && bed <= 4) {
+  if (bedMoreOneAndLessOrEqualFour) {
     secondWord = furnitureWords[1][1];
   }
-  if (bathroom > 1 && bathroom <= 4) {
+  if (bathroomMoreOneAndLessOrEqualFour) {
     thirdWord = furnitureWords[1][1];
   }
 
@@ -122,31 +139,31 @@ const getFurnitureValue = (uniqId) => {
     thirdWord = furnitureWords[2][1];
   }
 
-  if (bedroom > 0 && bed > 0 && bathroom > 0) {
+  if (bedroomAndBedAndBathroomMoreZero) {
     const result = `${bedroom} ${firstWord}, ${bed} ${secondWord}, ${bathroom} ${thirdWord}`;
     return result.length > 20 ? `${result.slice(0, 20)}...` : result;
   }
-  if (bedroom === 0 && bed > 0 && bathroom === 0) {
+  if (bedroomAndBathroomEqualZeroAndBedMoreZero) {
     const result = `${bed} ${secondWord}`;
     return result.length > 20 ? `${result.slice(0, 20)}...` : result;
   }
-  if (bedroom === 0 && bed === 0 && bathroom > 0) {
+  if (bedroomAndBedEqualZeroAndBathroomMoreZero) {
     const result = `${bathroom} ${thirdWord}`;
     return result.length > 20 ? `${result.slice(0, 20)}...` : result;
   }
-  if (bedroom > 0 && bed === 0 && bathroom === 0) {
+  if (bathroomAndBedEqualZeroAndBedroomMoreZero) {
     const result = `${bedroom} ${firstWord}`;
     return result.length > 20 ? `${result.slice(0, 20)}...` : result;
   }
-  if (bedroom > 0 && bed > 0 && bathroom === 0) {
+  if (bedroomAndBedMoreZeroAndBathroomEqualZero) {
     const result = `${bedroom} ${firstWord}, ${bed} ${secondWord}`;
     return result.length > 20 ? `${result.slice(0, 20)}...` : result;
   }
-  if (bedroom > 0 && bed === 0 && bathroom > 0) {
+  if (bathroomAndBedroomMoreZeroAndBedEqualZero) {
     const result = `${bedroom} ${firstWord}, ${bathroom} ${thirdWord}`;
     return result.length > 20 ? `${result.slice(0, 20)}...` : result;
   }
-  if (bedroom === 0 && bed > 0 && bathroom > 0) {
+  if (bedroomAndBathroomMoreZeroAndBedEqualZero) {
     const result = `${bed} ${secondWord}, ${bathroom} ${thirdWord}`;
     return result.length > 20 ? `${result.slice(0, 20)}...` : result;
   }
@@ -155,7 +172,7 @@ const getFurnitureValue = (uniqId) => {
 };
 
 const setNewTitle = (uniqId) => {
-  const dropdownField = document.querySelector(`.dropdown[data-type*=${uniqId}]`);
+  const dropdownField = document.querySelector(`.js-dropdown[data-type*=${uniqId}]`);
   const dropdownInput = document.querySelector(`[data-dropdown=${uniqId}]`);
   const type = dropdownField.dataset.type.split('-')[1];
   if (type === 'guests') {

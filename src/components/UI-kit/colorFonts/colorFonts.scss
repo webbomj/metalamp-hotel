@@ -1,81 +1,82 @@
 @use 'src/styles/global';
 
-.colorFonts__item {
-  display: flex;
-  margin-bottom: 51px;
-  list-style-type: none;
-}
+.colorFonts {
+  &__item {
+    display: flex;
+    margin-bottom: 51px;
+    list-style-type: none;
+  }
 
-.colorFonts__tagFonts {
-  font-family: Montserrat, Arial, Helvetica, sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  margin-right: 30px;
-  color: rgb(31 32 65 / 25%);
-}
+  &__tagFonts {
+    font-family: Montserrat, Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    margin-right: 30px;
+    color: rgb(31 32 65 / 25%);
+  }
 
-.colorFonts__h1 {
-  font-size: 24px;
-  text-transform: uppercase;
-  transform: translate(9px, 3px);
-}
+  &__h1 {
+    font-size: 24px;
+    text-transform: uppercase;
+    transform: translate(9px, 3px);
+  }
 
-.colorFonts__h2 {
-  font-size: 19px;
-  text-transform: uppercase;
-  transform: translate(11px, 1px);
-}
+  &__h2 {
+    font-size: 19px;
+    text-transform: uppercase;
+    transform: translate(11px, 1px);
+  }
 
-.colorFonts__h3 {
-  font-size: 12px;
-  text-transform: uppercase;
-  transform: translate(20px, -4px);
-}
+  &__h3 {
+    font-size: 12px;
+    text-transform: uppercase;
+    transform: translate(20px, -4px);
+  }
 
-.colorFonts__body {
-  font-size: 14px;
-  transform: translate(0, -13px);
-}
+  &__body {
+    font-size: 14px;
+    transform: translate(0, -13px);
+    &::first-letter {
+      text-transform: uppercase;
+    }
+  }
 
-.colorFonts__body::first-letter {
-  text-transform: uppercase;
-}
+  &__textWrapper {
+    width: 370px;
+  }
 
-.colorFonts__textWrapper {
-  width: 370px;
-}
+  &__textFonts {
+    display: block;
+    font-family: Montserrat, Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: 700;
+  }
 
-.colorFonts__textFonts {
-  display: block;
-  font-family: Montserrat, Arial, Helvetica, sans-serif;
-  font-style: normal;
-  font-weight: 700;
-}
+  &__text--h1 {
+    font-size: 24px;
+    line-height: 29px;
+    color: global.$dark100;
+    transform: translate(9px, 0);
+  }
 
-.colorFonts__text--h1 {
-  font-size: 24px;
-  line-height: 29px;
-  color: global.$dark100;
-  transform: translate(9px, 0);
-}
+  &__text--h2 {
+    font-size: 19px;
+    color: global.$dark100;
+    transform: translate(11px, 1px);
+  }
 
-.colorFonts__text--h2 {
-  font-size: 19px;
-  color: global.$dark100;
-  transform: translate(11px, 1px);
-}
+  &__text--h3 {
+    font-size: 12px;
+    color: global.$dark100;
+    transform: translate(21px, -4px);
+    text-transform: uppercase;
+  }
 
-.colorFonts__text--h3 {
-  font-size: 12px;
-  color: global.$dark100;
-  transform: translate(21px, -4px);
-  text-transform: uppercase;
-}
-
-.colorFonts__text--body {
-  font-size: 14px;
-  font-weight: 400;
-  color: global.$dark75;
-  transform: translate(1px, -13px);
-  width: 301px;
+  &__text--body {
+    font-size: 14px;
+    font-weight: 400;
+    color: global.$dark75;
+    transform: translate(1px, -13px);
+    width: 301px;
+  }
 }
