@@ -1,4 +1,4 @@
-include ../textField/textField.pug
+include ../text-field/text-field.pug
 
 mixin footer({id = "uniqIdFooter", type = "full"})
   .footer 
@@ -42,7 +42,7 @@ mixin footer({id = "uniqIdFooter", type = "full"})
           .footer__fith 
             h3.footer__header Подписка
             span.footer__span Получайте специальные предложения и новости сервиса
-            +textField({uniqId: id, title: '', description: '', placeholder: 'Email', arrow: true, small: true})
+            +text-field({uniqId: id, title: '', description: '', placeholder: 'Email', arrow: true, small: true})
         .footer__middleBlock 
           img.footer__logo(src=require("../../images/Logo.png"), alt="Логотип")
         .footer__botBlock

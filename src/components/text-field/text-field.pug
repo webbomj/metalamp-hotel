@@ -1,0 +1,20 @@
+mixin text-field(props)
+  - const { id = "uniqIdTextField", title = "Default", description = "", placeholder = "", value = "", styles = "", classNames = "", arrow = false, small = false, readonly = false, mask = false, dropdown = false, open = false } = props;
+  .text-field(class=small ? "text-field__small" : "")
+    .text-field__top(class=small ? "text-field__top--small" : "") 
+      span.text-field__title= title
+      span.text-field__description= description
+    .text-field__input-wrapper(class=classNames, data-dropdown=dropdown ? id : false)
+      input.text-field__input(
+        class=small ? `text-field__input--small ${open ? "dropdown__field--active" : ""}` : `${open ? "dropdown__field--active" : ""}`,
+        placeholder=placeholder,
+        value=value,
+        readonly=readonly,
+        data-masked=mask ? "masked" : "simple",
+        data-dropdown-input=id,
+        id=uniqId
+      )
+      if dropdown === true
+        .material-icons.md-24.dropdown__arrow(class=small ? "dropdown__arrow--small" : "") &#xe5cf;
+    if arrow === true
+      span.material-icons.md-24.text-field__arrow(class=small ? "text-field__arrow--small" : "") &#xe5c8;

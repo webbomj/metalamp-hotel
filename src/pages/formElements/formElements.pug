@@ -1,5 +1,5 @@
 extends ../../layouts/UI/UI.pug
-include ../../components/textField/textField.pug
+include ../../components/text-field/text-field.pug
 include ../../components/button/button.pug
 include ../../components/dropdown/dropdown.pug
 include ../../components/airDatePicker/airDatePicker.pug
@@ -26,19 +26,19 @@ block content
     .formElements__firstColumn
       .formElements__firstBlock
         .formElements__text-field
-          +textField({uniqId: 'textField1', title: 'Text field', description: 'default', placeholder: 'Email'})
+          +text-field({uniqId: 'textField1', title: 'Text field', description: 'default', placeholder: 'Email'})
         .formElements__text-field
-          +textField({uniqId: 'textField2', title: 'Text field', description: 'hover / focus', placeholder: 'Email', value: 'This is pretty awesome'})
+          +text-field({uniqId: 'textField2', title: 'Text field', description: 'hover / focus', placeholder: 'Email', value: 'This is pretty awesome'})
         .formElements__dropdown
           +dropdown({uniqId: 'dropdown1', title: 'dropdown', description: 'hover', text: 'Сколько гостей'})
         .formElements__text-field--masked
-          +textField({uniqId: 'textField3', title: 'Masked text field', description: '', placeholder: 'ДД.ММ.ГГГГ', mask: true})
+          +text-field({uniqId: 'textField3', title: 'Masked text field', description: '', placeholder: 'ДД.ММ.ГГГГ', mask: true})
         .formElements__dropdown--date
           +date-dropdown({uniqId: 'dateDropdown1', firstTitle: 'date dropdown', secondTitle: 'date dropdown'})
         .formElements__dropdown--filter
           +filter-date-dropdown({uniqId: 'filterDateDropdown1'})
         .formElements__text-field--sub
-          +textField({uniqId: 'textField4', title: 'subscription text field', description: '', placeholder: 'Email', arrow: true, small: true})
+          +text-field({uniqId: 'textField4', title: 'subscription text field', description: '', placeholder: 'Email', arrow: true, small: true})
       .formElements__secondBlock
         .formElements__dropdown
           +dropdown({uniqId: 'dropdown2', type: 'furniture', title: 'dropdown', small: true, description: 'default', text: '2 спальни, 2 кровати...'})

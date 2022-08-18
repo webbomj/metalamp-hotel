@@ -3,7 +3,7 @@ include ../airDatePicker/airDatePicker.pug
 mixin date-dropdown({uniqId = 'uniqIdsQQ2', firstTitle ='date dropdown', secondTitle = 'date dropdown', placeholder = 'ДД.ММ.ГГГГ', placeholder2 = '19.08.2019'})
   .date-dropdown.js-date-dropdown
     .date-dropdown__left.js-date-dropdown__left
-      +textField({id: uniqId, title: firstTitle, description: '', value: '', placeholder: placeholder, readonly: true, classNames: 'date-dropdown__left--main js-date-dropdown__left--main', styles: 'margin-bottom: 17px', dropdown: true})
+      +text-field({id: uniqId, title: firstTitle, description: '', value: '', placeholder: placeholder, readonly: true, classNames: 'date-dropdown__left--main js-date-dropdown__left--main', styles: 'margin-bottom: 17px', dropdown: true})
     .date-dropdown__right.js-date-dropdown__right
-      +textField({id: uniqId, title: secondTitle, description: '', value: '', placeholder: placeholder2, readonly: true, classNames: 'date-dropdown__right--main js-date-dropdown__right--main', styles: 'margin-bottom: 17px', dropdown: true})
+      +text-field({id: uniqId, title: secondTitle, description: '', value: '', placeholder: placeholder2, readonly: true, classNames: 'date-dropdown__right--main js-date-dropdown__right--main', styles: 'margin-bottom: 17px', dropdown: true})
   .date-dropdown__close.js-date-dropdown__close(data-dateDropdown=uniqId)

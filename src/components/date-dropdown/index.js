@@ -5,10 +5,10 @@ import { createAirDatePickerOptions, converseDate } from '../airDatePicker/index
 import 'air-datepicker/air-datepicker.css';
 
 const dateDropdownLeftInput = document.querySelectorAll(
-  '.js-date-dropdown__left--main .textField__input'
+  '.js-date-dropdown__left--main .text-field__input'
 );
 const dateDropdownRightInput = document.querySelectorAll(
-  '.js-date-dropdown__right--main .textField__input'
+  '.js-date-dropdown__right--main .text-field__input'
 );
 
 const toggleDropdownFunction = (e) => {

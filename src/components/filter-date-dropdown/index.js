@@ -26,7 +26,7 @@ const closeAirDatePickerToggle = ({ $datepicker }) => {
 const selectDate = (formDate, datePicker) => {
   const datePickerNode = datePicker.$datepicker.parentNode;
   const currentInput = datePickerNode.parentNode.querySelector(
-    '.js-filter-date-dropdown__main .textField__input'
+    '.js-filter-date-dropdown__main .text-field__input'
   );
 
   if (formDate.length === 0) {
