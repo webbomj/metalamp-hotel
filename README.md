@@ -12,17 +12,17 @@ Hotel Toxin - приложение по поиску номеров отеля. 
 ## Страницы
 
 В проекте содержится 4 UI страницы:<br>
-[colorsAndType](https://webbomj.github.io/metalamp-hotel/colorsAndType.html)<br>
-[formElements](https://webbomj.github.io/metalamp-hotel/formElements.html)<br>
-[headersAndFooters](https://webbomj.github.io/metalamp-hotel/headersAndFooters.html)<br>
+[colors-and-type](https://webbomj.github.io/metalamp-hotel/colors-and-type.html)<br>
+[form-elements](https://webbomj.github.io/metalamp-hotel/form-elements.html)<br>
+[headers-and-footers](https://webbomj.github.io/metalamp-hotel/headers-and-footers.html)<br>
 [cards](https://webbomj.github.io/metalamp-hotel/cards.html)<br>
 
 В проекте содержатся 5 основных страниц:<br>
-[loginPage](https://webbomj.github.io/metalamp-hotel/loginPage.html)<br>
-[registrationPage](https://webbomj.github.io/metalamp-hotel/registrationPage.html)<br>
-[landingPage](https://webbomj.github.io/metalamp-hotel/landingPage.html)<br>
-[roomDetails](https://webbomj.github.io/metalamp-hotel/roomDetails.html)<br>
-[searchRoom](https://webbomj.github.io/metalamp-hotel/searchRoom.html)<br>
+[login-page](https://webbomj.github.io/metalamp-hotel/login-page.html)<br>
+[registration-page](https://webbomj.github.io/metalamp-hotel/registration-page.html)<br>
+[landing-page](https://webbomj.github.io/metalamp-hotel/landing-page.html)<br>
+[room-details](https://webbomj.github.io/metalamp-hotel/room-details.html)<br>
+[search-room](https://webbomj.github.io/metalamp-hotel/search-room.html)<br>
 
 ## Особенности
 

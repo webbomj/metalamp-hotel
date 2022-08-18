@@ -9,7 +9,7 @@ const environments = {
   development: 'development',
 };
 
-const startPage = 'startPage';
+const startPage = 'start-page';
 
 let mode = 'development';
 if (process.env.NODE_ENV === environments.production) {

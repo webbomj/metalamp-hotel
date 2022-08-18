@@ -8,14 +8,14 @@ block header
   meta(name="keywords", content="colors and type")
 
 block content
-  section.pageColors__content
-    .pageColors__leftBlock
+  section.page-colors__content
+    .page-colors__left-block
       - const colors = [{color: 'dark100', title: 'Dark Shade 100%', hash: '#1F2041'},{color: 'dark75', title: 'Dark Shade 75%', hash: '#1F2041'},{color: 'dark50', title: 'Dark Shade 50%', hash: '#1F2041'},{color: 'dark25', title: 'Dark Shade 25%', hash: '#1F2041'},{color: 'dark5', title: 'Dark Shade 5%', hash: '#1F2041'},{color: 'purple', title: 'Purple', hash: '#BC9CFF'},{color: 'green', title: 'Green', hash: '#6FCF97'}];
-      ul.pageColors__list
+      ul.page-colors__list
         each color in colors
           +color-block(color)
-    .pageColors__rightBlock
+    .page-colors__right-block
       - const fonts = [{tag:'h1', title: 'This one is the sub-section or widget title'},{tag:'h2', title: 'Next one is the item title inside widgets'},{tag:'h3', title: 'This is a label or CTA text'},{tag:'body', title: 'This is the body text which is used for most of the design, like paragraphs, lists, etc.'}]
-      ul.pageColors__list
+      ul.page-colors__list
         each font in fonts
           +color-fonts(font)

@@ -1,9 +1,9 @@
-const filterButton = document.querySelector('.js-searchRoom__button');
-const formSearchRoom = document.querySelector('.js-searchRoom__form');
+const filterButton = document.querySelector('.js-search-room__button');
+const formSearchRoom = document.querySelector('.js-search-room__form');
 
 const handleButtonPointerdown = () => {
-  const dropdownFilterMenu = document.querySelector('.js-searchRoom__dropdown-filter');
-  dropdownFilterMenu.classList.toggle('searchRoom__dropdown-filter--active');
+  const dropdownFilterMenu = document.querySelector('.js-search-room__dropdown-filter');
+  dropdownFilterMenu.classList.toggle('search-room__dropdown-filter--active');
 };
 
 const setFilterButtonListener = () => {

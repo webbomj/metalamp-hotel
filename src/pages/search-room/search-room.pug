@@ -14,53 +14,53 @@ block header
   meta(name="keywords", content="Search room page")
 
 block content
-  section.searchRoom
-    .searchRoom__button.js-searchRoom__button
+  section.search-room
+    .search-room__button.js-search-room__button
       +button({title: 'Открыть фильтр', type: 'big', arrow: false})
-    .searchRoom__dropdown-filter.js-searchRoom__dropdown-filter
-      .searchRoom__filter-menu 
+    .search-room__dropdown-filter.js-search-room__dropdown-filter
+      .search-room__filter-menu 
         +filter-date-dropdown({uniqId: 'searchRoom__filterDateDropdown2', title: 'даты пребывания в отеле'})
-      .searchRoom__filter-menu 
+      .search-room__filter-menu 
         +dropdown({uniqId: 'searchRoom__dropdown2', title: 'гости', description: '', small: true, text: 'Сколько гостей'})
-      .searchRoom__filter-menu 
-      .searchRoom__filter-menu 
-        h3.searchRoom__sidebar-header правила дома
+      .search-room__filter-menu 
+      .search-room__filter-menu 
+        h3.search-room__sidebar-header правила дома
         +checkbox({id: 'checkbox4', title: 'Можно курить'})
         +checkbox({id: 'checkbox5', title: 'Можно с питомцами'})
         +checkbox({id: 'checkbox6', title: 'Можно пригласить гостей (до 10 человек)'})
-      .searchRoom__filter-menu 
-        h3.searchRoom__sidebar-header доступность
+      .search-room__filter-menu 
+        h3.search-room__sidebar-header доступность
         +checkbox({id: 'SuperIDcheckbox43', title: 'Широкий коридор', rich: true, richText: 'Ширина коридоров в номере не менее 91 см.'})
         +checkbox({id: 'SuperIDcheckbox444', title: 'Помощник для инвалидов', rich: true, richText: 'На 1 этаже вас встретит специалист и проводит до номера.'})
-      .searchRoom__filter-menu 
+      .search-room__filter-menu 
         +dropdown({uniqId: 'dropdown3', type: 'furniture', title: 'Удобствa номера', small: true, description: '', text: '2 спальни, 2 кровати...'})
-      .searchRoom__filter-menu 
+      .search-room__filter-menu 
         +expandable-checkbox-list({id: 'expandableCheckbox2', title: 'дополнительные удобства'})
-    .searchRoom__sidebar
-      form.searchRoom__form.js-searchRoom__form
-        .searchRoom__date-dropdown 
+    .search-room__sidebar
+      form.search-room__form.js-search-room__form
+        .search-room__date-dropdown 
           +filter-date-dropdown({uniqId: 'searchRoom__filterDateDropdown1', title: 'даты пребывания в отеле'})
-        .searchRoom__guestDropdown
+        .search-room__guestDropdown
           +dropdown({uniqId: 'searchRoom__dropdown1', title: 'гости', description: '', small: true, text: 'Сколько гостей'})
-        .searchRoom__ratePriceSlider
-        .searchRoom__rules
-          h3.searchRoom__sidebar-header правила дома
+        .search-room__ratePriceSlider
+        .search-room__rules
+          h3.search-room__sidebar-header правила дома
           +checkbox({id: 'checkbox1', title: 'Можно курить'})
           +checkbox({id: 'checkbox2', title: 'Можно с питомцами'})
           +checkbox({id: 'checkbox3', title: 'Можно пригласить гостей (до 10 человек)'})
-        .searchRoom__availability
-          h3.searchRoom__sidebar-header доступность
+        .search-room__availability
+          h3.search-room__sidebar-header доступность
           +checkbox({id: 'SuperIDcheckbox33', title: 'Широкий коридор', rich: true, richText: 'Ширина коридоров в номере не менее 91 см.'})
           +checkbox({id: 'SuperIDcheckbox344', title: 'Помощник для инвалидов', rich: true, richText: 'На 1 этаже вас встретит специалист и проводит до номера.'})
-        .searchRoom__convenienceDropdown
+        .search-room__convenienceDropdown
           +dropdown({uniqId: 'dropdown2', type: 'furniture', title: 'Удобствa номера', small: true, description: '', text: '2 спальни, 2 кровати...'})
-        .searchRoom__convenienceList
+        .search-room__convenienceList
           +expandable-checkbox-list({id: 'expandableCheckbox1', title: 'дополнительные удобства'})
-    .searchRoom__mainContent
-      h1.searchRoom__header Номера, которые мы для вас подобрали
-      .searchRoom__hotelList 
+    .search-room__mainContent
+      h1.search-room__header Номера, которые мы для вас подобрали
+      .search-room__hotelList 
         - const rooms = [{id: 'room1', type: 'люкс', number: '888', price: '9 990', stars: 5, review: 145, array: ['room1.1.jpg', 'room1.1.jpg', 'room1.1.jpg', 'room1.1.jpg']}, {id: 'room2', number: '840', type: '', price: '9 990', stars: 4, review: 65, array: ['room.jpg', 'room.jpg', 'room.jpg', 'room.jpg']}, {id: 'room3', type: 'люкс', price: '8 500', number: '980', stars: 3, review: 35, array: ['room3.1.jpg', 'room3.1.jpg', 'room3.1.jpg', 'room3.1.jpg']}, {id: 'room4', type: 'люкс', price: '7 300', number: '856', stars: 5, review: 145, array: ['room4.jpg', 'room1.1.jpg', 'room1.1.jpg', 'room1.1.jpg']}, {id: 'room5', type: '', number: '740', price: '6 000', stars: 4, review: 44, array: ['room5.jpg', 'room1.1.jpg', 'room1.1.jpg', 'room1.1.jpg']}, {id: 'room6', type: '', number: '982', price: '5 800', stars: 3, review: 56, array: ['room6.jpg', 'room1.1.jpg', 'room1.1.jpg', 'room1.1.jpg']}, {id: 'room7', type: '', number: '678', price: '5 500', stars: 5, review: 45, array: ['room7.jpg', 'room1.1.jpg', 'room1.1.jpg', 'room1.1.jpg']}, {id: 'room8', type: '', number: '450', price: '5 300', stars: 4, review: 39, array: ['room8.jpg', 'room1.1.jpg', 'room1.1.jpg', 'room1.1.jpg']}, {id: 'room9', type: '', number: '350', price: '5 000', stars: 3, review: 77, array: ['room9.jpg', 'room1.1.jpg', 'room1.1.jpg', 'room1.1.jpg']}, {id: 'room10', type: '', price: '5 000', number: '666', stars: 5, review: 25, array: ['room10.jpg', 'room1.1.jpg', 'room1.1.jpg', 'room1.1.jpg']}, {id: 'room11', type: '', number: '444', price: '5 000', stars: 3, review: 15, array: ['room11.jpg', 'room1.1.jpg', 'room1.1.jpg', 'room1.1.jpg']}, {id: 'room12', type: '', number: '352', price: '5 000', stars: 3, review: 55, array: ['room12.jpg', 'room1.1.jpg', 'room1.1.jpg', 'room1.1.jpg']}]
         each room, idx in rooms 
           +room({id: `searchRoom__room${idx + 1}`, type: room.type, number: room.number, price: room.price, stars: 5, review: room.review, array: room.array, stars: room.stars})
-      .searchRoom__pagination 
+      .search-room__pagination 
         +pagination({})

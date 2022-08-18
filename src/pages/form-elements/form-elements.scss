@@ -1,4 +1,4 @@
-.formElements {
+.form-elements {
   padding: 54px 0 0 141px;
   display: grid;
   grid-template-columns: 320px 374px 320px;
@@ -10,28 +10,28 @@
     grid-row-gap: 52px;
     grid-column: 1 / 2;
 
-    & .formElements__firstBlock {
+    & .form-elements__firstBlock {
       grid-column: 1 / 2;
       grid-row: 1 / 2;
     }
 
-    & .formElements__secondBlock {
+    & .form-elements__secondBlock {
       grid-column: 1 / 2;
       grid-row: 2 / 3;
       padding: 5px 0 0;
 
-      & .formElements__dropdown {
+      & .form-elements__dropdown {
         margin-bottom: 14px;
       }
     }
 
-    & .formElements__thirdBlock {
+    & .form-elements__thirdBlock {
       grid-column: 1 / 2;
       grid-row: 3 / 4;
       padding: 6px 0 0;
     }
 
-    & .formElements {
+    & .form-elements {
       &__text-field {
         margin-bottom: 16px;
 
@@ -68,15 +68,15 @@
     grid-template-rows: 676px 270px 525px;
     grid-row-gap: 52px;
 
-    & .formElements__secondBlock {
+    & .form-elements__secondBlock {
       grid-row: 2 / 3;
 
-      & .formElements__dropdown {
+      & .form-elements__dropdown {
         margin-top: 4px;
       }
     }
 
-    & .formElements__thirdBlock {
+    & .form-elements__thirdBlock {
       margin-top: 4px;
       grid-row: 3 / 4;
       display: grid;
@@ -90,22 +90,22 @@
     grid-template-rows: 676px 270px 325px;
     grid-row-gap: 52px;
 
-    & .formElements__secondBlock {
+    & .form-elements__secondBlock {
       grid-row: 2 / 3;
 
-      & .formElements__dropdown {
+      & .form-elements__dropdown {
         margin-top: 4px;
       }
     }
 
-    & .formElements__thirdBlock {
+    & .form-elements__thirdBlock {
       grid-row: 3 / 4;
     }
 
-    & .formElements__bullet-list {
+    & .form-elements__bullet-list {
       padding-top: 2px;
 
-      & .formElements__header {
+      & .form-elements__header {
         margin-top: 5px;
       }
     }
@@ -114,7 +114,7 @@
   &__checkbox-button {
     width: 245px;
 
-    & .formElements__header {
+    & .form-elements__header {
       margin: 4px 0 11px;
     }
   }
@@ -122,7 +122,7 @@
   &__radio-button {
     margin-top: 39px;
 
-    & .formElements__header {
+    & .form-elements__header {
       margin: 4px 0 9px;
     }
 
@@ -139,7 +139,7 @@
   &__toggle {
     margin-top: 38px;
 
-    & .formElements__header {
+    & .form-elements__header {
       margin: 4px 0 15px;
     }
 
@@ -151,7 +151,7 @@
   &__like-button {
     margin-top: 40px;
 
-    & .formElements__header {
+    & .form-elements__header {
       margin: 4px 0 15px;
     }
 
@@ -167,7 +167,7 @@
   &__rate-button {
     margin-top: 41px;
 
-    & .formElements__header {
+    & .form-elements__header {
       margin: 4px 0 15px;
     }
 
@@ -182,7 +182,7 @@
   }
 
   &__checkboxes {
-    & .formElements__header {
+    & .form-elements__header {
       margin: 4px 0 10px;
     }
   }
@@ -193,7 +193,7 @@
   }
 
   &__range-slider {
-    & .formElements__header {
+    & .form-elements__header {
       margin: 4px 0 10px;
     }
   }
@@ -201,11 +201,11 @@
   &__buttons {
     margin-top: 73px;
 
-    & .formElements__header {
+    & .form-elements__header {
       margin: 4px 0 10px;
     }
 
-    & .formElements__topButtons {
+    & .form-elements__topButtons {
       margin-top: 16px;
 
       & button:first-of-type {
@@ -213,7 +213,7 @@
       }
     }
 
-    & .formElements__middleButtons {
+    & .form-elements__middleButtons {
       margin-top: 30px;
 
       & button:first-of-type {
@@ -221,7 +221,7 @@
       }
     }
 
-    & .formElements__botButtons {
+    & .form-elements__botButtons {
       margin-top: 20px;
 
       & button:first-of-type {
@@ -237,7 +237,7 @@
   &__pagination {
     margin-top: 40px;
 
-    & .formElements__header {
+    & .form-elements__header {
       margin: 4px 0 16px;
     }
   }

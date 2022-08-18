@@ -11,39 +11,39 @@ block header
   meta(name="keywords", content="Room details page")
 
 block content
-  section.roomDetails
-    .roomDetails__imgBlock 
-      .roomDetails__leftImgBlock 
-        img.roomDetails__leftImg(src=require("../../images/room1.jpg"), alt="room1")
-      .roomDetails__rightImgBlock 
-        .roomDetails__topImg 
-          img.roomDetails__firstRightImage(src=require("../../images/room2.jpg"), alt="room2")
-        .roomDetails__botImg 
-          img.roomDetails__secondRightImage(src=require("../../images/room3.jpg"), alt="room3")
-    .roomDetails__mainContent 
-      .roomDetails__leftContentBlock
-        .roomDetails__topContent 
-          .roomDetails__roomInfo 
-            h2.roomDetails__header Сведения о номере
+  section.room-details
+    .room-details__imgBlock 
+      .room-details__leftImgBlock 
+        img.room-details__leftImg(src=require("../../images/room1.jpg"), alt="room1")
+      .room-details__rightImgBlock 
+        .room-details__topImg 
+          img.room-details__firstRightImage(src=require("../../images/room2.jpg"), alt="room2")
+        .room-details__botImg 
+          img.room-details__secondRightImage(src=require("../../images/room3.jpg"), alt="room3")
+    .room-details__mainContent 
+      .room-details__leftContentBlock
+        .room-details__topContent 
+          .room-details__roomInfo 
+            h2.room-details__header Сведения о номере
             +icon-text-list({list: [{title: 'Комфорт', text: 'Шумопоглощающие стены', icon: 'insert_emoticon'}, {title: 'Удобство', text: 'Окно в каждой из спален', icon: 'location_city'}, {title: 'Уют', text: 'Номер оснащён камином', icon: 'whatshot'},]})
-          .roomDetails__review 
-            h2.roomDetails__header Впечатления от номера
+          .room-details__review 
+            h2.room-details__header Впечатления от номера
             +chart({})
-        .roomDetails__comments 
-          .roomDetails__comment-header-wrapper
-            h2.roomDetails__comment-header Отзывы посетителей номера
-            span.roomDetails__comment-count 2 отзыва
-          .roomDetails__comment
+        .room-details__comments 
+          .room-details__comment-header-wrapper
+            h2.room-details__comment-header Отзывы посетителей номера
+            span.room-details__comment-count 2 отзыва
+          .room-details__comment
             +comment({id: 'UniqIdComment1', title: 'Мурад Сарафанов', date: '5 дней', photo: 'photo.png', likes: 12, liked: true, text: 'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.'})
-          .roomDetails__comment
+          .room-details__comment
             +comment({id: 'UniqIdComment2', title: 'Патрисия Стёклышкова', date: 'Неделю', photo: 'photo2.png', likes: 2, liked: false, text: 'Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент'})
-        .roomDetails__botContent
-          .roomDetails__rules 
-            h2.roomDetails__header Правила
+        .room-details__botContent
+          .room-details__rules 
+            h2.room-details__header Правила
             +bullet-list({title: 'Правила', list: ['Нельзя с питомцами', 'Без вечеринок и мероприятий', 'Время прибытия — после 13:00, а выезд до 12:00']})
-          .roomDetails__freeCancle
-            h2.roomDetails__header Отмена
-            p.roomDetails__text Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги.
+          .room-details__freeCancle
+            h2.room-details__header Отмена
+            p.room-details__text Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги.
 
-      .roomDetails__rightContentBlock
+      .room-details__rightContentBlock
         +booking({id: 'roomDetails__booking1'})

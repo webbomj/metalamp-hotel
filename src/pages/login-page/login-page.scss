@@ -1,4 +1,4 @@
-.registrationPage {
+.login-page {
   width: 1534px;
   min-height: 684px;
   background-image: url('../../images/image\ 4.jpg');
@@ -6,13 +6,13 @@
   background-position: 0% 100%;
   display: flex;
   align-items: center;
-  @media (max-width: 1500px) {
+  @media (max-width: 1380px) {
     width: 100%;
   }
 
-  &__registrationForm {
-    margin-left: 533px;
-    @media (max-width: 1500px) {
+  &__loginForm {
+    margin-left: 530px;
+    @media (max-width: 1380px) {
       margin: 0 auto;
     }
   }

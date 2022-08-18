@@ -10,14 +10,14 @@ html(lang="en")
   body
     .start-page
       section.start-page__links 
-        - const UILinks = ["colorsAndType", "formElements", "headersAndFooters", "cards"];
+        - const UILinks = ["colors-and-type", "form-elements", "headers-and-footers", "cards"];
         ul.start-page__list
           each link in UILinks
             li.start-page__item
               a.start-page__link(href=`./${link}.html`)= link
           hr.start-page__hr
         ul.start-page__list 
-          - const links = ["loginPage", "registrationPage", "landingPage", "roomDetails", "searchRoom"];
+          - const links = ["login-page", "registration-page", "landing-page", "room-details", "search-room"];
           each link in links
             li.start-page__item
               a.start-page__link(href=`./${link}.html`)= link

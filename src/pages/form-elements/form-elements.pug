@@ -22,94 +22,94 @@ block header
   meta(name="keywords", content="Form elements")
 
 block content
-  section.formElements
-    .formElements__firstColumn
-      .formElements__firstBlock
-        .formElements__text-field
+  section.form-elements
+    .form-elements__firstColumn
+      .form-elements__firstBlock
+        .form-elements__text-field
           +text-field({uniqId: 'textField1', title: 'Text field', description: 'default', placeholder: 'Email'})
-        .formElements__text-field
+        .form-elements__text-field
           +text-field({uniqId: 'textField2', title: 'Text field', description: 'hover / focus', placeholder: 'Email', value: 'This is pretty awesome'})
-        .formElements__dropdown
+        .form-elements__dropdown
           +dropdown({uniqId: 'dropdown1', title: 'dropdown', description: 'hover', text: 'Сколько гостей'})
-        .formElements__text-field--masked
+        .form-elements__text-field--masked
           +text-field({uniqId: 'textField3', title: 'Masked text field', description: '', placeholder: 'ДД.ММ.ГГГГ', mask: true})
-        .formElements__dropdown--date
+        .form-elements__dropdown--date
           +date-dropdown({uniqId: 'dateDropdown1', firstTitle: 'date dropdown', secondTitle: 'date dropdown'})
-        .formElements__dropdown--filter
+        .form-elements__dropdown--filter
           +filter-date-dropdown({uniqId: 'filterDateDropdown1'})
-        .formElements__text-field--sub
+        .form-elements__text-field--sub
           +text-field({uniqId: 'textField4', title: 'subscription text field', description: '', placeholder: 'Email', arrow: true, small: true})
-      .formElements__secondBlock
-        .formElements__dropdown
+      .form-elements__secondBlock
+        .form-elements__dropdown
           +dropdown({uniqId: 'dropdown2', type: 'furniture', title: 'dropdown', small: true, description: 'default', text: '2 спальни, 2 кровати...'})
-        .formElements__dropdown
+        .form-elements__dropdown
           +dropdown({uniqId: 'dropdown3', type: 'furniture', title: 'dropdown', small: true, description: 'expanded', text: '2 спальни, 2 кровати...', open: true})
-      .formElements__thirdBlock
-        .formElements__expandable-checkbox
+      .form-elements__thirdBlock
+        .form-elements__expandable-checkbox
           +expandable-checkbox-list({id: 'expandableCheckbox1', title: 'expandable checkbox list'})
-        .formElements__expandable-checkbox--open
+        .form-elements__expandable-checkbox--open
           +expandable-checkbox-list({id: 'expandableCheckbox2', title: 'expandable checkbox list', open: true})
-        .formElements__icon-text-list
+        .form-elements__icon-text-list
           +icon-text-list({list: [{title: 'Комфорт', text: 'Шумопоглощающие стены', icon: 'insert_emoticon'}, {title: 'Удобство', text: 'Окно в каждой из спален', icon: 'location_city'}]})
-    .formElements__secondColumn
-      .formElements__firstBlock
-        .formElements__checkbox-button
-          h3.formElements__header Checkbox Buttons
+    .form-elements__secondColumn
+      .form-elements__firstBlock
+        .form-elements__checkbox-button
+          h3.form-elements__header Checkbox Buttons
           +checkbox({id: 'checkbox1', title: 'Можно курить'})
           +checkbox({id: 'checkbox2', title: 'Можно с питомцами'})
           +checkbox({id: 'checkbox3', title: 'Можно пригласить гостей (до 10 человек)'})
-        .formElements__radio-button
-          h3.formElements__header Radio Buttons
-          .formElements__radio-button-box
+        .form-elements__radio-button
+          h3.form-elements__header Radio Buttons
+          .form-elements__radio-button-box
             +radio-button({id: 'radio-button1', title:'Мужчина', name: 'checkboxed', checked: true})
             +radio-button({id: 'radio-button2', title: 'Женщина', name: 'checkboxed'})
-        .formElements__toggle
-          h3.formElements__header Toggle
+        .form-elements__toggle
+          h3.form-elements__header Toggle
           +toggle({id: 'toggle1', text: 'Получать спецпредложения', cheked: true})
           +toggle({id: 'toggle2', text: 'Получать спецпредложения'})
-        .formElements__like-button
-          h3.formElements__header like button
-          .formElements__like-button-box
+        .form-elements__like-button
+          h3.form-elements__header like button
+          .form-elements__like-button-box
             +like-button({number: 2, clicked: false})
             +like-button({number: 12, clicked: true})
-        .formElements__rate-button
-          h3.formElements__header rate button
-            .formElements__rate-button-box
+        .form-elements__rate-button
+          h3.form-elements__header rate button
+            .form-elements__rate-button-box
               +rate-button({id: 'rateButton1', size: 3})
               +rate-button({id: 'rateButton2', size: 4})
-      .formElements__secondBlock
-        .formElements__dropdown
+      .form-elements__secondBlock
+        .form-elements__dropdown
           +dropdown({uniqId: 'dropdown4', title: 'dropdown', description: 'expanded', text: 'Сколько гостей', open: true})
-      .formElements__thirdBlock
-        .formElements__checkboxes
-          h3.formElements__header rich Checkbox Buttons
+      .form-elements__thirdBlock
+        .form-elements__checkboxes
+          h3.form-elements__header rich Checkbox Buttons
           +checkbox({id: 'SuperIDcheckbox33', title: 'Широкий коридор', rich: true, richText: 'Ширина коридоров в номере не менее 91 см.'})
           +checkbox({id: 'SuperIDcheckbox344', title: 'Помощник для инвалидов', rich: true, richText: 'На 1 этаже вас встретит специалист и проводит до номера.'})
-        .formElements__comment
+        .form-elements__comment
           +comment({id: 'UniqIdComment1', title: 'Мурад Сарафанов', date: '5 дней', photo: 'photo.png', likes: 12, liked: true, text: 'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.'})
-    .formElements__thirdColumn
-      .formElements__firstBlock
-        .formElements__range-slider
-          h3.formElements__header range slider
-        .formElements__buttons
-          h3.formElements__header buttons
-          .formElements__topButtons
+    .form-elements__thirdColumn
+      .form-elements__firstBlock
+        .form-elements__range-slider
+          h3.form-elements__header range slider
+        .form-elements__buttons
+          h3.form-elements__header buttons
+          .form-elements__topButtons
             +button({title: 'click me'})
             +button({title: 'click me'})
-          .formElements__middleButtons
+          .form-elements__middleButtons
             +button({title: 'click me', type: 'white'})
             +button({title: 'click me', type: 'white'})
-          .formElements__botButtons
+          .form-elements__botButtons
             +button({title: 'click me', type: 'without'})
             +button({title: 'click me', type: 'without'})
           +button({title: 'Перейти к оплате', type: 'big', arrow: true})
-        .formElements__pagination
-          h3.formElements__header pagination
+        .form-elements__pagination
+          h3.form-elements__header pagination
           +pagination({})
-      .formElements__secondBlock
-        .formElements__dropdown
+      .form-elements__secondBlock
+        .form-elements__dropdown
           +dropdown({uniqId: 'dropdown5', title: 'dropdown', description: 'expanded', text: 'Сколько гостей', open: true})
-      .formElements__thirdBlock
-        .formElements__bullet-list
-          h3.formElements__header Bullet list
+      .form-elements__thirdBlock
+        .form-elements__bullet-list
+          h3.form-elements__header Bullet list
           +bullet-list({title: 'bullet list', list: ['Нельзя с питомцами', 'Без вечеринок и мероприятий', 'Время прибытия — после 13:00, а выезд до 12:00']})
