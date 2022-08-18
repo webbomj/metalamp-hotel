@@ -16,16 +16,16 @@
   }
 
   &__id {
-    & .numberRoomAndPrice__id {
+    & .number-room-and-price__id {
       font-size: 23px;
       margin-right: 7px;
     }
 
-    & .numberRoomAndPrice__price {
+    & .number-room-and-price__price {
       transform: translate(-3px, 1px);
     }
 
-    & .numberRoomAndPrice__period {
+    & .number-room-and-price__period {
       transform: translate(0, 1px);
     }
   }

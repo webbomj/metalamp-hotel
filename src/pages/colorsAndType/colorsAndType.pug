@@ -1,6 +1,6 @@
 extends ../../layouts/UI/UI.pug
-include ../../components/UI-kit/ColorBlock/colorBlock.pug
-include ../../components/UI-kit/ColorFonts/colorFonts.pug
+include ../../components/UI-kit/Color-block/color-block.pug
+include ../../components/UI-kit/Color-fonts/color-fonts.pug
 
 block header
   title Colors and type
@@ -13,9 +13,9 @@ block content
       - const colors = [{color: 'dark100', title: 'Dark Shade 100%', hash: '#1F2041'},{color: 'dark75', title: 'Dark Shade 75%', hash: '#1F2041'},{color: 'dark50', title: 'Dark Shade 50%', hash: '#1F2041'},{color: 'dark25', title: 'Dark Shade 25%', hash: '#1F2041'},{color: 'dark5', title: 'Dark Shade 5%', hash: '#1F2041'},{color: 'purple', title: 'Purple', hash: '#BC9CFF'},{color: 'green', title: 'Green', hash: '#6FCF97'}];
       ul.pageColors__list
         each color in colors
-          +colorBlock(color)
+          +color-block(color)
     .pageColors__rightBlock
       - const fonts = [{tag:'h1', title: 'This one is the sub-section or widget title'},{tag:'h2', title: 'Next one is the item title inside widgets'},{tag:'h3', title: 'This is a label or CTA text'},{tag:'body', title: 'This is the body text which is used for most of the design, like paragraphs, lists, etc.'}]
       ul.pageColors__list
         each font in fonts
-          +colorFonts(font)
+          +color-fonts(font)

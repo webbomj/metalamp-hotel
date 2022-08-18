@@ -1,0 +1,6 @@
+mixin color-block({color, title, hash})
+  li.color-block__item
+    div(class=`color-block__colors color-block__${color}`)
+    .color-block__right-block
+      h2.color-block__title= title
+      span.color-block__hash= hash
