@@ -21,9 +21,9 @@ mixin registration({id = '', textButton = 'Перейти к оплате'})
       +text-field({uniqId: `registration-textField5-${id}`, title: '', description: '', placeholder: 'Пароль'})
     .registration__toggle
       +toggle({id: 'toggle1', text: 'Получать спецпредложения'})
-    .registration__buttonPay
+    .registration__button-pay
       +button({title: textButton, type: 'big', arrow: true})
-    .registration__hasAccount
+    .registration__has-account
       .registration__text Уже есть аккаунт на Toxin
-      .registration__buttonIn
+      .registration__button-in
         +button({title: 'Войти', type: 'white'})

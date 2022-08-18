@@ -1,5 +1,5 @@
 mixin toggle({id = 'uniqIdToggle', text = 'ssss', cheked = false})
   .toggle(data-toggle=id)
-    .toggle__Block.js-toggle__Block(class=cheked ? "toggle__Block--active" : "")
-      .toggle__Circle(class=cheked ? "toggle__Circle--active" : "")
-    .toggle__Text= text
+    .toggle__block.js-toggle__block(class=cheked ? "toggle__block--active" : "")
+      .toggle__circle(class=cheked ? "toggle__circle--active" : "")
+    .toggle__text= text

@@ -1,4 +1,4 @@
-const toggleBlock = document.querySelectorAll('.js-toggle__Block');
+const toggleBlock = document.querySelectorAll('.js-toggle__block');
 
 const toggleClass = (e) => {
   const { target } = e;
@@ -6,8 +6,8 @@ const toggleClass = (e) => {
 
   toggleBlock.forEach((el) => {
     if (el.parentNode.dataset.toggle === toggleId) {
-      el.firstChild.classList.toggle('toggle__Circle--active');
-      el.classList.toggle('toggle__Block--active');
+      el.firstChild.classList.toggle('toggle__circle--active');
+      el.classList.toggle('toggle__block--active');
     }
   });
 };

@@ -3,7 +3,7 @@
   margin-top: 65px;
   margin-left: 140px;
 
-  &__firstColumn {
+  &__first-column {
     margin-right: 40px;
   }
 
@@ -15,7 +15,7 @@
     margin-top: 40px;
   }
 
-  &__secondColumn {
+  &__second-column {
     margin-right: 40px;
   }
 
@@ -23,18 +23,18 @@
     margin-top: 40px;
   }
 
-  &__thirdColumn {
+  &__third-column {
   }
 
-  &__airDatePicker {
+  &__air-date-picker {
   }
 
-  &__secondRoom,
-  &__firstRoom {
+  &__second-room,
+  &__first-room {
     margin-top: 40px;
   }
 }
 
-.UILayout__wrapper--cards {
+.UI-layout__wrapper--cards {
   background: #f4f4f6;
 }

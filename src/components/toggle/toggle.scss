@@ -3,7 +3,7 @@
 .toggle {
   display: flex;
 
-  &__Block {
+  &__block {
     display: flex;
     justify-content: flex-start;
     padding: 3px 7px 0 2px;
@@ -19,7 +19,7 @@
     }
   }
 
-  &__Circle {
+  &__circle {
     width: 12px;
     height: 12px;
     background: global.$dark25;
@@ -33,7 +33,7 @@
     }
   }
 
-  &__Text {
+  &__text {
     font-weight: 400;
     font-size: 14px;
     line-height: 24px;

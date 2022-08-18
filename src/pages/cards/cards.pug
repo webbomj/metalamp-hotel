@@ -1,6 +1,6 @@
 extends ../../layouts/UI/UI.pug
 include ../../components/room/room.pug
-include ../../components/airDatePicker/airDatePicker.pug
+include ../../components/air-date-picker/air-date-picker.pug
 include ../../components/find-rooms/find-rooms.pug
 include ../../components/registration/registration.pug
 include ../../components/booking/booking.pug
@@ -14,20 +14,20 @@ block header
 
 block content
   section.cards 
-    .cards__firstColumn
+    .cards__first-column
       .cards__find-rooms
         +find-rooms({id: 'cardsFindRooms1'})
       .cards__registration
         +registration({})
-    .cards__secondColumn
+    .cards__second-column
       .cards__booking
         +booking({id: 'cardsBooking1'})
       .cards__login
         +login({id: 'cardsLogin1'})
-    .cards__thirdColumn
-      .cards__airDatePicker 
-        +airDatePicker({uniqId: 'cardsAirDatePicker1'})
-      .cards__firstRoom
+    .cards__third-column
+      .cards__air-date-picker 
+        +air-date-picker({uniqId: 'cardsAirDatePicker1'})
+      .cards__first-room
         +room({id: 'room1', type: 'люкс', price: '9 990', stars: 5, review: 145, array: ['room1.1.jpg', 'room1.1.jpg', 'room1.1.jpg', 'room1.1.jpg']})
-      .cards__secondRoom
+      .cards__second-room
         +room({id: 'room2', type: '', number: '840', price: '9 990', stars: 4, review: 65, array: ['room.jpg', 'room.jpg', 'room.jpg', 'room.jpg']})

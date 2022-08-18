@@ -9,9 +9,9 @@ mixin login({id = 'loginId'})
       +text-field({uniqId: `login-textField1-${id}`, title: '', description: '', placeholder: 'Email'})
     .login__password 
       +text-field({uniqId: `login-textField2-${id}`, title: '', description: '', placeholder: 'Пароль'})
-    .login__buttonIn 
+    .login__button-in 
       +button({title: 'Войти', type: 'big', arrow: true})
-    .login__hasAccount 
+    .login__has-account 
       .login__text Нет аккаунта на Toxin?
-      .login__buttonCreate
+      .login__button-create
         +button({title: 'Создать', type: 'white'})

@@ -42,16 +42,16 @@ const converseDate = (dates) => {
 
 const createAirDatePickerOptions = (fnSelect, fnHandler) => {
   return {
-    classes: 'js-airDatePicker',
+    classes: 'js-air-datepicker',
     moveToOtherMonthsOnSelect: false,
     minDate: [new Date()],
     multipleDatesSeparator: '-',
     range: true,
-    prevHtml: "<span class='js-airDatePicker__arrowBack material-icons md-24'>&#xe5c4;</span>",
-    nextHtml: "<span class='js-airDatePicker__arrowForward material-icons md-24'>&#xe5c8;</span>",
+    prevHtml: "<span class='js-air-datepicker__arrow-back material-icons md-24'>&#xe5c4;</span>",
+    nextHtml: "<span class='js-air-datepicker__arrow-forward material-icons md-24'>&#xe5c8;</span>",
     navTitles: {
-      days: `<div class='js-airDatePicker__header'>
-          <span class='js-airDatePicker__title'>MMMM yyyy</span>
+      days: `<div class='js-air-datepicker__header'>
+          <span class='js-air-datepicker__title'>MMMM yyyy</span>
         </div>
         `,
     },

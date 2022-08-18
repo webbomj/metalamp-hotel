@@ -4,7 +4,7 @@ mixin footer({id = "uniqIdFooter", type = "full"})
   .footer 
     if type === 'full'
       .footer__full
-        .footer__topBlock 
+        .footer__top-block 
           .footer__first 
             img.footer__logo(src=require("../../images/Logo.png"), alt="Логотип")
             span.footer__span.footer__description Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»
@@ -39,15 +39,15 @@ mixin footer({id = "uniqIdFooter", type = "full"})
                 a.footer__link(href="#") Сообшества
               li.footer__item
                 a.footer__link(href="#") Связь с нами
-          .footer__fith 
+          .footer__fifth 
             h3.footer__header Подписка
             span.footer__span Получайте специальные предложения и новости сервиса
             +text-field({uniqId: id, title: '', description: '', placeholder: 'Email', arrow: true, small: true})
-        .footer__middleBlock 
+        .footer__middle-block 
           img.footer__logo(src=require("../../images/Logo.png"), alt="Логотип")
-        .footer__botBlock
+        .footer__bot-block
           span.footer__copyright Copyright © 2018 Toxin отель. Все права защищены.
-          .footer__socialButtons
+          .footer__social-buttons
             span.footer__icon &#xf099;
             span.footer__icon &#xf082;
             span.footer__icon &#xf16d;
@@ -55,7 +55,7 @@ mixin footer({id = "uniqIdFooter", type = "full"})
       .footer__small 
         img.footer__logo(src=require("../../images/Logo.png"), alt="Логотип")
         span.footer__copyright Copyright © 2018 Toxin отель. Все права защищены.
-        .footer__socialButtons
+        .footer__social-buttons
           span.footer__icon &#xf099;
           span.footer__icon &#xf082;
           span.footer__icon &#xf16d;

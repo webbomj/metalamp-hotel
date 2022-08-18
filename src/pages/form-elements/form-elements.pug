@@ -2,7 +2,6 @@ extends ../../layouts/UI/UI.pug
 include ../../components/text-field/text-field.pug
 include ../../components/button/button.pug
 include ../../components/dropdown/dropdown.pug
-include ../../components/airDatePicker/airDatePicker.pug
 include ../../components/filter-date-dropdown/filter-date-dropdown.pug
 include ../../components/date-dropdown/date-dropdown.pug
 include ../../components/checkbox/checkbox.pug
@@ -23,8 +22,8 @@ block header
 
 block content
   section.form-elements
-    .form-elements__firstColumn
-      .form-elements__firstBlock
+    .form-elements__first-column
+      .form-elements__first-block
         .form-elements__text-field
           +text-field({uniqId: 'textField1', title: 'Text field', description: 'default', placeholder: 'Email'})
         .form-elements__text-field
@@ -39,20 +38,20 @@ block content
           +filter-date-dropdown({uniqId: 'filterDateDropdown1'})
         .form-elements__text-field--sub
           +text-field({uniqId: 'textField4', title: 'subscription text field', description: '', placeholder: 'Email', arrow: true, small: true})
-      .form-elements__secondBlock
+      .form-elements__second-block
         .form-elements__dropdown
           +dropdown({uniqId: 'dropdown2', type: 'furniture', title: 'dropdown', small: true, description: 'default', text: '2 спальни, 2 кровати...'})
         .form-elements__dropdown
           +dropdown({uniqId: 'dropdown3', type: 'furniture', title: 'dropdown', small: true, description: 'expanded', text: '2 спальни, 2 кровати...', open: true})
-      .form-elements__thirdBlock
+      .form-elements__third-block
         .form-elements__expandable-checkbox
           +expandable-checkbox-list({id: 'expandableCheckbox1', title: 'expandable checkbox list'})
         .form-elements__expandable-checkbox--open
           +expandable-checkbox-list({id: 'expandableCheckbox2', title: 'expandable checkbox list', open: true})
         .form-elements__icon-text-list
           +icon-text-list({list: [{title: 'Комфорт', text: 'Шумопоглощающие стены', icon: 'insert_emoticon'}, {title: 'Удобство', text: 'Окно в каждой из спален', icon: 'location_city'}]})
-    .form-elements__secondColumn
-      .form-elements__firstBlock
+    .form-elements__second-column
+      .form-elements__first-block
         .form-elements__checkbox-button
           h3.form-elements__header Checkbox Buttons
           +checkbox({id: 'checkbox1', title: 'Можно курить'})
@@ -77,39 +76,39 @@ block content
             .form-elements__rate-button-box
               +rate-button({id: 'rateButton1', size: 3})
               +rate-button({id: 'rateButton2', size: 4})
-      .form-elements__secondBlock
+      .form-elements__second-block
         .form-elements__dropdown
           +dropdown({uniqId: 'dropdown4', title: 'dropdown', description: 'expanded', text: 'Сколько гостей', open: true})
-      .form-elements__thirdBlock
+      .form-elements__third-block
         .form-elements__checkboxes
           h3.form-elements__header rich Checkbox Buttons
           +checkbox({id: 'SuperIDcheckbox33', title: 'Широкий коридор', rich: true, richText: 'Ширина коридоров в номере не менее 91 см.'})
           +checkbox({id: 'SuperIDcheckbox344', title: 'Помощник для инвалидов', rich: true, richText: 'На 1 этаже вас встретит специалист и проводит до номера.'})
         .form-elements__comment
           +comment({id: 'UniqIdComment1', title: 'Мурад Сарафанов', date: '5 дней', photo: 'photo.png', likes: 12, liked: true, text: 'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.'})
-    .form-elements__thirdColumn
-      .form-elements__firstBlock
+    .form-elements__third-column
+      .form-elements__first-block
         .form-elements__range-slider
           h3.form-elements__header range slider
         .form-elements__buttons
           h3.form-elements__header buttons
-          .form-elements__topButtons
+          .form-elements__top-buttons
             +button({title: 'click me'})
             +button({title: 'click me'})
-          .form-elements__middleButtons
+          .form-elements__middle-buttons
             +button({title: 'click me', type: 'white'})
             +button({title: 'click me', type: 'white'})
-          .form-elements__botButtons
+          .form-elements__bot-buttons
             +button({title: 'click me', type: 'without'})
             +button({title: 'click me', type: 'without'})
           +button({title: 'Перейти к оплате', type: 'big', arrow: true})
         .form-elements__pagination
           h3.form-elements__header pagination
           +pagination({})
-      .form-elements__secondBlock
+      .form-elements__second-block
         .form-elements__dropdown
           +dropdown({uniqId: 'dropdown5', title: 'dropdown', description: 'expanded', text: 'Сколько гостей', open: true})
-      .form-elements__thirdBlock
+      .form-elements__third-block
         .form-elements__bullet-list
           h3.form-elements__header Bullet list
           +bullet-list({title: 'bullet list', list: ['Нельзя с питомцами', 'Без вечеринок и мероприятий', 'Время прибытия — после 13:00, а выезд до 12:00']})

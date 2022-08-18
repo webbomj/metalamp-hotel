@@ -1,6 +1,6 @@
 @use 'src/styles/global.scss';
 
-.js-airDatePicker {
+.js-air-datepicker {
   width: 318px !important;
   height: 367px !important;
 
@@ -119,12 +119,12 @@
     color: #fff !important;
   }
 
-  &__arrowBack {
+  &__arrow-back {
     color: global.$purple;
     transform: translate(11px, -3px);
   }
 
-  &__arrowForward {
+  &__arrow-forward {
     color: global.$purple;
     transform: translate(-11px, -3px);
   }
@@ -143,58 +143,6 @@
     &:hover {
       background-color: #fff;
     }
-  }
-
-  &__date {
-    &--current {
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
-      background-color: global.$green;
-    }
-
-    &--selected {
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
-      background-color: global.$purple;
-    }
-  }
-
-  &__contentGrid {
-    grid-auto-rows: 40px !important;
-    margin-top: 8px !important;
-  }
-
-  &__shortMonth {
-    color: #bc9cff !important;
-    font-weight: 700 !important;
-    text-transform: initial !important;
-  }
-
-  &__dateDays {
-    font-size: 12px !important;
-    font-weight: 400 !important;
-
-    &.-selected- {
-      background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%) !important;
-      border-radius: 50% !important;
-    }
-
-    &.-focus- {
-      border-radius: 50% !important;
-    }
-
-    &.-in-range- {
-      background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%) !important;
-      opacity: 0.25 !important;
-    }
-  }
-
-  &__currentDay {
-    border-radius: 50% !important;
-    background: linear-gradient(180deg, #6fcf97 0%, #66d2ea 100%) !important;
-    color: #fff !important;
   }
 
   & .air-datepicker--buttons {
@@ -236,9 +184,5 @@
     &:hover {
       background: none;
     }
-  }
-
-  &__open {
-    display: block;
   }
 }

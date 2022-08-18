@@ -10,7 +10,7 @@ mixin dropdown(props)
   .dropdown.js-dropdown(data-type=`${uniqId}-${type}`)
     +text-field({id: uniqId, title: title, description: description, open: open, value: text, small: small, placeholder: 'Сколько гостей', readonly: true, classNames: 'dropdown__main js-dropdown__main', styles: 'margin-bottom: 17px', dropdown: true})
     div(
-      class=type === "guests" ? `dropdown__bottomField ${open ? "" : "dropdown__bottomField--none"}` : `dropdown__bottomField dropdown__furnitureField ${open ? "" : "dropdown__bottomField--none"}`
+      class=type === "guests" ? `dropdown__bottom-field ${open ? "" : "dropdown__bottom-field--none"}` : `dropdown__bottom-field dropdown__furniture-field ${open ? "" : "dropdown__bottom-field--none"}`
     )
       ul.dropdown__list.js-dropdown__list(data-dropdown-list=uniqId) 
         each item, i in list 

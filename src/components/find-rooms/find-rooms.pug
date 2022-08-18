@@ -9,7 +9,7 @@ mixin find-rooms({id = ''})
         h1.find-rooms__header Найдём номера под ваши пожелания
       .find-rooms__date-dropdown
         +date-dropdown({uniqId: `cards__dateDropdown_${id}`, firstTitle: 'прибытие', secondTitle: 'выезд'})
-      .find-rooms__guestDropdown
+      .find-rooms__guest-dropdown
         +dropdown({uniqId: `cards__dropdown_${id}`, title: 'гости', description: '', text: 'Сколько гостей'})
       .find-rooms__button
         +button({title: 'Подобрать номер', type: 'big', arrow: true})

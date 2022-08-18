@@ -48,7 +48,7 @@ if (allButtons) {
     if (el.textContent === buttonsText.apply) {
       const target = document.querySelector(`[data-dropdown=${dataset}]`);
       el.addEventListener('click', () => {
-        target.parentNode.nextElementSibling.classList.add('dropdown__bottomField--none');
+        target.parentNode.nextElementSibling.classList.add('dropdown__bottom-field--none');
         target.firstChild.classList.toggle('dropdown__field--active');
       });
     } else if (el.textContent === buttonsText.clear) {
@@ -65,7 +65,7 @@ const changeVisibility = (e) => {
   if (!datasetParent) return;
   const target = allInputs.find((el) => el.dataset.dropdown === datasetParent);
   target.firstChild.classList.toggle('dropdown__field--active');
-  target.parentNode.nextElementSibling.classList.toggle('dropdown__bottomField--none');
+  target.parentNode.nextElementSibling.classList.toggle('dropdown__bottom-field--none');
 };
 
 allInputs.forEach((el) => el.addEventListener('click', (e) => changeVisibility(e)));

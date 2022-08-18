@@ -2,7 +2,7 @@ import AirDatepicker from 'air-datepicker';
 
 import 'air-datepicker/air-datepicker.css';
 
-import { createAirDatePickerOptions, converseDate } from '../airDatePicker/index';
+import { createAirDatePickerOptions, converseDate } from '../air-date-picker/index';
 
 const mainBlock = document.querySelectorAll('.js-filter-date-dropdown__main');
 const airDatePickerBlocks = document.querySelectorAll('.js-filter-date-dropdown__close');
@@ -14,13 +14,13 @@ const toggleAirDatePicker = (el) => {
   const airDatePickerNode = el.parentNode.parentNode.parentNode.querySelector(
     '.js-filter-date-dropdown__close'
   );
-  airDatePickerNode.classList.toggle('filter-date-dropdown__dateOpen');
+  airDatePickerNode.classList.toggle('filter-date-dropdown__date-open');
 };
 
 const closeAirDatePickerToggle = ({ $datepicker }) => {
   const datePickerNode = $datepicker.parentNode;
 
-  datePickerNode.classList.toggle('filter-date-dropdown__dateOpen');
+  datePickerNode.classList.toggle('filter-date-dropdown__date-open');
 };
 
 const selectDate = (formDate, datePicker) => {

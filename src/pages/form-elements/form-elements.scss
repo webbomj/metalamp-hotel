@@ -4,18 +4,18 @@
   grid-template-columns: 320px 374px 320px;
   grid-column-gap: 72px;
 
-  &__firstColumn {
+  &__first-column {
     display: grid;
     grid-template-rows: 676px 270px 525px;
     grid-row-gap: 52px;
     grid-column: 1 / 2;
 
-    & .form-elements__firstBlock {
+    & .form-elements__first-block {
       grid-column: 1 / 2;
       grid-row: 1 / 2;
     }
 
-    & .form-elements__secondBlock {
+    & .form-elements__second-block {
       grid-column: 1 / 2;
       grid-row: 2 / 3;
       padding: 5px 0 0;
@@ -25,7 +25,7 @@
       }
     }
 
-    & .form-elements__thirdBlock {
+    & .form-elements__third-block {
       grid-column: 1 / 2;
       grid-row: 3 / 4;
       padding: 6px 0 0;
@@ -62,13 +62,13 @@
     }
   }
 
-  &__secondColumn {
+  &__second-column {
     padding: 0 0 0 54px;
     display: grid;
     grid-template-rows: 676px 270px 525px;
     grid-row-gap: 52px;
 
-    & .form-elements__secondBlock {
+    & .form-elements__second-block {
       grid-row: 2 / 3;
 
       & .form-elements__dropdown {
@@ -76,7 +76,7 @@
       }
     }
 
-    & .form-elements__thirdBlock {
+    & .form-elements__third-block {
       margin-top: 4px;
       grid-row: 3 / 4;
       display: grid;
@@ -85,12 +85,12 @@
     }
   }
 
-  &__thirdColumn {
+  &__third-column {
     display: grid;
     grid-template-rows: 676px 270px 325px;
     grid-row-gap: 52px;
 
-    & .form-elements__secondBlock {
+    & .form-elements__second-block {
       grid-row: 2 / 3;
 
       & .form-elements__dropdown {
@@ -98,7 +98,7 @@
       }
     }
 
-    & .form-elements__thirdBlock {
+    & .form-elements__third-block {
       grid-row: 3 / 4;
     }
 
@@ -205,7 +205,7 @@
       margin: 4px 0 10px;
     }
 
-    & .form-elements__topButtons {
+    & .form-elements__top-buttons {
       margin-top: 16px;
 
       & button:first-of-type {
@@ -213,7 +213,7 @@
       }
     }
 
-    & .form-elements__middleButtons {
+    & .form-elements__middle-buttons {
       margin-top: 30px;
 
       & button:first-of-type {
@@ -221,7 +221,7 @@
       }
     }
 
-    & .form-elements__botButtons {
+    & .form-elements__bot-buttons {
       margin-top: 20px;
 
       & button:first-of-type {

@@ -49,11 +49,11 @@
   &__date-dropdown {
   }
 
-  &__guestDropdown {
+  &__guest-dropdown {
     margin-top: 16px;
   }
 
-  &__ratePriceSlider {
+  &__rate-price-slider {
     height: 120px;
   }
 
@@ -64,15 +64,15 @@
     margin-top: 28px;
   }
 
-  &__convenienceDropdown {
+  &__convenience-dropdown {
     margin-top: 25px;
   }
 
-  &__convenienceList {
+  &__convenience-list {
     margin-top: 29px;
   }
 
-  &__mainContent {
+  &__main-content {
     width: 846px;
     margin-top: 4px;
     @media (max-width: 900px) {
@@ -92,7 +92,7 @@
     }
   }
 
-  &__hotelList {
+  &__hotel-list {
     display: flex;
     flex-wrap: wrap;
     margin-top: 22px;

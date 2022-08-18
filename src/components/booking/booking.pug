@@ -9,27 +9,27 @@ mixin booking({id = 'bookingId'})
       +number-room-and-price({price: '9 800', type: 'люкс', number: '888'})
     .booking__date-dropdown 
       +date-dropdown({uniqId: `cards__dateDropdown_${id}`, firstTitle: 'прибытие', secondTitle: 'выезд'})
-    .booking__guestDropdown 
+    .booking__guest-dropdown 
       +dropdown({uniqId: `cards__dropdown_${id}`, title: 'гости', description: '', text: 'Сколько гостей'})
     .booking__list 
       .booking__item 
-        .booking__priceToDays 9 990₽ х 4 суток
+        .booking__price-to-days 9 990₽ х 4 суток
         .booking__price 39 960₽
       .booking__item
-        .booking__priceToDays 
+        .booking__price-to-days 
           span.booking__price-item Сбор за услуги: скидка 2 179₽
-          .booking__priceInfo
-            .booking__priceSymbol i
+          .booking__price-info
+            .booking__price-symbol i
         .booking__price 0₽
       .booking__item
-        .booking__priceToDays
+        .booking__price-to-days
           span.booking__price-item Сбор за дополнительные услуги
-          .booking__priceInfo
-            .booking__priceSymbol i
+          .booking__price-info
+            .booking__price-symbol i
         .booking__price 300₽
-    .booking__totalPrice 
-      .booking__totalPrice-text Итого
-      .booking__totalPrice-underline 
-      .booking__totalPrice-text 38 081₽
+    .booking__total-price 
+      .booking__total-price-text Итого
+      .booking__total-price-underline 
+      .booking__total-price-text 38 081₽
     .booking__button
       +button({title: 'Забронировать', type: 'big', arrow: true})

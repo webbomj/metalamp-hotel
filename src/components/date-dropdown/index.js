@@ -1,6 +1,6 @@
 import AirDatepicker from 'air-datepicker';
 
-import { createAirDatePickerOptions, converseDate } from '../airDatePicker/index';
+import { createAirDatePickerOptions, converseDate } from '../air-date-picker/index';
 
 import 'air-datepicker/air-datepicker.css';
 

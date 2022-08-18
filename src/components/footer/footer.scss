@@ -18,7 +18,7 @@
     }
   }
 
-  &__topBlock {
+  &__top-block {
     padding: 92px 140px 83px;
     display: flex;
     @media (max-width: 1240px) {
@@ -72,7 +72,7 @@
     margin-left: 92px;
   }
 
-  &__fith {
+  &__fifth {
     width: 260px;
     margin-left: 52px;
 
@@ -101,14 +101,14 @@
     cursor: pointer;
   }
 
-  &__middleBlock {
+  &__middle-block {
     display: none;
     @media (max-width: 768px) {
       display: block;
     }
   }
 
-  &__botBlock {
+  &__bot-block {
     display: flex;
     justify-content: space-between;
     padding: 23px 140px 26px;
@@ -133,7 +133,7 @@
     }
   }
 
-  &__socialButtons {
+  &__social-buttons {
     display: flex;
     justify-content: space-between;
     width: 112px;
@@ -149,7 +149,7 @@
     padding: 187px 104px 100px;
     background-color: #fff;
 
-    & .footer__socialButtons {
+    & .footer__social-buttons {
       margin-top: 21px;
     }
 
