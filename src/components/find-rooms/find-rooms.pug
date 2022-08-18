@@ -2,14 +2,14 @@ include ../date-dropdown/date-dropdown.pug
 include ../dropdown/dropdown.pug
 include ../button/button.pug
 
-mixin findRooms({id = ''})
-  .findRooms.js-findRooms
-    form.findRooms__form
-      .findRooms__header-wrapper
-        h1.findRooms__header Найдём номера под ваши пожелания
-      .findRooms__date-dropdown
+mixin find-rooms({id = ''})
+  .find-rooms.js-find-rooms
+    form.find-rooms__form
+      .find-rooms__header-wrapper
+        h1.find-rooms__header Найдём номера под ваши пожелания
+      .find-rooms__date-dropdown
         +date-dropdown({uniqId: `cards__dateDropdown_${id}`, firstTitle: 'прибытие', secondTitle: 'выезд'})
-      .findRooms__guestDropdown
+      .find-rooms__guestDropdown
         +dropdown({uniqId: `cards__dropdown_${id}`, title: 'гости', description: '', text: 'Сколько гостей'})
-      .findRooms__button
+      .find-rooms__button
         +button({title: 'Подобрать номер', type: 'big', arrow: true})

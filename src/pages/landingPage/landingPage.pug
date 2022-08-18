@@ -1,5 +1,5 @@
 extends ../../layouts/pages/pages.pug
-include ../../components/findRooms/findRooms.pug
+include ../../components/find-rooms/find-rooms.pug
 
 block header
   title Landing page
@@ -9,5 +9,5 @@ block header
 block content
   section.landingPage
     .landingPage__findForm 
-      +findRooms({id: 'landingPage__findRooms1'})
+      +find-rooms({id: 'landingPage__findRooms1'})
     .landingPage__text Лучшие номера для вашей работы, отдыха и просто вдохновения

@@ -1,0 +1,8 @@
+include ../icon-text-item/icon-text-item.pug
+
+mixin icon-text-list({list = []})
+  .icon-text-list
+    ul.icon-text-list__list
+      each item in list
+        li.icon-text-list__item
+          +icon-text-item({title: item.title, text: item.text, icon: item.icon})

@@ -3,7 +3,7 @@ include ../../components/comment/comment.pug
 include ../../components/booking/booking.pug
 include ../../components/chart/chart.pug
 include ../../components/bullet-list/bullet-list.pug
-include ../../components/iconTextList/iconTextList.pug
+include ../../components/icon-text-list/icon-text-list.pug
 
 block header
   title Room details page
@@ -25,7 +25,7 @@ block content
         .roomDetails__topContent 
           .roomDetails__roomInfo 
             h2.roomDetails__header Сведения о номере
-            +iconTextList({list: [{title: 'Комфорт', text: 'Шумопоглощающие стены', icon: 'insert_emoticon'}, {title: 'Удобство', text: 'Окно в каждой из спален', icon: 'location_city'}, {title: 'Уют', text: 'Номер оснащён камином', icon: 'whatshot'},]})
+            +icon-text-list({list: [{title: 'Комфорт', text: 'Шумопоглощающие стены', icon: 'insert_emoticon'}, {title: 'Удобство', text: 'Окно в каждой из спален', icon: 'location_city'}, {title: 'Уют', text: 'Номер оснащён камином', icon: 'whatshot'},]})
           .roomDetails__review 
             h2.roomDetails__header Впечатления от номера
             +chart({})

@@ -1,4 +1,4 @@
-const form = document.querySelector('.js-findRooms');
+const form = document.querySelector('.js-find-rooms');
 
 const stopFormSubmit = (e) => {
   e.preventDefault();

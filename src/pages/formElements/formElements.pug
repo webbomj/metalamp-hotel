@@ -9,8 +9,7 @@ include ../../components/checkbox/checkbox.pug
 include ../../components/bullet-list/bullet-list.pug
 include ../../components/radioButton/radioButton.pug
 include ../../components/expandable-checkbox-list/expandable-checkbox-list.pug
-include ../../components/iconTextItem/iconTextItem.pug
-include ../../components/iconTextList/iconTextList.pug
+include ../../components/icon-text-list/icon-text-list.pug
 include ../../components/likeButton/likeButton.pug
 include ../../components/rateButton/rateButton.pug
 include ../../components/comment/comment.pug
@@ -51,7 +50,7 @@ block content
         .formElements__expandable-checkbox--open
           +expandable-checkbox-list({id: 'expandableCheckbox2', title: 'expandable checkbox list', open: true})
         .formElements__icon-text-list
-          +iconTextList({list: [{title: 'Комфорт', text: 'Шумопоглощающие стены', icon: 'insert_emoticon'}, {title: 'Удобство', text: 'Окно в каждой из спален', icon: 'location_city'}]})
+          +icon-text-list({list: [{title: 'Комфорт', text: 'Шумопоглощающие стены', icon: 'insert_emoticon'}, {title: 'Удобство', text: 'Окно в каждой из спален', icon: 'location_city'}]})
     .formElements__secondColumn
       .formElements__firstBlock
         .formElements__checkbox-button
