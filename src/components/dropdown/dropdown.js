@@ -3,7 +3,7 @@ import { dropdownSaveStartTitle, dropdownChangeTitle } from './dropdownChangeTit
 
 const dropdownElements = document.querySelectorAll('.js-dropdown__main');
 const dropdownList = document.querySelectorAll('.js-dropdown__list');
-const buttons = document.querySelectorAll(`js-dropdown__buttons button[data-button]`);
+const buttons = document.querySelectorAll(`.js-dropdown__buttons button[data-button]`);
 
 const allInputs = [...dropdownElements];
 const allList = [...dropdownList];
@@ -22,7 +22,6 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 const clearCount = (e) => {
-  e.preventDefault();
   const dataset = e.target.dataset.button;
   clearState(dataset);
   const clearButton = document.querySelector(`button[data-button=${dataset}]`);
@@ -42,17 +41,20 @@ const clearCount = (e) => {
   });
 };
 
-if (allButtons) {
+if (allButtons.length) {
   allButtons.forEach((el) => {
     const dataset = el.dataset.button;
+    console.log(el);
     if (el.textContent === buttonsText.apply) {
       const target = document.querySelector(`[data-dropdown=${dataset}]`);
       el.addEventListener('click', () => {
+        console.log('asdasdased');
         target.parentNode.nextElementSibling.classList.add('dropdown__bottom-field--none');
         target.firstChild.classList.toggle('dropdown__field--active');
       });
     } else if (el.textContent === buttonsText.clear) {
       el.addEventListener('click', (e) => {
+        console.log('asdasdased');
         clearCount(e);
         dropdownChangeTitle(dataset);
       });
@@ -73,7 +75,7 @@ allInputs.forEach((el) => el.addEventListener('click', (e) => changeVisibility(e
 const handleListCounterClick = (e) => {
   const dataset = e.target.dataset.dropdownbutton;
   if (!dataset) return;
-
+  console.log(dataset);
   const uniqDropDownId = dataset.split('-')[0];
   const clearButton = document.querySelector(`button[data-button=${uniqDropDownId}]`);
   const whatIsButton = e.target.textContent;
@@ -84,24 +86,25 @@ const handleListCounterClick = (e) => {
     dec: '-',
   };
 
-  const counterZeroAndClearButtonTruthy = counter[uniqDropDownId] === 0 && clearButton;
-
   if (whatIsButton === buttonsSign.inc) {
     incrementCounter(dataset);
+    console.log('counter2', counter);
     datasetCounter.textContent = counter[dataset];
     if (clearButton) {
       clearButton.classList.remove('button__none');
     }
   } else {
     decrementCounter(dataset);
+    console.log('counter3', counter);
     datasetCounter.textContent = counter[dataset];
+    const counterZeroAndClearButtonTruthy = counter[uniqDropDownId] === 0 && clearButton;
+    console.log('counter', counter);
+    if (counterZeroAndClearButtonTruthy) {
+      clearButton.classList.add('button__none');
+    }
   }
 
   dropdownChangeTitle(uniqDropDownId);
-
-  if (counterZeroAndClearButtonTruthy) {
-    clearButton.classList.add('button__none');
-  }
 
   const incButton = document.getElementById(dataset);
   if (counter[dataset] > 0) {
