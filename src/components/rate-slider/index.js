@@ -9,7 +9,7 @@ window.addEventListener('DOMContentLoaded', () => {
     max: 15000,
     from: 5000,
     to: 10000,
-    step: 100,
+    step: 1,
     stepScale: 100,
     isVertical: false,
     isInterval: true,
