@@ -74,31 +74,32 @@
   }
 
   &__room-info {
-    margin-right: 80px;
+    margin-right: 76px;
     @media (max-width: 700px) {
       margin: 0;
     }
-    & .icon-text-list {
-      margin-top: 20px;
-    }
+  }
+
+  &__room-info-header {
+    margin-bottom: 20px;
   }
 
   &__review {
-    & .room-details__header {
-      margin-bottom: 2px;
-    }
+    // & .chart {
+    //   margin-left: -3px;
+    // }
+  }
 
-    & .chart {
-      margin-left: -3px;
-    }
+  &__review-header {
+    margin: 16px 0 2px 5px;
   }
 
   &__comments {
     margin-top: 34px;
+  }
 
-    & .room-details__comment-header {
-      margin-bottom: 13px;
-    }
+  &__comment-header {
+    margin-bottom: 13px;
   }
 
   &__comment-header-wrapper {
@@ -114,11 +115,14 @@
     margin: 0;
   }
 
-  &__comment:not(:last-child) {
-    margin-bottom: 16px;
-    @media (max-width: 700px) {
-      flex-direction: column;
-      align-items: center;
+  &__comment {
+    margin-top: 12px;
+    &:not(:last-child) {
+      margin-bottom: 16px;
+      @media (max-width: 700px) {
+        flex-direction: column;
+        align-items: center;
+      }
     }
   }
 
@@ -132,29 +136,24 @@
   }
 
   &__rules {
-    margin: 0 102px 0 0;
-    & .room-details__header {
-      margin: 0 0 0 21px;
-    }
+    margin: 0 101px 0 0;
+  }
 
-    & .bullet-list__list {
-      margin: 18px 0 0;
+  &__rules-header {
+    margin: 0 0 18px 21px;
+  }
+
+  &__text {
+    width: 342px;
+    margin-top: 20px;
+    @media (max-width: 380px) {
+      width: 100%;
     }
   }
 
-  &__free-cancel {
-    & .room-details__header {
-      padding: 0;
-      margin-top: -2px;
-    }
-
-    & .room-details__text {
-      width: 342px;
-      margin-top: 20px;
-      @media (max-width: 380px) {
-        width: 100%;
-      }
-    }
+  &__free-cancel-header {
+    padding: 0;
+    margin-top: -2px;
   }
 
   &__right-content-block {
