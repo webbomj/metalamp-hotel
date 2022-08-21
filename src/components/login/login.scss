@@ -21,9 +21,6 @@
     border: none;
   }
 
-  &__header-wrapper {
-  }
-
   &__header {
     font-weight: 700;
     font-size: 24px;
@@ -51,8 +48,5 @@
 
   &__text {
     transform: translateY(9px);
-  }
-
-  &__button-create {
   }
 }

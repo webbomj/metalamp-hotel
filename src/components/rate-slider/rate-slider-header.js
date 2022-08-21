@@ -19,9 +19,24 @@ class SliderHeader {
     }
   }
 
+  // eslint-disable-next-line class-methods-use-this
+  transformNumber(number) {
+    const transformNumber = String(number).split('').reverse('');
+    let result = number;
+    if (transformNumber.length >= 4) {
+      result = [...transformNumber.slice(0, 3), ' ', ...transformNumber.slice(3)].reverse().join('');
+    }
+
+    return result;
+  }
+
   setState = (state) => {
     const { from, to } = state;
-    this.createTextToHeader(from, to);
+
+    const transformFrom = this.transformNumber(from);
+    const transformTo = this.transformNumber(to);
+
+    this.createTextToHeader(transformFrom, transformTo);
     this.setValueToHeader(this.text);
   };
 }

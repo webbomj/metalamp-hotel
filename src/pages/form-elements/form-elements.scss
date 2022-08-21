@@ -9,57 +9,63 @@
     grid-template-rows: 676px 270px 525px;
     grid-row-gap: 52px;
     grid-column: 1 / 2;
+  }
 
-    & .form-elements__first-block {
-      grid-column: 1 / 2;
-      grid-row: 1 / 2;
+  &__first-main-block {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+  }
+
+  &__first-dropdown-block {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+    padding: 5px 0 0;
+  }
+
+  &__first-dropdown,
+  &__second-dropdown {
+    width: 266px;
+    margin-bottom: 14px;
+  }
+
+  &__text-field {
+    margin-bottom: 16px;
+
+    &--masked {
+      margin-bottom: 36px;
     }
 
-    & .form-elements__second-block {
-      grid-column: 1 / 2;
-      grid-row: 2 / 3;
-      padding: 5px 0 0;
+    &--sub {
+      width: 266px;
+    }
+  }
 
-      & .form-elements__dropdown {
-        margin-bottom: 14px;
-      }
+  &__dropdown {
+    margin-bottom: 19px;
+
+    &--date {
+      margin-bottom: 37px;
     }
 
-    & .form-elements__third-block {
-      grid-column: 1 / 2;
-      grid-row: 3 / 4;
-      padding: 6px 0 0;
+    &--filter {
+      position: relative;
+      width: 266px;
+      margin-bottom: 37px;
     }
+  }
 
-    & .form-elements {
-      &__text-field {
-        margin-bottom: 16px;
+  &__expandable-checkbox {
+    margin-bottom: 41px;
+  }
 
-        &--masked {
-          margin-bottom: 36px;
-        }
-      }
+  &__icon-text-list {
+    margin-top: 36px;
+  }
 
-      &__dropdown {
-        margin-bottom: 19px;
-
-        &--date {
-          margin-bottom: 37px;
-        }
-
-        &--filter {
-          margin-bottom: 37px;
-        }
-      }
-
-      &__expandable-checkbox {
-        margin-bottom: 41px;
-      }
-
-      &__icon-text-list {
-        margin-top: 36px;
-      }
-    }
+  &__third-expandable-block {
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
+    padding: 6px 0 0;
   }
 
   &__second-column {
@@ -67,62 +73,55 @@
     display: grid;
     grid-template-rows: 676px 270px 525px;
     grid-row-gap: 52px;
+  }
 
-    & .form-elements__second-block {
-      grid-row: 2 / 3;
+  &__second-dropdown-block {
+    grid-row: 2 / 3;
+  }
 
-      & .form-elements__dropdown {
-        margin-top: 4px;
-      }
-    }
-
-    & .form-elements__third-block {
-      margin-top: 4px;
-      grid-row: 3 / 4;
-      display: grid;
-      grid-template-columns: 320px 320px;
-      grid-column-gap: 72px;
-    }
+  &__third-checkboxes-block {
+    margin-top: 4px;
+    grid-row: 3 / 4;
+    display: grid;
+    grid-template-columns: 320px 320px;
+    grid-column-gap: 72px;
   }
 
   &__third-column {
     display: grid;
     grid-template-rows: 676px 270px 325px;
     grid-row-gap: 52px;
+  }
 
-    & .form-elements__second-block {
-      grid-row: 2 / 3;
+  &__third-dropdown-block {
+    grid-row: 2 / 3;
+  }
 
-      & .form-elements__dropdown {
-        margin-top: 4px;
-      }
-    }
+  &__dropdown {
+    margin-top: 4px;
+  }
 
-    & .form-elements__third-block {
-      grid-row: 3 / 4;
-    }
+  &__bullet-block {
+    grid-row: 3 / 4;
+  }
 
-    & .form-elements__bullet-list {
-      padding-top: 2px;
-
-      & .form-elements__header {
-        margin-top: 5px;
-      }
+  &__bullet-list {
+    padding-top: 2px;
+    &-header {
+      margin-top: 5px;
     }
   }
 
   &__checkbox-button {
     width: 245px;
-
-    & .form-elements__header {
+    &-header {
       margin: 4px 0 11px;
     }
   }
 
   &__radio-button {
     margin-top: 39px;
-
-    & .form-elements__header {
+    &-header {
       margin: 4px 0 9px;
     }
 
@@ -131,58 +130,55 @@
       margin-top: 10px;
     }
 
-    & .radio-button:first-of-type {
-      margin-right: 20px;
+    &-first {
+      margin-right: 9px;
     }
   }
 
   &__toggle {
     margin-top: 38px;
-
-    & .form-elements__header {
+    &-header {
       margin: 4px 0 15px;
     }
 
-    & .toggle:last-child {
+    &-second {
       margin-top: 11px;
     }
   }
 
   &__like-button {
     margin-top: 40px;
-
-    & .form-elements__header {
+    &-header {
       margin: 4px 0 15px;
     }
 
     &-box {
       display: flex;
+    }
 
-      & .like-button:first-of-type {
-        margin-right: 9px;
-      }
+    &-first {
+      margin-right: 9px;
     }
   }
 
   &__rate-button {
     margin-top: 41px;
-
-    & .form-elements__header {
+    &-header {
       margin: 4px 0 15px;
     }
 
     &-box {
       display: flex;
       margin-top: 16px;
+    }
 
-      & .rate-button:first-of-type {
-        margin-right: 20px;
-      }
+    &-first {
+      margin-right: 20px;
     }
   }
 
   &__checkboxes {
-    & .form-elements__header {
+    &-header {
       margin: 4px 0 10px;
     }
   }
@@ -192,52 +188,47 @@
     margin-top: 208px;
   }
 
-  &__range-slider {
-    & .form-elements__header {
+  &__buttons {
+    margin-top: 45px;
+    &-header {
       margin: 4px 0 10px;
     }
   }
 
-  &__buttons {
-    margin-top: 45px;
+  &__top-buttons {
+    display: flex;
+    margin-top: 16px;
+  }
 
-    & .form-elements__header {
-      margin: 4px 0 10px;
-    }
+  &__first-top-button {
+    margin-right: 20px;
+  }
 
-    & .form-elements__top-buttons {
-      margin-top: 16px;
+  &__middle-buttons {
+    display: flex;
+    margin-top: 30px;
+  }
 
-      & button:first-of-type {
-        margin-right: 20px;
-      }
-    }
+  &__first-middle-button {
+    margin-right: 20px;
+  }
 
-    & .form-elements__middle-buttons {
-      margin-top: 30px;
+  &__bot-buttons {
+    display: flex;
+    margin-top: 20px;
+  }
 
-      & button:first-of-type {
-        margin-right: 20px;
-      }
-    }
+  &__first-bot-button {
+    margin-right: 21px;
+  }
 
-    & .form-elements__bot-buttons {
-      margin-top: 20px;
-
-      & button:first-of-type {
-        margin-right: 21px;
-      }
-    }
-
-    & .button__wrapper {
-      margin-top: 19px;
-    }
+  &__big-button {
+    margin-top: 19px;
   }
 
   &__pagination {
     margin-top: 40px;
-
-    & .form-elements__header {
+    &-header {
       margin: 4px 0 16px;
     }
   }

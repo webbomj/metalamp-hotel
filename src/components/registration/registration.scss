@@ -12,9 +12,6 @@
     padding: 25px 0 30px;
   }
 
-  &__header-wrapper {
-  }
-
   &__header {
     font-weight: 700;
     font-size: 24px;
@@ -33,10 +30,6 @@
   &__radio-buttons {
     margin-top: 4px;
     display: flex;
-
-    & div:first-child {
-      margin-right: 20px;
-    }
   }
 
   &__birthday {
@@ -61,8 +54,5 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-  }
-
-  &__text {
   }
 }

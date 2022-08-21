@@ -1,22 +1,10 @@
 @use 'src/styles/global';
 
 .filter-date-dropdown {
-  width: 266px;
+  width: 100%;
 
   &__main {
-    width: 266px;
     position: relative;
-
-    & .text-field__input {
-      width: 266px;
-    }
-  }
-
-  &__arrow {
-    position: absolute;
-    top: 37px;
-    right: 10px;
-    cursor: pointer;
   }
 
   &__close {

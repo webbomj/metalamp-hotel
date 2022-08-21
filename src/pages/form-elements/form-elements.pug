@@ -24,7 +24,7 @@ block header
 block content
   section.form-elements
     .form-elements__first-column
-      .form-elements__first-block
+      .form-elements__first-main-block
         .form-elements__text-field
           +text-field({uniqId: 'textField1', title: 'Text field', description: 'default', placeholder: 'Email'})
         .form-elements__text-field
@@ -39,12 +39,12 @@ block content
           +filter-date-dropdown({uniqId: 'filterDateDropdown1'})
         .form-elements__text-field--sub
           +text-field({uniqId: 'textField4', title: 'subscription text field', description: '', placeholder: 'Email', arrow: true, small: true})
-      .form-elements__second-block
-        .form-elements__dropdown
+      .form-elements__first-dropdown-block
+        .form-elements__first-dropdown
           +dropdown({uniqId: 'dropdown2', type: 'furniture', title: 'dropdown', small: true, description: 'default', text: '2 спальни, 2 кровати...'})
-        .form-elements__dropdown
+        .form-elements__second-dropdown
           +dropdown({uniqId: 'dropdown3', type: 'furniture', title: 'dropdown', small: true, description: 'expanded', text: '2 спальни, 2 кровати...', open: true})
-      .form-elements__third-block
+      .form-elements__third-expandable-block
         .form-elements__expandable-checkbox
           +expandable-checkbox-list({id: 'expandableCheckbox1', title: 'expandable checkbox list'})
         .form-elements__expandable-checkbox--open
@@ -54,35 +54,41 @@ block content
     .form-elements__second-column
       .form-elements__first-block
         .form-elements__checkbox-button
-          h3.form-elements__header Checkbox Buttons
+          h3.form-elements__checkbox-button-header Checkbox Buttons
           +checkbox({id: 'checkbox1', title: 'Можно курить'})
           +checkbox({id: 'checkbox2', title: 'Можно с питомцами'})
           +checkbox({id: 'checkbox3', title: 'Можно пригласить гостей (до 10 человек)'})
         .form-elements__radio-button
-          h3.form-elements__header Radio Buttons
+          h3.form-elements__radio-button-header Radio Buttons
           .form-elements__radio-button-box
             +radio-button({id: 'radio-button1', title:'Мужчина', name: 'checkboxed', checked: true})
             +radio-button({id: 'radio-button2', title: 'Женщина', name: 'checkboxed'})
         .form-elements__toggle
-          h3.form-elements__header Toggle
-          +toggle({id: 'toggle1', text: 'Получать спецпредложения', cheked: true})
-          +toggle({id: 'toggle2', text: 'Получать спецпредложения'})
+          h3.form-elements__toggle-header Toggle
+          .form-elements__toggle-first
+            +toggle({id: 'toggle1', text: 'Получать спецпредложения', cheked: true})
+          .form-elements__toggle-second
+            +toggle({id: 'toggle2', text: 'Получать спецпредложения'})
         .form-elements__like-button
-          h3.form-elements__header like button
+          h3.form-elements__like-button-header like button
           .form-elements__like-button-box
-            +like-button({number: 2, clicked: false})
-            +like-button({number: 12, clicked: true})
+            .form-elements__like-button-first
+              +like-button({number: 2, clicked: false})
+            .form-elements__like-button-second
+              +like-button({number: 12, clicked: true})
         .form-elements__rate-button
-          h3.form-elements__header rate button
+          h3.form-elements__rate-button-header rate button
             .form-elements__rate-button-box
-              +rate-button({id: 'rateButton1', size: 3})
-              +rate-button({id: 'rateButton2', size: 4})
-      .form-elements__second-block
+              .form-elements__rate-button-first
+                +rate-button({id: 'rateButton1', size: 3})
+              .form-elements__rate-button-second
+                +rate-button({id: 'rateButton2', size: 4})
+      .form-elements__second-dropdown-block
         .form-elements__dropdown
           +dropdown({uniqId: 'dropdown4', title: 'dropdown', description: 'expanded', text: 'Сколько гостей', open: true})
-      .form-elements__third-block
+      .form-elements__third-checkboxes-block
         .form-elements__checkboxes
-          h3.form-elements__header rich Checkbox Buttons
+          h3.form-elements__checkboxes-header rich Checkbox Buttons
           +checkbox({id: 'SuperIDcheckbox33', title: 'Широкий коридор', rich: true, richText: 'Ширина коридоров в номере не менее 91 см.'})
           +checkbox({id: 'SuperIDcheckbox344', title: 'Помощник для инвалидов', rich: true, richText: 'На 1 этаже вас встретит специалист и проводит до номера.'})
         .form-elements__comment
@@ -92,24 +98,31 @@ block content
         .form-elements__range-slider
           +rate-slider({uniqId: 'slider_formElements', headerText: 'Range Slider'})
         .form-elements__buttons
-          h3.form-elements__header buttons
+          h3.form-elements__buttons-header buttons
           .form-elements__top-buttons
-            +button({title: 'click me'})
-            +button({title: 'click me'})
+            .form-elements__first-top-button
+              +button({title: 'click me'})
+            .form-elements__second-top-button
+              +button({title: 'click me'})
           .form-elements__middle-buttons
-            +button({title: 'click me', type: 'white'})
-            +button({title: 'click me', type: 'white'})
+            .form-elements__first-middle-button
+              +button({title: 'click me', type: 'white'})
+            .form-elements__first-middle-button
+              +button({title: 'click me', type: 'white'})
           .form-elements__bot-buttons
-            +button({title: 'click me', type: 'without'})
-            +button({title: 'click me', type: 'without'})
-          +button({title: 'Перейти к оплате', type: 'big', arrow: true})
+            .form-elements__first-bot-button
+              +button({title: 'click me', type: 'without'})
+            .form-elements__first-bot-button
+              +button({title: 'click me', type: 'without'})
+          .form-elements__big-button
+            +button({title: 'Перейти к оплате', type: 'big', arrow: true})
         .form-elements__pagination
-          h3.form-elements__header pagination
+          h3.form-elements__pagination-header pagination
           +pagination({})
-      .form-elements__second-block
+      .form-elements__third-dropdown-block
         .form-elements__dropdown
           +dropdown({uniqId: 'dropdown5', title: 'dropdown', description: 'expanded', text: 'Сколько гостей', open: true})
-      .form-elements__third-block
+      .form-elements__bullet-block
         .form-elements__bullet-list
-          h3.form-elements__header Bullet list
+          h3.form-elements__bullet-list-header Bullet list
           +bullet-list({title: 'bullet list', list: ['Нельзя с питомцами', 'Без вечеринок и мероприятий', 'Время прибытия — после 13:00, а выезд до 12:00']})

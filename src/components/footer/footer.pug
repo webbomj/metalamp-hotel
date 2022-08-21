@@ -42,7 +42,8 @@ mixin footer({id = "uniqIdFooter", type = "full"})
           .footer__fifth 
             h3.footer__header Подписка
             span.footer__span Получайте специальные предложения и новости сервиса
-            +text-field({uniqId: id, title: '', description: '', placeholder: 'Email', arrow: true, small: true})
+            .footer__fifth-text
+              +text-field({uniqId: id, title: '', description: '', placeholder: 'Email', arrow: true, small: true})
         .footer__middle-block 
           img.footer__logo(src=require("../../images/Logo.png"), alt="Логотип")
         .footer__bot-block
@@ -53,9 +54,9 @@ mixin footer({id = "uniqIdFooter", type = "full"})
             span.footer__icon &#xf16d;
     else
       .footer__small 
-        img.footer__logo(src=require("../../images/Logo.png"), alt="Логотип")
+        img.footer__small-logo(src=require("../../images/Logo.png"), alt="Логотип")
         span.footer__copyright Copyright © 2018 Toxin отель. Все права защищены.
-        .footer__social-buttons
+        .footer__small-social-buttons
           span.footer__icon &#xf099;
           span.footer__icon &#xf082;
           span.footer__icon &#xf16d;

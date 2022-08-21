@@ -15,41 +15,21 @@
     z-index: 3;
   }
 
-  & .date-dropdown__left {
+  &__left {
     position: relative;
     margin-right: 20px;
-
+    width: 150px;
     &--main {
       position: relative;
-
-      & .text-field__input {
-        width: 150px;
-      }
-
-      & .dropdown__arrow {
-        position: absolute;
-        top: 11px;
-        left: 116px;
-      }
     }
   }
 
-  & .date-dropdown__right {
+  &__right {
     position: relative;
     margin-right: 20px;
-
+    width: 150px;
     &--main {
       position: relative;
-
-      & .text-field__input {
-        width: 150px;
-      }
-
-      & .dropdown__arrow {
-        position: absolute;
-        top: 11px;
-        left: 116px;
-      }
     }
   }
 

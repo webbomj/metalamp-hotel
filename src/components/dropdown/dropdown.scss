@@ -21,17 +21,17 @@
     &--none {
       display: none;
     }
+  }
 
-    & ul {
-      padding: 5px 0 2px;
+  &__list {
+    padding: 5px 0 2px;
+  }
 
-      li {
-        display: flex;
-        justify-content: space-between;
-        list-style-type: none;
-        margin-bottom: 7px;
-      }
-    }
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    margin-bottom: 7px;
   }
 
   &__field {

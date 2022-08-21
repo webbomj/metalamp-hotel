@@ -110,23 +110,20 @@
     @media (max-width: 1192px) {
       justify-content: center;
     }
+  }
 
-    & .room {
-      margin-right: 12px;
-      margin-bottom: 21px;
-    }
-
-    & .room:nth-child(2n) {
+  &__hotel-item {
+    margin-right: 12px;
+    margin-bottom: 21px;
+    &:nth-child(2n) {
       @media (max-width: 1192px) {
         margin-right: 12px;
       }
     }
-
-    & .room:nth-child(3n) {
+    &:nth-child(3n) {
       margin-right: 12px;
     }
-
-    & .room:nth-child(n + 10) {
+    &:nth-child(n + 10) {
       @media (max-width: 1192px) {
         margin-bottom: 21px;
       }
