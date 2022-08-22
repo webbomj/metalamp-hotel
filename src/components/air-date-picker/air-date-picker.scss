@@ -1,13 +1,17 @@
 @use 'src/styles/global.scss';
 
-.js-air-datepicker {
-  width: 318px !important;
-  height: 367px !important;
-
-  & .air-datepicker--pointer {
+.air-datepicker {
+  &--pointer {
     border-bottom: none !important;
+  }
 
-    & .air-datepicker-nav--action {
+  &--content {
+    margin: 0 15px 0 17px !important;
+  }
+
+  &-nav {
+    border-bottom: none;
+    &--action {
       visibility: visible !important;
       background-color: transparent !important;
 
@@ -16,20 +20,17 @@
         background-color: transparent !important;
       }
     }
-  }
-
-  & .air-datepicker--content {
-    margin: 0 15px 0 17px !important;
-  }
-
-  & .air-datepicker-nav {
-    border-bottom: none;
-
-    & .air-datepicker-nav--action {
-      visibility: visible !important;
-      background-color: transparent !important;
+    &--title {
+      &:hover {
+        background: none;
+      }
     }
   }
+}
+
+.js-air-datepicker {
+  width: 318px !important;
+  height: 367px !important;
 
   & [data-day-index] {
     color: #bc9cff !important;
@@ -177,12 +178,6 @@
         opacity: 1;
         color: global.$dark50;
       }
-    }
-  }
-
-  & .air-datepicker-nav--title {
-    &:hover {
-      background: none;
     }
   }
 }
