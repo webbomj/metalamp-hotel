@@ -2,6 +2,8 @@
 
 Hotel Toxin - приложение по поиску номеров отеля. [Demo](https://webbomj.github.io/metalamp-hotel)<br>
 
+[Макет в Figma](https://www.figma.com/file/MumYcKVk9RkKZEG6dR5E3A/MetaLamp-(former-FSD)-frontend-education-program.-The-2nd-task?type=design&node-id=0-1&mode=design)
+
 ## Цели:
 
 1. Практика верстки
